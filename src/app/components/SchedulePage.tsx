@@ -85,7 +85,7 @@ function RecentPostCard({
         src={post.image}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 size-full object-cover opacity-72 transition duration-700 group-hover:scale-105 group-hover:opacity-90"
+        className="absolute inset-0 size-full object-contain opacity-72 transition duration-700 group-hover:scale-105 group-hover:opacity-90 md:object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/42 to-black/5" />
       <div className="absolute right-5 top-5 grid size-11 place-items-center rounded-full border border-white/18 bg-white/10 text-white backdrop-blur-sm transition duration-300 group-hover:bg-[#d41c24]">
@@ -95,7 +95,7 @@ function RecentPostCard({
         <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.24em] text-[#f3b7bd]">
           {post.label}
         </p>
-        <h2 className="mt-3 max-w-[560px] font-['Montserrat',sans-serif] text-[30px] font-black leading-[1] text-white md:text-[44px]">
+        <h2 className="mt-3 max-w-[560px] break-words font-['Montserrat',sans-serif] text-[27px] font-black leading-[1.05] text-white md:text-[44px] md:leading-[1]">
           {post.title}
         </h2>
         <p className="mt-4 max-w-[520px] font-['Lato',sans-serif] text-[15px] leading-[1.65] text-white/78 md:text-[17px]">
@@ -161,7 +161,7 @@ function RecentPostHero() {
         <span className="absolute left-[55%] top-[31%] size-28 rounded-full bg-black/40 md:size-36" />
         <span className="absolute left-[76%] top-[24%] size-32 rounded-full bg-black/40 md:size-40" />
       </div>
-      <h1 className="relative z-10 mx-auto px-5 pt-28 text-center font-['Montserrat',sans-serif] text-[34px] font-black leading-none text-white md:pt-44 md:text-[64px] lg:text-[70px]">
+      <h1 className="relative z-10 mx-auto px-5 pt-28 text-center font-['Montserrat',sans-serif] text-[30px] font-black leading-[1.05] text-white md:pt-44 md:text-[64px] md:leading-none lg:text-[70px]">
         OUR RECENT POST!
       </h1>
       <InstagramRecentFeed />
@@ -184,10 +184,10 @@ function SundayServicePhotoCarousel() {
   };
 
   return (
-    <div className="group relative aspect-square w-full max-w-[520px] overflow-hidden bg-[#3a1116] shadow-[0_24px_54px_rgba(0,0,0,0.26)]">
+    <div className="group relative aspect-[4/5] w-full max-w-[520px] overflow-hidden bg-[#3a1116] shadow-[0_24px_54px_rgba(0,0,0,0.26)] md:aspect-square">
       <img
         key={activePhoto.src}
-        className="absolute inset-0 size-full object-cover opacity-[0.78] transition-all duration-700 group-hover:scale-105"
+        className="absolute inset-0 size-full object-contain opacity-[0.78] transition-all duration-700 group-hover:scale-105 md:object-cover"
         src={activePhoto.src}
         alt={activePhoto.alt}
       />
@@ -396,7 +396,7 @@ function YouthPhotoCarousel() {
             key={activePhoto.src}
             src={activePhoto.src}
             alt={activePhoto.alt}
-            className="h-[360px] w-full object-cover object-center opacity-75 transition-all duration-700 md:h-[600px]"
+            className="h-[360px] w-full object-contain object-center opacity-75 transition-all duration-700 md:h-[600px] md:object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/48 via-black/8 to-black/28" />
 
@@ -476,7 +476,7 @@ function YouthSection() {
             src={youthMainPhoto}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 size-full object-cover object-center opacity-70"
+            className="pointer-events-none absolute inset-0 size-full object-contain object-center opacity-70 md:object-cover"
           />
           <div className="absolute inset-0 bg-[#b51b2a]/34" />
           <img

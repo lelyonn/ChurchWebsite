@@ -1,10 +1,13 @@
-import { CalendarDays, MapPin, MessageCircle, Volume2, VolumeX } from "lucide-react";
+import { CalendarDays, ExternalLink, MapPin, MessageCircle, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router";
 import pixelCross from "../../assets/decor/pixel-cross.jpg";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import gcLogo from "../../assets/images/gc-logo.png";
+import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
+import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
+import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import SiteFooter from "../components/SiteFooter";
 import { SITE_INFO } from "../config/site";
@@ -68,6 +71,46 @@ function MobileSocialLink({
       <span className="absolute -top-12 left-[50%] z-20 hidden origin-left -translate-x-[50%] scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 font-['Lato',sans-serif] text-sm font-bold text-[#15181c] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 md:block">
         {label}
       </span>
+    </a>
+  );
+}
+
+const PROGRAM_PREVIEW_IMAGES: Record<string, string> = {
+  "/alpha": youthHaloPhoto,
+  "/SJ": youthBgPhoto,
+  "/homecell": youthMainPhoto,
+};
+
+function MobileContactPreview({
+  href,
+  title,
+  body,
+  icon,
+}: {
+  href: string;
+  title: string;
+  body: string;
+  icon: ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.06] p-4 text-white no-underline"
+    >
+      <span className="grid size-12 shrink-0 place-items-center rounded-[8px] bg-[#d41c24]/24 text-[#f3b7bd] transition-colors group-hover:bg-[#d41c24] group-hover:text-white">
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block font-['Montserrat',sans-serif] text-[16px] font-bold leading-[1.2]">
+          {title}
+        </span>
+        <span className="mt-1 block font-['Lato',sans-serif] text-[13px] leading-[1.45] text-[#d7d9da]">
+          {body}
+        </span>
+      </span>
+      <ExternalLink className="size-4 shrink-0 text-white/55 transition-colors group-hover:text-white" aria-hidden="true" />
     </a>
   );
 }
@@ -150,7 +193,7 @@ export default function MobileHomePage() {
             </p>
             <a
               href="#services"
-              className="geis-button-hover mt-7 flex min-h-[76px] items-center justify-between rounded-[6px] bg-[#b51b2a] px-5 no-underline"
+              className="geis-button-hover mt-7 flex min-h-[76px] w-full max-w-full items-center justify-between rounded-[6px] bg-[#b51b2a] px-5 no-underline"
             >
               <p className="font-['Montserrat',sans-serif] text-[20px] font-bold leading-[1.25] text-white">
                 SUNDAY 09.00
@@ -265,6 +308,13 @@ export default function MobileHomePage() {
             </Link>
           ))}
         </div>
+        <Link
+          to="/schedule"
+          className="geis-button-hover mt-7 flex h-[58px] items-center justify-between rounded-[8px] bg-[#b51b2a] px-6 font-['Lato',sans-serif] text-[16px] font-bold text-white no-underline"
+        >
+          More Information
+          <span>-&gt;</span>
+        </Link>
       </MobileSection>
 
       <MobileSection id="programs">
@@ -287,17 +337,31 @@ export default function MobileHomePage() {
             <Link
               key={program.path}
               to={program.path}
-              className="block rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+              className="block overflow-hidden rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
             >
-              <p className="font-['Montserrat',sans-serif] text-[24px] font-bold leading-[1.2] text-[#15181c]">
-                {program.title}
-              </p>
-              <p className="mt-4 font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#46505a]">
-                {program.tagline}
-              </p>
-              <p className="mt-5 font-['Lato',sans-serif] text-[15px] font-bold text-[#d41c24]">
-                Pelajari lagi -&gt;
-              </p>
+              <div className="relative h-[190px] bg-[#1b1e21]">
+                <img
+                  src={PROGRAM_PREVIEW_IMAGES[program.path] ?? youthMainPhoto}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 size-full object-cover object-center opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
+                <p className="absolute bottom-4 left-5 font-['Montserrat',sans-serif] text-[22px] font-black leading-[1.05] text-white">
+                  {program.title}
+                </p>
+              </div>
+              <div className="p-6">
+                <p className="font-['Montserrat',sans-serif] text-[24px] font-bold leading-[1.2] text-[#15181c]">
+                  {program.title}
+                </p>
+                <p className="mt-4 font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#46505a]">
+                  {program.tagline}
+                </p>
+                <p className="mt-5 font-['Lato',sans-serif] text-[15px] font-bold text-[#d41c24]">
+                  Pelajari lagi -&gt;
+                </p>
+              </div>
             </Link>
           ))}
         </div>
@@ -324,11 +388,37 @@ export default function MobileHomePage() {
           href={SITE_INFO.location.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="geis-button-hover mt-8 flex h-[58px] items-center justify-between rounded-[8px] bg-[#b51b2a] px-6 font-['Lato',sans-serif] text-[16px] font-bold text-white no-underline"
+          className="group relative mt-8 block min-h-[210px] overflow-hidden rounded-[8px] border border-white/10 bg-[#f8f6f0] text-[#15181c] no-underline shadow-[0_20px_42px_rgba(0,0,0,0.22)]"
         >
-          Google Maps
-          <MapPin className="size-5" aria-hidden="true" />
+          <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(90deg,rgba(181,27,42,0.16)_1px,transparent_1px),linear-gradient(rgba(181,27,42,0.16)_1px,transparent_1px)] [background-size:38px_38px]" />
+          <div className="absolute -left-10 top-12 h-16 w-[135%] -rotate-12 rounded-full bg-[#d8d0c4]/80" />
+          <div className="absolute left-8 top-7 h-36 w-24 rotate-[22deg] rounded-full border-[10px] border-[#d41c24]/18" />
+          <div className="absolute right-8 top-8 grid size-14 place-items-center rounded-full bg-[#b51b2a] text-white shadow-[0_14px_28px_rgba(181,27,42,0.32)]">
+            <MapPin className="size-7" aria-hidden="true" />
+          </div>
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#15181c] to-[#15181c]/0 px-5 pb-5 pt-20 text-white">
+            <p className="font-['Montserrat',sans-serif] text-[18px] font-black">
+              Google Maps
+            </p>
+            <p className="mt-1 font-['Lato',sans-serif] text-[13px] leading-[1.45] text-white/78">
+              {SITE_INFO.location.street}, {SITE_INFO.location.area}
+            </p>
+          </div>
         </a>
+        <div className="mt-4 grid gap-3">
+          <MobileContactPreview
+            href={SITE_INFO.social.instagramUrl}
+            title="Instagram"
+            body={SITE_INFO.social.instagramLabel}
+            icon={<MobileInstagramIcon />}
+          />
+          <MobileContactPreview
+            href={SITE_INFO.social.whatsappUrl}
+            title="WhatsApp"
+            body="Hubungi admin GEIS CCC"
+            icon={<MessageCircle className="size-6" aria-hidden="true" />}
+          />
+        </div>
       </MobileSection>
 
       <SiteFooter />

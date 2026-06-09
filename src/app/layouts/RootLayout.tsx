@@ -116,12 +116,12 @@ export default function RootLayout() {
       <ScrollToTop />
       <PointerEffects />
       <GlobalHomeLogo />
-      <GlobalRouteMenu />
       <StickyNav />
       <div className="relative z-[1] flex-1" data-page-content="true">
         <Outlet />
       </div>
       {!hasEmbeddedFooter(pathname) && <SiteFooter />}
+      <GlobalRouteMenu />
     </div>
   );
 }

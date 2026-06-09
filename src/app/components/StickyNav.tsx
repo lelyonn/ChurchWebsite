@@ -84,7 +84,7 @@ export default function StickyNav() {
 
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${
+      className={`fixed top-4 left-0 right-0 z-50 hidden transition-all duration-300 ease-out md:block ${
         visible ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0 pointer-events-none"
       }`}
       data-name="Sticky Top Nav"

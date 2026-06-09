@@ -41,12 +41,13 @@ export default function GlobalRouteMenu() {
   return (
     <div
       ref={menuRef}
-      className="fixed right-5 top-4 z-[90] md:right-8 md:top-5"
+      className="fixed right-4 top-4 z-[140] md:right-8 md:top-5"
       data-name="Global Route Menu"
+      style={{ zIndex: 140 }}
     >
       <button
         type="button"
-        className="geis-nav-trigger grid size-12 place-items-center rounded-[8px] border border-white/10 bg-black/22 text-white shadow-[0_10px_28px_rgba(0,0,0,0.22)] backdrop-blur-md transition-colors hover:bg-white/10"
+        className="geis-nav-trigger grid size-12 place-items-center rounded-[8px] border border-white/20 bg-[#6d1019] text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621]"
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={open}
         onClick={() => setOpen((current) => !current)}
@@ -55,7 +56,7 @@ export default function GlobalRouteMenu() {
       </button>
 
       {open && (
-        <nav className="geis-menu-panel absolute right-0 mt-3 w-[270px] rounded-[8px] border border-white/10 bg-[#17100f]/96 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-xl">
+        <nav className="geis-menu-panel fixed right-4 top-[76px] max-h-[calc(100dvh-96px)] w-[min(292px,calc(100vw-32px))] overflow-y-auto rounded-[8px] border border-white/10 bg-[#17100f]/96 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-xl md:absolute md:right-0 md:top-auto md:mt-3 md:w-[270px]">
           <p className="mb-2 px-4 py-2 font-['Montserrat',sans-serif] text-[11px] font-bold uppercase tracking-[0.18em] text-[#f3b7bd]">
             {SITE_INFO.shortName}
           </p>
