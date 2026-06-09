@@ -1,0 +1,559 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, ExternalLink, PlusCircle } from "lucide-react";
+import pixelJesus from "../../assets/decor/pixel-jesus.jpg";
+import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
+import redGrain from "../../assets/decor/red-grain.jpg";
+import youthPhotoOne from "../../assets/images/carousel/youth-1.jpg";
+import youthPhotoTwo from "../../assets/images/carousel/youth-2.jpg";
+import youthPhotoThree from "../../assets/images/carousel/youth-3.jpg";
+import youthPhotoFour from "../../assets/images/carousel/youth-4.jpg";
+import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
+import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
+import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
+import { INSTAGRAM_RECENT_POSTS, SITE_INFO } from "../config/site";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+
+const ckidsTopics = [
+  {
+    title: "Jesus, Safety, & Fun",
+    body:
+      "Anak-anak belajar mengenal Yesus di ruang yang aman, hangat, dan menyenangkan.",
+  },
+];
+
+const youthGalleryPhotos = [
+  { src: youthPhotoOne, alt: "Youth community group photo" },
+  { src: youthPhotoTwo, alt: "Youth worship moment" },
+  { src: youthPhotoThree, alt: "Youth community candid" },
+  { src: youthPhotoFour, alt: "Youth friends at GEIS CCC" },
+];
+
+const sundayServicePhotos = [
+  { src: youthHaloPhoto, alt: "Sunday service community moment" },
+  { src: youthPhotoOne, alt: "GEIS CCC Sunday gathering" },
+  { src: youthPhotoFour, alt: "Church community group photo" },
+  { src: youthBgPhoto, alt: "Worship service moment" },
+  { src: youthMainPhoto, alt: "Youth and Sunday service moment" },
+];
+
+const recentPostCards = [
+  {
+    image: youthPhotoOne,
+    label: "Community",
+    title: "This Is Us!",
+    body: "Potongan momen keluarga GEIS CCC, worship, dan kebersamaan setelah ibadah.",
+    href: INSTAGRAM_RECENT_POSTS[0],
+  },
+  {
+    image: youthHaloPhoto,
+    label: "Anniversary",
+    title: "Three Years Together",
+    body: "Cerita syukur, tawa, dan momen perayaan 3 tahun kebaikan Tuhan.",
+    href: INSTAGRAM_RECENT_POSTS[1],
+  },
+  {
+    image: youthBgPhoto,
+    label: "Behind The Scene",
+    title: "Intip Keseruan Kami",
+    body: "Cuplikan singkat aktivitas, pelayanan, dan energi komunitas GEIS CCC.",
+    href: INSTAGRAM_RECENT_POSTS[2],
+  },
+];
+
+function RecentPostCard({
+  post,
+  featured = false,
+}: {
+  post: (typeof recentPostCards)[number];
+  featured?: boolean;
+}) {
+  return (
+    <a
+      href={post.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group relative block min-h-[360px] overflow-hidden rounded-[14px] border border-white/10 bg-[#111418] text-white no-underline shadow-[0_22px_48px_rgba(0,0,0,0.32)] ${
+        featured ? "md:col-span-2 md:min-h-[460px]" : "md:min-h-[460px]"
+      }`}
+    >
+      <img
+        src={post.image}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 size-full object-cover opacity-72 transition duration-700 group-hover:scale-105 group-hover:opacity-90"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/42 to-black/5" />
+      <div className="absolute right-5 top-5 grid size-11 place-items-center rounded-full border border-white/18 bg-white/10 text-white backdrop-blur-sm transition duration-300 group-hover:bg-[#d41c24]">
+        <ExternalLink className="size-5" aria-hidden="true" />
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+        <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.24em] text-[#f3b7bd]">
+          {post.label}
+        </p>
+        <h2 className="mt-3 max-w-[560px] font-['Montserrat',sans-serif] text-[30px] font-black leading-[1] text-white md:text-[44px]">
+          {post.title}
+        </h2>
+        <p className="mt-4 max-w-[520px] font-['Lato',sans-serif] text-[15px] leading-[1.65] text-white/78 md:text-[17px]">
+          {post.body}
+        </p>
+      </div>
+    </a>
+  );
+}
+
+function InstagramRecentFeed() {
+  return (
+    <div className="relative z-10 mx-auto mt-8 w-full max-w-[1180px] px-5 md:mt-14 md:px-10">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {recentPostCards.map((post, index) => (
+          <RecentPostCard
+            key={post.href}
+            post={post}
+            featured={index === 0}
+          />
+        ))}
+      </div>
+      <a
+        href={SITE_INFO.social.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="geis-button-hover geis-hover-black mx-auto mt-8 flex w-full max-w-[320px] items-center justify-center rounded-[8px] bg-[#d41c24] px-5 py-4 text-center font-['Montserrat',sans-serif] text-[12px] font-black uppercase text-white no-underline md:w-fit md:max-w-none md:px-7 md:text-[13px]"
+      >
+        <span>OPEN INSTAGRAM @GEISCCC</span>
+      </a>
+    </div>
+  );
+}
+
+function RecentPostHero() {
+  return (
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#5f1119_0%,#77131c_58%,#8f1620_100%)] pb-20 md:pb-28">
+      <img
+        src={redGrain}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 size-full object-cover opacity-25 mix-blend-soft-light"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(93,17,24,0.82)_0%,rgba(104,18,27,0.88)_62%,rgba(143,22,32,0.94)_100%)]" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[8%] top-[12%] h-[360px] w-[230px] rotate-[-8deg] opacity-[0.11] md:left-[14%] md:top-[10%] md:h-[520px] md:w-[330px]"
+      >
+        <span className="absolute left-1/2 top-0 h-full w-[28%] -translate-x-1/2 rounded-[999px] bg-white" />
+        <span className="absolute left-0 top-[28%] h-[22%] w-full rounded-[999px] bg-white" />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[7%] top-[20%] hidden h-[280px] w-[180px] rotate-[10deg] opacity-[0.06] md:block"
+      >
+        <span className="absolute left-1/2 top-0 h-full w-[26%] -translate-x-1/2 rounded-[999px] bg-white" />
+        <span className="absolute left-0 top-[30%] h-[20%] w-full rounded-[999px] bg-white" />
+      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-32 bg-gradient-to-b from-transparent via-[#8f1620]/72 to-[#8f1620]" />
+      <div className="absolute inset-0 opacity-20">
+        <span className="absolute left-[9%] top-[33%] size-28 rounded-full bg-black/45 md:size-32" />
+        <span className="absolute left-[28%] top-[23%] size-36 rounded-full bg-black/40 md:size-44" />
+        <span className="absolute left-[55%] top-[31%] size-28 rounded-full bg-black/40 md:size-36" />
+        <span className="absolute left-[76%] top-[24%] size-32 rounded-full bg-black/40 md:size-40" />
+      </div>
+      <h1 className="relative z-10 mx-auto px-5 pt-28 text-center font-['Montserrat',sans-serif] text-[34px] font-black leading-none text-white md:pt-44 md:text-[64px] lg:text-[70px]">
+        OUR RECENT POST!
+      </h1>
+      <InstagramRecentFeed />
+    </section>
+  );
+}
+
+function SundayServicePhotoCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activePhoto = sundayServicePhotos[activeIndex];
+
+  const showPreviousPhoto = () => {
+    setActiveIndex((current) =>
+      (current - 1 + sundayServicePhotos.length) % sundayServicePhotos.length,
+    );
+  };
+
+  const showNextPhoto = () => {
+    setActiveIndex((current) => (current + 1) % sundayServicePhotos.length);
+  };
+
+  return (
+    <div className="group relative aspect-square w-full max-w-[520px] overflow-hidden bg-[#3a1116] shadow-[0_24px_54px_rgba(0,0,0,0.26)]">
+      <img
+        key={activePhoto.src}
+        className="absolute inset-0 size-full object-cover opacity-[0.78] transition-all duration-700 group-hover:scale-105"
+        src={activePhoto.src}
+        alt={activePhoto.alt}
+      />
+      <div className="absolute inset-0 bg-[#181313]/30" />
+      <div className="absolute bottom-7 left-7 right-7 border-t border-white/35 pt-5">
+        <p className="font-['Roboto_Mono',monospace] text-[12px] uppercase text-white/80">
+          GEIS CCC / Sunday Gathering
+        </p>
+      </div>
+      <button
+        type="button"
+        aria-label="Foto Sunday Service sebelumnya"
+        className="absolute left-4 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/24 text-white backdrop-blur-sm transition-all duration-300 hover:-translate-x-1 hover:bg-[#d41c24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+        onClick={showPreviousPhoto}
+      >
+        <ChevronLeft className="size-5" aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        aria-label="Foto Sunday Service berikutnya"
+        className="absolute right-4 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/24 text-white backdrop-blur-sm transition-all duration-300 hover:translate-x-1 hover:bg-[#d41c24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+        onClick={showNextPhoto}
+      >
+        <ChevronRight className="size-5" aria-hidden="true" />
+      </button>
+      <div className="absolute bottom-4 right-5 flex gap-1.5">
+        {sundayServicePhotos.map((photo, index) => (
+          <button
+            key={photo.src}
+            type="button"
+            aria-label={`Lihat foto Sunday Service ${index + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === activeIndex ? "w-7 bg-white" : "w-2.5 bg-white/38"
+            }`}
+            onClick={() => setActiveIndex(index)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TimePlaceSection() {
+  return (
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#8f1620_0%,#a41724_28%,#d41c24_100%)] px-6 py-14 md:min-h-[820px] md:px-[120px] md:py-[82px]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-34 [background-image:radial-gradient(circle_at_22%_10%,rgba(255,255,255,0.18),transparent_30%),radial-gradient(circle_at_80%_72%,rgba(0,0,0,0.2),transparent_36%),linear-gradient(90deg,rgba(0,0,0,0.16),transparent_42%,rgba(255,255,255,0.08))]"
+      />
+      <img
+        src={redGrain}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 size-full object-cover opacity-18 mix-blend-soft-light"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute right-[-120px] top-[-120px] h-[360px] w-[360px] rotate-45 border border-white/12"
+      />
+      <div className="absolute bottom-16 left-8 hidden h-[220px] w-[160px] border-l-2 border-white/28 md:block" />
+
+      <div className="relative z-10 inline-flex bg-white px-4 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.12)]">
+        <p className="font-['Montserrat',sans-serif] text-[14px] font-black uppercase text-[#d41c24]">
+          Waktu dan Tempat
+        </p>
+      </div>
+
+      <div className="relative z-10 mt-10 grid gap-8 md:mt-16 lg:grid-cols-[520px_1fr] lg:items-start">
+        <SundayServicePhotoCarousel />
+        <div className="max-w-xl pt-2 text-white">
+          <h2 className="font-['Montserrat',sans-serif] text-[34px] font-black leading-[1] md:text-[58px]">
+            Sunday Service
+          </h2>
+          <p className="mt-5 font-['Lato',sans-serif] text-[21px] font-bold text-[#f4eeee] md:text-[24px]">
+            Minggu, 09.00 WIB
+          </p>
+          <p className="mt-5 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-white/82 md:text-[18px]">
+            Ibadah umum untuk bertumbuh dalam firman, penyembahan, dan
+            komunitas yang hangat bersama GEIS CCC.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CkidsLogo() {
+  return (
+    <div className="relative mx-auto flex h-[150px] items-center justify-center overflow-hidden bg-[#fffdf8] md:h-[190px]">
+      <img
+        src={redFluidShape}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 top-2 h-36 w-36 rotate-12 rounded-full object-cover opacity-[0.08] mix-blend-multiply md:h-52 md:w-52"
+      />
+      <img
+        src={pixelJesus}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-[8%] hidden h-28 w-28 object-contain opacity-[0.08] mix-blend-multiply md:block"
+      />
+      <div className="relative">
+        <span className="absolute -left-9 -top-6 text-[28px] text-[#f09395]">
+          *
+        </span>
+        <span className="absolute -right-9 -top-7 text-[32px] text-[#f2b84b]">
+          +
+        </span>
+        <span className="absolute -bottom-6 left-8 text-[24px] text-[#8fd3c7]">
+          ~
+        </span>
+        <p className="font-['Montserrat',sans-serif] text-[62px] font-black leading-none tracking-[-0.04em] text-[#1b1e21] md:text-[86px]">
+          CKIDS
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CkidsGallery() {
+  const panels = [
+    { bg: "#d6e8bd", block: "#78806c", label: "Faith" },
+    { bg: "#d9b8cf", block: "#806d7a", label: "Creative" },
+    { bg: "#9fd4f2", block: "#5f788d", label: "Safe" },
+  ];
+
+  return (
+    <div className="grid md:grid-cols-3">
+      {panels.map((panel) => (
+        <div
+          key={panel.bg}
+          className="group relative flex h-[250px] items-center justify-center overflow-hidden p-7 md:h-[310px]"
+          style={{ backgroundColor: panel.bg }}
+        >
+          <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(90deg,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(rgba(0,0,0,0.08)_1px,transparent_1px)] [background-size:28px_28px]" />
+          <div
+            className="relative h-[160px] w-full max-w-[290px] overflow-hidden shadow-[0_18px_34px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:-translate-y-2 md:h-[200px]"
+            style={{ backgroundColor: panel.block }}
+          >
+            <div className="absolute inset-x-0 bottom-0 bg-black/22 px-5 py-4">
+              <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase text-white">
+                {panel.label}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CkidsAccordion() {
+  return (
+    <div className="bg-white px-6 py-16">
+      <Accordion
+        type="single"
+        collapsible
+        className="mx-auto max-w-[700px] border-y border-[#e8e3dc]"
+      >
+        {ckidsTopics.map((topic) => (
+          <AccordionItem key={topic.title} value={topic.title}>
+            <AccordionTrigger className="group py-5 font-['Montserrat',sans-serif] text-[15px] font-black text-[#15181c] transition-colors hover:text-[#d41c24] hover:no-underline data-[state=open]:text-[#d41c24] [&>svg:last-child]:hidden">
+              <span>{topic.title}</span>
+              <PlusCircle className="size-4 shrink-0 text-[#15181c] transition-transform duration-300 group-data-[state=open]:rotate-45 group-hover:scale-110" />
+            </AccordionTrigger>
+            <AccordionContent className="font-['Lato',sans-serif] text-[15px] leading-[1.7] text-[#46505a]">
+              {topic.body}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  );
+}
+
+function CkidsSection() {
+  return (
+    <section className="bg-white">
+      <CkidsLogo />
+      <CkidsGallery />
+      <CkidsAccordion />
+    </section>
+  );
+}
+
+function YouthPhotoCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activePhoto = youthGalleryPhotos[activeIndex];
+
+  const showPreviousPhoto = () => {
+    setActiveIndex((current) =>
+      (current - 1 + youthGalleryPhotos.length) % youthGalleryPhotos.length,
+    );
+  };
+
+  const showNextPhoto = () => {
+    setActiveIndex((current) => (current + 1) % youthGalleryPhotos.length);
+  };
+
+  return (
+    <div className="relative bg-[#111418] px-0 pb-16 pt-8 md:pb-20 md:pt-10">
+      <div className="absolute inset-x-0 top-0 h-px bg-white/8" />
+      <div className="relative mx-auto w-full max-w-[1440px] px-4 md:px-8">
+        <div className="relative overflow-hidden rounded-[6px] border border-white/10 bg-black shadow-[0_24px_52px_rgba(0,0,0,0.32)]">
+          <img
+            key={activePhoto.src}
+            src={activePhoto.src}
+            alt={activePhoto.alt}
+            className="h-[360px] w-full object-cover object-center opacity-75 transition-all duration-700 md:h-[600px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/48 via-black/8 to-black/28" />
+
+          <p className="absolute left-6 top-6 font-['Montserrat',sans-serif] text-[34px] font-black uppercase leading-none text-white md:left-11 md:top-10 md:text-[72px]">
+            OUR
+            <br />
+            MOMENTS
+          </p>
+
+          <button
+            type="button"
+            aria-label="Foto sebelumnya"
+            className="absolute left-4 top-1/2 grid size-12 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/18 text-white backdrop-blur-sm transition-all duration-300 hover:-translate-x-1 hover:bg-[#d41c24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 md:left-7 md:size-14"
+            onClick={showPreviousPhoto}
+          >
+            <ChevronLeft className="size-7" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            aria-label="Foto berikutnya"
+            className="absolute right-4 top-1/2 grid size-12 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/18 text-white backdrop-blur-sm transition-all duration-300 hover:translate-x-1 hover:bg-[#d41c24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 md:right-7 md:size-14"
+            onClick={showNextPhoto}
+          >
+            <ChevronRight className="size-7" aria-hidden="true" />
+          </button>
+
+          <div className="absolute bottom-5 left-6 flex gap-2 md:left-11">
+            {youthGalleryPhotos.map((photo, index) => (
+              <button
+                key={photo.src}
+                type="button"
+                aria-label={`Lihat foto ${index + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  index === activeIndex ? "w-9 bg-white" : "w-3 bg-white/38"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function YouthSection() {
+  const marqueeItems = [
+    "Kreatif dan Relevan,",
+    "My Generation is my responsibility,",
+  ];
+
+  return (
+    <section className="bg-[#cfcfcf]">
+      <div className="relative overflow-hidden rounded-b-[24px] bg-[#111214] shadow-[0_20px_38px_rgba(0,0,0,0.24)]">
+        <img
+          src={youthBgPhoto}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] object-cover object-center opacity-70 md:block"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#111214] via-[#111214]/86 to-[#111214]/18" />
+        <div className="absolute right-[7%] top-8 h-20 w-20 rounded-full border border-white/10 bg-white/[0.025] md:h-24 md:w-24" />
+        <div className="absolute bottom-[-70px] right-[14%] h-44 w-44 rounded-full border border-[#ef2735]/20 md:h-52 md:w-52" />
+        <div className="relative z-10 px-6 py-16 md:px-11 md:py-20">
+          <h2 className="font-['Montserrat',sans-serif] text-[56px] font-black leading-[0.86] text-white md:text-[96px] lg:text-[118px]">
+            YOUTH
+          </h2>
+          <p className="mt-4 font-['Montserrat',sans-serif] text-[15px] font-black uppercase text-[#ff2638] md:text-[18px]">
+            Service
+          </p>
+        </div>
+      </div>
+
+      <div className="px-6 py-10 md:px-11 md:py-12">
+        <div className="relative mx-auto max-w-[1280px] overflow-hidden bg-[#111214] px-7 py-8 shadow-[0_18px_30px_rgba(0,0,0,0.16)] md:px-16 md:py-12">
+          <img
+            src={youthMainPhoto}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 size-full object-cover object-center opacity-70"
+          />
+          <div className="absolute inset-0 bg-[#b51b2a]/34" />
+          <img
+            src={redFluidShape}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full object-cover opacity-14 mix-blend-screen md:h-64 md:w-64"
+          />
+          <div className="absolute bottom-[-36px] left-[52%] h-20 w-20 rotate-45 bg-black/10" />
+          <div className="relative z-10 grid min-h-[210px] gap-8 py-3 md:grid-cols-[1fr_300px] md:items-end">
+            <div>
+              <p className="font-['Montserrat',sans-serif] text-[16px] font-black uppercase tracking-[0.12em] text-white/70">
+                Youth Gathering
+              </p>
+              <h3 className="mt-5 max-w-[720px] font-['Montserrat',sans-serif] text-[30px] font-black leading-[1] text-white md:text-[52px]">
+                Kreatif dan <span className="geis-serif-accent">relevan.</span>
+              </h3>
+            </div>
+            <div className="border-l-4 border-white pl-6">
+              <p className="font-['Montserrat',sans-serif] text-[24px] font-black text-white md:text-[30px]">
+                Minggu
+              </p>
+              <p className="mt-2 font-['Montserrat',sans-serif] text-[38px] font-black leading-none text-white md:text-[52px]">
+                11.00
+              </p>
+              <p className="mt-2 font-['Lato',sans-serif] text-[18px] font-bold text-white/85">
+                WIB
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative overflow-hidden bg-[#0f1115] py-8">
+        <div className="absolute -left-10 top-3 h-20 w-20 rounded-full border border-[#f05a66]/35" />
+        <div className="absolute right-[18%] top-8 h-5 w-5 rotate-45 bg-[#f05a66]" />
+        <svg
+          className="geis-curved-marquee h-[96px] w-[1400px] min-w-full text-white md:h-[118px] md:w-[1800px]"
+          viewBox="0 0 1800 118"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <path
+              id="youth-marquee-curve"
+              d="M -80 72 C 210 16 430 112 680 60 C 930 8 1130 104 1390 56 C 1570 24 1690 34 1880 70"
+            />
+          </defs>
+          <text
+            fill="currentColor"
+            className="font-['Montserrat',sans-serif] text-[22px] font-black uppercase tracking-[0.04em]"
+          >
+            <textPath href="#youth-marquee-curve" startOffset="0%">
+              {marqueeItems.join("   ")}   {marqueeItems.join("   ")}   {marqueeItems.join("   ")}
+              <animate
+                attributeName="startOffset"
+                from="0%"
+                to="-50%"
+                dur="16s"
+                repeatCount="indefinite"
+              />
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <YouthPhotoCarousel />
+    </section>
+  );
+}
+
+export default function SchedulePage() {
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-[#111418]">
+      <RecentPostHero />
+      <TimePlaceSection />
+      <CkidsSection />
+      <YouthSection />
+    </div>
+  );
+}
