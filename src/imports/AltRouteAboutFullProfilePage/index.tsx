@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import svgPaths from "./svg-06l1rck7wx";
 import CoreValuesAccordion from "../../app/components/CoreValuesAccordion";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
@@ -6,7 +7,7 @@ import redGrain from "../../assets/decor/red-grain.jpg";
 function ButtonViewServiceScheduleSchedule() {
   return (
     <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[205px] w-[390px]" data-name="Button / VIEW SERVICE SCHEDULE → /schedule">
-      <a aria-label="View Service Schedule" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" href="/schedule" />
+      <Link aria-label="View Service Schedule" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" to="/schedule" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">VIEW SERVICE SCHEDULE</p>
     </div>
   );
@@ -15,7 +16,7 @@ function ButtonViewServiceScheduleSchedule() {
 function ButtonViewServiceScheduleSchedule1() {
   return (
     <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[140px] w-[390px]" data-name="Button / VIEW SERVICE SCHEDULE → /schedule">
-      <a aria-label="Back to Home" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" href="/" />
+      <Link aria-label="Back to Home" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" to="/" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">BACK TO HOMEPAGES</p>
     </div>
   );

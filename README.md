@@ -69,6 +69,17 @@ npm run build
 
 The production build is generated in `dist/`. That folder is ignored by Git and can be regenerated at any time.
 
+### Static Hosting Routes
+
+This project uses React Router with clean routes such as `/about`, `/schedule`, and `/alpha`. Static hosts need a fallback to serve `index.html` for those routes.
+
+The repository includes:
+
+- `public/404.html` for GitHub Pages route fallback
+- `public/_redirects` for Netlify fallback
+- `vercel.json` for Vercel rewrites
+- `base: "./"` in `vite.config.ts` so built assets work from a GitHub Pages repository subpath
+
 ### Preview The Production Build
 
 ```bash

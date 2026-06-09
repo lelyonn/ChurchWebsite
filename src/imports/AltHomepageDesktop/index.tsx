@@ -1,5 +1,6 @@
 import { MapPin, MessageCircle, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState, type ReactNode } from "react";
+import { Link } from "react-router";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
@@ -498,15 +499,15 @@ function ButtonArrowIcon() {
 
 function CtaMoreInformationHrefAbout() {
   return (
-    <a
-      href="/about"
+    <Link
+      to="/about"
       aria-label="More Information"
       className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[30px] pl-[28px] pr-[26px] rounded-[8px] top-[570px] w-[640px] no-underline"
       data-name="CTA / More Information / href: /about"
     >
       <p className="[word-break:break-word] font-['Lato',sans-serif] font-bold leading-[22px] not-italic relative shrink-0 text-white text-[16px]">More Information</p>
       <ButtonArrowIcon />
-    </a>
+    </Link>
   );
 }
 
@@ -666,8 +667,8 @@ function CtaArrow1() {
 
 function PrimaryRedServiceCta1() {
   return (
-    <a
-      href="/schedule"
+    <Link
+      to="/schedule"
       aria-label="More Information"
       className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[81px] items-center justify-between left-[461px] pl-[25px] pr-[22px] rounded-[4px] top-[611px] w-[467px] no-underline"
       data-name="Primary red service CTA"
@@ -676,7 +677,7 @@ function PrimaryRedServiceCta1() {
       <svg width="32" height="22" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
         <path d="M2 10H26M18 2L26 10L18 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-    </a>
+    </Link>
   );
 }
 
@@ -900,7 +901,7 @@ function FeatureProgramCardAlpha() {
       <RichVisualPlaceholderAlpha />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] not-italic text-[29px] text-black top-[304px] w-[532px]">Alpha</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[33px] not-italic text-[#4b5560] text-[18px] top-[359px] w-[524px]">Ruang untuk mengenal iman, bertanya, berdiskusi, dan mengalami Tuhan secara pribadi. Alpha cocok untuk pengunjung baru, anak muda, atau siapa pun yang ingin memahami dasar iman Kristen dalam suasana terbuka.</p>
-      <a href="/alpha" className="absolute font-['Lato',sans-serif] font-bold leading-[24px] left-[33px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[17px] top-[505px] w-[220px] whitespace-pre-wrap transition-colors no-underline">{`Pelajari lagi  →`}</a>
+      <Link to="/alpha" className="absolute font-['Lato',sans-serif] font-bold leading-[24px] left-[33px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[17px] top-[505px] w-[220px] whitespace-pre-wrap transition-colors no-underline">{`Pelajari lagi  →`}</Link>
     </div>
   );
 }
@@ -1001,7 +1002,7 @@ function FeatureProgramCardSpiritualJourney() {
       <RichVisualPlaceholderSpiritualJourney />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] not-italic text-[29px] text-black top-[304px] w-[532px]">Spiritual Journey</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[33px] not-italic text-[#4b5560] text-[18px] top-[359px] w-[524px]">Perjalanan pemuridan untuk membantu setiap pribadi bertumbuh dalam iman, identitas, dan tujuan hidup. Program ini menolong jemaat memahami proses pertumbuhan rohani secara lebih terarah.</p>
-      <a href="/SJ" className="absolute font-['Lato',sans-serif] font-bold leading-[24px] left-[33px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[17px] top-[505px] w-[220px] whitespace-pre-wrap transition-colors no-underline">{`Pelajari lagi  →`}</a>
+      <Link to="/SJ" className="absolute font-['Lato',sans-serif] font-bold leading-[24px] left-[33px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[17px] top-[505px] w-[220px] whitespace-pre-wrap transition-colors no-underline">{`Pelajari lagi  →`}</Link>
     </div>
   );
 }
@@ -1154,7 +1155,7 @@ function CommunityFeatureSection() {
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[17px] left-[55px] not-italic text-[#d41c24] text-[12px] top-[53px] tracking-[3.6px] w-[400px]">KOMUNITAS</p>
       <p className="[word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[66px] left-[55px] text-[#15181c] text-[58px] top-[91px] w-[430px]">Homecell</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[31px] left-[55px] not-italic text-[#4b5560] text-[18px] top-[179px] w-[470px]">Ruang untuk bertumbuh bersama dalam Tuhan. Homecell menjadi tempat untuk saling mengenal, berdoa, berdiskusi, dan berjalan bersama dalam komunitas yang lebih dekat.</p>
-      <a href="/homecell" className="absolute font-['Lato',sans-serif] font-bold leading-[23px] left-[55px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[16px] top-[339px] w-[160px] whitespace-pre-wrap transition-colors no-underline">{`Learn About  →`}</a>
+      <Link to="/homecell" className="absolute font-['Lato',sans-serif] font-bold leading-[23px] left-[55px] not-italic text-[#d41c24] hover:text-[#8f1621] text-[16px] top-[339px] w-[160px] whitespace-pre-wrap transition-colors no-underline">{`Learn About  →`}</Link>
       <HomecellPhotoCluster />
     </div>
   );
