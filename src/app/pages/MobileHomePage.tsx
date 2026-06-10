@@ -219,9 +219,7 @@ export default function MobileHomePage() {
               className="geis-button-hover mt-7 flex min-h-[76px] w-full max-w-full items-center justify-between rounded-[6px] bg-[#b51b2a] px-5 no-underline"
             >
               <p className="font-['Montserrat',sans-serif] text-[20px] font-bold leading-[1.25] text-white">
-                SUNDAY 09.00
-                <br />
-                YOUTH 11.00
+                Join Us Every Sunday
               </p>
               <span className="font-['Montserrat',sans-serif] text-[34px] font-bold text-white">
                 -&gt;

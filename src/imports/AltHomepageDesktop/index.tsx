@@ -44,10 +44,9 @@ function PrimaryRedServiceCta() {
       className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[86px] items-center justify-between left-[360px] pl-[25px] pr-[22px] rounded-[4px] bottom-[160px] w-[470px] no-underline"
       data-name="Primary red service CTA"
     >
-      <div className="font-['Montserrat',sans-serif] font-bold leading-[0] not-italic shrink-0 text-[24px] text-white">
-        <p className="leading-[29px] mb-0">SUNDAY SERVICE 09.00</p>
-        <p className="leading-[29px]">YOUTH SERVICE 11.00</p>
-      </div>
+      <p className="font-['Montserrat',sans-serif] font-bold leading-[29px] not-italic shrink-0 text-[24px] text-white">
+        Join Us Every Sunday
+      </p>
       <svg width="32" height="22" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
         <path d="M2 10H26M18 2L26 10L18 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
