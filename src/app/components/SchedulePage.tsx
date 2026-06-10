@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, PlusCircle } from "lucide-react";
+import { Link } from "react-router";
 import pixelJesus from "../../assets/decor/pixel-jesus.jpg";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
@@ -11,6 +12,7 @@ import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
 import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import { INSTAGRAM_RECENT_POSTS, SITE_INFO } from "../config/site";
+import { SCHEDULE_ITEMS } from "../data/schedules";
 import {
   Accordion,
   AccordionContent,
@@ -64,6 +66,22 @@ const recentPostCards = [
     href: INSTAGRAM_RECENT_POSTS[2],
   },
 ];
+
+function getScheduleItem(title: string) {
+  return SCHEDULE_ITEMS.find((item) => item.title === title);
+}
+
+function MinistryViewMoreLink({ to }: { to: string }) {
+  return (
+    <Link
+      to={to}
+      className="geis-button-hover mt-8 inline-flex h-[56px] w-full items-center justify-between rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline sm:w-[220px]"
+    >
+      View More
+      <ExternalLink className="size-5" aria-hidden="true" />
+    </Link>
+  );
+}
 
 function RecentPostCard({
   post,
@@ -359,6 +377,9 @@ function CkidsAccordion() {
           </AccordionItem>
         ))}
       </Accordion>
+      <div className="mx-auto max-w-[700px]">
+        <MinistryViewMoreLink to="/ckids" />
+      </div>
     </div>
   );
 }
@@ -505,6 +526,7 @@ function YouthSection() {
               <p className="mt-2 font-['Lato',sans-serif] text-[18px] font-bold text-white/85">
                 WIB
               </p>
+              <MinistryViewMoreLink to="/youth" />
             </div>
           </div>
         </div>
@@ -547,6 +569,87 @@ function YouthSection() {
   );
 }
 
+function PowerhouseSection() {
+  const schedule = getScheduleItem("Power House");
+
+  return (
+    <section className="relative overflow-hidden bg-[#171014] px-6 py-16 text-white md:px-14 md:py-24">
+      <img
+        src={redGrain}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 size-full object-cover opacity-24 mix-blend-soft-light"
+      />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(212,28,36,0.28),transparent_34%),linear-gradient(135deg,#171014_0%,#241014_50%,#6d1019_100%)]" />
+      <div className="relative z-10 mx-auto grid max-w-[1180px] gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+        <div>
+          <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+            Prayer & Worship
+          </p>
+          <h2 className="mt-4 font-['Montserrat',sans-serif] text-[44px] font-black uppercase leading-[0.95] md:text-[86px]">
+            Power
+            <br />
+            House
+          </h2>
+          <MinistryViewMoreLink to="/powerhouse" />
+        </div>
+        <div className="rounded-[8px] border border-white/12 bg-white/[0.06] p-7 backdrop-blur-md md:p-10">
+          <p className="font-['Montserrat',sans-serif] text-[24px] font-black text-white md:text-[34px]">
+            {schedule?.day ?? "Setiap Jumat"}
+          </p>
+          <p className="mt-2 font-['Montserrat',sans-serif] text-[42px] font-black leading-none text-[#ff2638] md:text-[58px]">
+            {schedule?.time ?? "18.00"}
+          </p>
+          <p className="mt-6 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-white/82 md:text-[18px]">
+            {schedule?.description ??
+              "Pertemuan doa dan pujian untuk mencari hadirat Tuhan lebih dalam bersama komunitas GEIS CCC."}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MorningPrayerSection() {
+  const schedule = getScheduleItem("Pagi Bersama Tuhan");
+
+  return (
+    <section className="relative overflow-hidden bg-[#fffdf8] px-6 py-16 md:px-14 md:py-24">
+      <img
+        src={redFluidShape}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full object-cover opacity-[0.08] mix-blend-multiply md:h-96 md:w-96"
+      />
+      <div className="relative z-10 mx-auto grid max-w-[1180px] gap-8 md:grid-cols-[1fr_0.85fr] md:items-center">
+        <div>
+          <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#d41c24]">
+            Daily Devotion
+          </p>
+          <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] font-bold leading-[1.02] text-[#15181c] md:text-[78px]">
+            Pagi Bersama Tuhan
+          </h2>
+          <p className="mt-6 max-w-[720px] font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#46505a] md:text-[20px]">
+            {schedule?.description ??
+              "Saat teduh pagi untuk memulai hari dengan renungan firman Tuhan dan doa bersama."}
+          </p>
+        </div>
+        <div className="rounded-[8px] border border-[#e2ded6] bg-white p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)] md:p-9">
+          <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.16em] text-[#d41c24]">
+            {schedule?.day ?? "Senin - Sabtu"}
+          </p>
+          <p className="mt-4 font-['Montserrat',sans-serif] text-[58px] font-black leading-none text-[#15181c] md:text-[76px]">
+            {schedule?.time ?? "05.30"}
+          </p>
+          <p className="mt-4 font-['Lato',sans-serif] text-[15px] font-bold text-[#46505a] md:text-[17px]">
+            Mulai hari dengan firman dan doa.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function SchedulePage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#111418]">
@@ -554,6 +657,8 @@ export default function SchedulePage() {
       <TimePlaceSection />
       <CkidsSection />
       <YouthSection />
+      <PowerhouseSection />
+      <MorningPrayerSection />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
 import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import SiteFooter from "../components/SiteFooter";
-import { SITE_INFO } from "../config/site";
+import { MINISTRY_ROUTE_LINKS, SITE_INFO } from "../config/site";
 import { PROGRAM_DETAIL_PAGES } from "../data/programs";
 import { SCHEDULE_ITEMS } from "../data/schedules";
 
@@ -80,6 +80,27 @@ const PROGRAM_PREVIEW_IMAGES: Record<string, string> = {
   "/alpha": alphaLogo,
   "/SJ": youthBgPhoto,
   "/homecell": youthMainPhoto,
+};
+
+const MINISTRY_PREVIEW_CONTENT: Record<
+  string,
+  {
+    tagline: string;
+    image: string;
+  }
+> = {
+  "/youth": {
+    tagline: "Ruang anak muda untuk bertumbuh, terhubung, dan berjalan bersama Tuhan.",
+    image: youthBgPhoto,
+  },
+  "/ckids": {
+    tagline: "Ruang yang aman, kreatif, dan penuh sukacita untuk anak-anak mengenal Tuhan.",
+    image: redFluidShape,
+  },
+  "/powerhouse": {
+    tagline: "Ruang doa, pujian, dan pencarian hadirat Tuhan bersama komunitas.",
+    image: redGrain,
+  },
 };
 
 function MobileContactPreview({
@@ -289,7 +310,7 @@ export default function MobileHomePage() {
           Pilih waktu yang paling sesuai. Semua orang diterima dengan hangat.
         </p>
         <div className="mt-8 space-y-4">
-          {SCHEDULE_ITEMS.slice(0, 4).map((item) => (
+          {SCHEDULE_ITEMS.map((item) => (
             <Link
               key={item.title}
               to="/schedule"
@@ -377,6 +398,59 @@ export default function MobileHomePage() {
                   </p>
                 </div>
               </Link>
+            );
+          })}
+        </div>
+      </MobileSection>
+
+      <MobileSection id="ministries" className="bg-[#111418] text-white">
+        <img
+          src={redGrain}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 size-full object-cover opacity-22 mix-blend-soft-light"
+        />
+        <SectionLabel>Ministries</SectionLabel>
+        <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] font-bold leading-[1.05] text-[#f8f8f6]">
+          Generasi & Komunitas
+        </h2>
+        <p className="mt-5 font-['Lato',sans-serif] text-[16px] leading-[1.7] text-[#d7d9da]">
+          Temukan ruang pertumbuhan yang sesuai dengan tahap hidupmu.
+        </p>
+        <div className="relative z-10 mt-8 space-y-5">
+          {MINISTRY_ROUTE_LINKS.map((ministry) => {
+            const preview = MINISTRY_PREVIEW_CONTENT[ministry.to];
+
+            return (
+              <article
+                key={ministry.to}
+                className="overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] shadow-[0_16px_34px_rgba(0,0,0,0.18)]"
+              >
+                <div className="relative h-[170px] bg-[#1b1e21]">
+                  <img
+                    src={preview.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 size-full object-cover object-center opacity-72"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/22 to-transparent" />
+                  <p className="absolute bottom-4 left-5 font-['Montserrat',sans-serif] text-[24px] font-black uppercase leading-[1] text-white">
+                    {ministry.label}
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#d7d9da]">
+                    {preview.tagline}
+                  </p>
+                  <Link
+                    to={ministry.to}
+                    className="mt-5 flex h-[54px] items-center justify-between rounded-[8px] bg-[#d41c24] px-5 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
+                  >
+                    View More
+                    <ExternalLink className="size-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </article>
             );
           })}
         </div>

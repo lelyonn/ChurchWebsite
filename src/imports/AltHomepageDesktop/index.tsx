@@ -559,7 +559,8 @@ Ckids"
         <p className="leading-[35px]">Ckids</p>
       </div>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Minggu</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">09.00 - 10.15</p>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">09.00 - 10.15</p>
+      <Link to="/ckids" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
     </div>
   );
 }
@@ -587,7 +588,8 @@ function ScheduleCardYouthService() {
       <CalendarIconRed1 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Youth Service</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Minggu</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">11.00 - 12.15</p>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">11.00 - 12.15</p>
+      <Link to="/youth" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
     </div>
   );
 }
@@ -615,7 +617,8 @@ function ScheduleCardPowerHouse() {
       <CalendarIconRed2 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Power House</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Jumat</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">18.00</p>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">18.00</p>
+      <Link to="/powerhouse" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
     </div>
   );
 }
