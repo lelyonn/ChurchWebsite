@@ -31,6 +31,12 @@ export const MAIN_ROUTE_LINKS = [
   { to: "/schedule", label: "Schedule" },
 ] as const;
 
+export const MINISTRY_ROUTE_LINKS = [
+  { to: "/youth", label: "Youth" },
+  { to: "/ckids", label: "Ckids" },
+  { to: "/powerhouse", label: "Powerhouse" },
+] as const;
+
 export const FOOTER_NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },

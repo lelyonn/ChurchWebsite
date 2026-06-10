@@ -1,7 +1,7 @@
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { MAIN_ROUTE_LINKS, SITE_INFO } from "../config/site";
+import { MAIN_ROUTE_LINKS, MINISTRY_ROUTE_LINKS, SITE_INFO } from "../config/site";
 import { PROGRAM_DETAIL_PAGES } from "../data/programs";
 
 export default function GlobalRouteMenu() {
@@ -9,6 +9,7 @@ export default function GlobalRouteMenu() {
   const menuRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(true);
+  const [ministriesOpen, setMinistriesOpen] = useState(true);
 
   useEffect(() => {
     setOpen(false);
@@ -92,6 +93,35 @@ export default function GlobalRouteMenu() {
                     className={linkClass(program.path)}
                   >
                     {program.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="mt-2 rounded-[6px] border border-white/8 bg-white/[0.04]">
+            <button
+              type="button"
+              className="flex w-full items-center justify-between px-4 py-3 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.06em] text-[#f7ece8] transition-colors hover:bg-white/10"
+              aria-expanded={ministriesOpen}
+              onClick={() => setMinistriesOpen((current) => !current)}
+            >
+              Ministries
+              <ChevronDown
+                className={`size-4 transition-transform ${ministriesOpen ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              />
+            </button>
+
+            {ministriesOpen && (
+              <div className="border-t border-white/8 px-2 py-2">
+                {MINISTRY_ROUTE_LINKS.map((ministry) => (
+                  <Link
+                    key={ministry.to}
+                    to={ministry.to}
+                    className={linkClass(ministry.to)}
+                  >
+                    {ministry.label}
                   </Link>
                 ))}
               </div>

@@ -1,6 +1,11 @@
 export type ProgramSection = {
   heading: string;
   body: string;
+  bullets?: string[];
+  items?: {
+    title: string;
+    body: string;
+  }[];
 };
 
 export type ProgramDetail = {
@@ -10,6 +15,8 @@ export type ProgramDetail = {
   tagline: string;
   intro: string;
   bgColor: string;
+  websiteUrl?: string;
+  websiteLabel?: string;
   sections: ProgramSection[];
 };
 
@@ -18,20 +25,70 @@ export const PROGRAM_DETAIL_PAGES: ProgramDetail[] = [
     path: "/alpha",
     eyebrow: "PROGRAM GEIS CCC",
     title: "Alpha",
-    tagline: "Ruang terbuka untuk mengenal iman dan mengalami Tuhan secara pribadi.",
+    tagline:
+      "Ruang terbuka untuk mengeksplorasi kehidupan, iman, dan tujuan melalui persahabatan, pengajaran, dan percakapan.",
     intro:
-      "Alpha adalah ruang untuk mengenal iman, bertanya, berdiskusi, dan mengalami Tuhan secara pribadi. Alpha cocok untuk pengunjung baru, anak muda, atau siapa pun yang ingin memahami dasar iman Kristen dalam suasana terbuka.",
+      "Alpha adalah ruang untuk mengenal iman, bertanya, berdiskusi, dan mengalami Tuhan secara pribadi. Melalui video yang sederhana, waktu untuk terkoneksi, dan diskusi kelompok kecil, setiap orang diberi tempat yang aman untuk mengeksplorasi pertanyaan besar tentang kehidupan, iman, dan tujuan.",
     bgColor: "#e8f4f8",
+    websiteUrl: "https://indonesia.alpha.org/?lang=id",
+    websiteLabel: "Website Alpha Indonesia",
     sections: [
       {
-        heading: "Untuk siapa Alpha?",
+        heading: "Sejarah Alpha",
         body:
-          "Alpha terbuka untuk semua kalangan - pengunjung baru, anak muda, mahasiswa, hingga keluarga muda yang ingin mengenal Yesus lebih dekat. Tidak perlu latar belakang Kristen; cukup hadir dengan keterbukaan untuk bertanya dan berdiskusi.",
+          "Alpha dimulai dari Gereja HTB di London lebih dari 30 tahun yang lalu. Saat ini Alpha berjalan di lebih dari 100 negara di seluruh dunia dan telah diterjemahkan ke dalam lebih dari 100 bahasa.",
+        bullets: [
+          "Berawal dari Holy Trinity Brompton (HTB), London.",
+          "Berjalan di lebih dari 100 negara.",
+          "Diterjemahkan ke dalam lebih dari 100 bahasa.",
+          "Tokoh pendiri Alpha adalah Nicky Gumbel.",
+        ],
       },
       {
-        heading: "Apa yang dipelajari?",
+        heading: "Bahan-Bahan Alpha",
         body:
-          "Setiap pertemuan membahas pertanyaan-pertanyaan fundamental seputar iman: siapa Yesus, mengapa Ia datang, bagaimana berdoa, dan apa artinya hidup bersama Tuhan. Suasana santai, tanpa tekanan, dengan ruang diskusi yang luas.",
+          "Materi Alpha tersedia dalam beberapa seri yang disesuaikan dengan usia dan konteks peserta.",
+        bullets: [
+          "Alpha Youth Film Series: 12 video untuk usia 12-18 tahun.",
+          "Alpha Youth Series: 13 video untuk usia 18-24 tahun.",
+          "Alpha Film Series Konteks Indonesia: 15 video + 1 video intro AP untuk usia 25 tahun ke atas.",
+          "NEW AYS: 10 video untuk Gen Z usia 12-17 tahun.",
+        ],
+      },
+      {
+        heading: "NEW AYS",
+        body:
+          "NEW AYS dirancang untuk membantu anak muda mengeksplorasi pertanyaan besar tentang kehidupan, iman, dan tujuan dengan format yang lebih segar dan dekat dengan Gen Z.",
+        bullets: [
+          "10 sesi berlangsung dalam sekitar 9 pertemuan.",
+          "Sesi baru lebih pendek, kurang dari 20 menit.",
+          "Dibuat oleh anak youth untuk anak youth.",
+          "Dipandu oleh 8 anak Gen Z internasional.",
+          "Menghadirkan ahli, cerita, dan wawancara baru.",
+          "Menggunakan animasi dan gaya visual yang baru.",
+        ],
+      },
+      {
+        heading: "3 Elemen Penting di Alpha",
+        body:
+          "Setiap sesi Alpha dibangun dengan tiga elemen sederhana yang membantu peserta merasa diterima, memahami pengajaran, dan punya ruang untuk berdiskusi.",
+        items: [
+          {
+            title: "Persahabatan",
+            body:
+              "Setiap sesi dimulai dengan waktu untuk terkoneksi dan bersahabat. Ini adalah waktu untuk menyambut tamu, membuat mereka merasa seperti di rumah sendiri, diterima, dan dikasihi.",
+          },
+          {
+            title: "Pengajaran",
+            body:
+              "Pengajaran di Alpha mencakup konten yang sederhana, singkat, dan mudah dipahami melalui video.",
+          },
+          {
+            title: "Percakapan",
+            body:
+              "Setelah video, para tamu masuk ke dalam kelompok kecil untuk berdiskusi, bertanya, dan saling mendengar.",
+          },
+        ],
       },
       {
         heading: "Bagaimana mengikutinya?",

@@ -6,7 +6,16 @@
     <script>
       (function redirectToSpa(location) {
         var segments = location.pathname.split("/").filter(Boolean);
-        var appRoutes = ["about", "schedule", "alpha", "sj", "homecell"];
+        var appRoutes = [
+          "about",
+          "schedule",
+          "alpha",
+          "sj",
+          "homecell",
+          "youth",
+          "ckids",
+          "powerhouse",
+        ];
         var pathSegmentsToKeep =
           segments.length > 1 && appRoutes.indexOf(segments[0].toLowerCase()) === -1
             ? 1

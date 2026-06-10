@@ -5,6 +5,7 @@ import pixelJesus from "../../assets/decor/pixel-jesus.jpg";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
+import alphaLogo from "../../assets/images/alpha-logo.png";
 import BackHeader from "./BackHeader";
 import PrimaryActionLink from "./PrimaryActionLink";
 
@@ -13,7 +14,8 @@ type ProgramDetailPageProps = {
 };
 
 export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
-  const texture = program.path === "/alpha" ? redFluidShape : program.path === "/SJ" ? warmWallpaper : redGrain;
+  const isAlpha = program.path === "/alpha";
+  const texture = isAlpha ? alphaLogo : program.path === "/SJ" ? warmWallpaper : redGrain;
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f8f6f0] pt-[74px] md:pt-[92px]">
@@ -27,7 +29,9 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
           src={texture}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-20 -top-16 h-[300px] w-[300px] rotate-12 rounded-full object-cover opacity-[0.13] mix-blend-multiply md:h-[480px] md:w-[480px]"
+          className={`pointer-events-none absolute -right-20 -top-16 h-[300px] w-[300px] rotate-12 rounded-full opacity-[0.13] mix-blend-multiply md:h-[480px] md:w-[480px] ${
+            isAlpha ? "object-contain" : "object-cover"
+          }`}
         />
         <img
           src={pixelCross}
@@ -36,6 +40,13 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
           className="pointer-events-none absolute bottom-8 left-6 hidden h-16 w-16 rounded-[6px] object-cover opacity-25 mix-blend-multiply md:block"
         />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 text-center">
+          {isAlpha && (
+            <img
+              src={alphaLogo}
+              alt="Alpha"
+              className="mx-auto mb-8 h-[128px] w-auto object-contain md:h-[180px]"
+            />
+          )}
           <p className="font-['Lato',sans-serif] font-bold text-[11px] md:text-[12px] text-[#d41c24] tracking-[3.5px] md:tracking-[4.5px] uppercase mb-5 md:mb-7">
             {program.eyebrow}
           </p>
@@ -45,6 +56,16 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
           <p className="font-['Lato',sans-serif] font-normal text-[18px] md:text-[22px] lg:text-[26px] text-[#46505a] leading-[1.6] max-w-3xl mx-auto">
             {program.tagline}
           </p>
+          {program.websiteUrl && (
+            <a
+              href={program.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center justify-center rounded-[8px] bg-[#d41c24] px-6 py-4 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline shadow-[0_16px_34px_rgba(212,28,36,0.22)] transition-colors hover:bg-[#8f1621]"
+            >
+              {program.websiteLabel ?? "Website Resmi"}
+            </a>
+          )}
         </div>
       </section>
 
@@ -81,6 +102,33 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
               <p className="font-['Lato',sans-serif] font-normal text-[17px] md:text-[20px] text-[#46505a] leading-[1.8]">
                 {section.body}
               </p>
+              {section.bullets && (
+                <ul className="mt-6 grid gap-3 font-['Lato',sans-serif] text-[16px] leading-[1.65] text-[#46505a] md:text-[18px]">
+                  {section.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-3 size-2 shrink-0 rounded-full bg-[#d41c24]" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {section.items && (
+                <div className="mt-8 grid gap-4 md:grid-cols-3">
+                  {section.items.map((item) => (
+                    <article
+                      key={item.title}
+                      className="rounded-[8px] border border-[#e2ded6] bg-[#f8f6f0] p-6"
+                    >
+                      <h3 className="font-['Montserrat',sans-serif] text-[20px] font-black leading-[1.2] text-[#15181c]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-4 font-['Lato',sans-serif] text-[15px] leading-[1.7] text-[#46505a] md:text-[16px]">
+                        {item.body}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -95,12 +143,19 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
             Hubungi admin kami untuk informasi lebih lanjut atau langsung
             kunjungi gereja kami.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center max-w-[640px] mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center max-w-[900px] mx-auto">
             <PrimaryActionLink
               href={SITE_INFO.social.whatsappUrl}
               ariaLabel="WhatsApp Admin"
               label="WhatsApp Admin"
             />
+            {program.websiteUrl && (
+              <PrimaryActionLink
+                href={program.websiteUrl}
+                ariaLabel={program.websiteLabel ?? "Website Resmi"}
+                label={program.websiteLabel ?? "Website Resmi"}
+              />
+            )}
             <PrimaryActionLink
               to="/"
               ariaLabel="Kembali ke Beranda"

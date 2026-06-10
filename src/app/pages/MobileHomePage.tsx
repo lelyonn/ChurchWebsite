@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import pixelCross from "../../assets/decor/pixel-cross.jpg";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
+import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
 import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
@@ -76,7 +77,7 @@ function MobileSocialLink({
 }
 
 const PROGRAM_PREVIEW_IMAGES: Record<string, string> = {
-  "/alpha": youthHaloPhoto,
+  "/alpha": alphaLogo,
   "/SJ": youthBgPhoto,
   "/homecell": youthMainPhoto,
 };
@@ -333,37 +334,51 @@ export default function MobileHomePage() {
           menemukan tujuan.
         </p>
         <div className="mt-8 space-y-5">
-          {PROGRAM_DETAIL_PAGES.map((program) => (
-            <Link
-              key={program.path}
-              to={program.path}
-              className="block overflow-hidden rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
-            >
-              <div className="relative h-[190px] bg-[#1b1e21]">
-                <img
-                  src={PROGRAM_PREVIEW_IMAGES[program.path] ?? youthMainPhoto}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 size-full object-cover object-center opacity-80"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
-                <p className="absolute bottom-4 left-5 font-['Montserrat',sans-serif] text-[22px] font-black leading-[1.05] text-white">
-                  {program.title}
-                </p>
-              </div>
-              <div className="p-6">
-                <p className="font-['Montserrat',sans-serif] text-[24px] font-bold leading-[1.2] text-[#15181c]">
-                  {program.title}
-                </p>
-                <p className="mt-4 font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#46505a]">
-                  {program.tagline}
-                </p>
-                <p className="mt-5 font-['Lato',sans-serif] text-[15px] font-bold text-[#d41c24]">
-                  Pelajari lagi -&gt;
-                </p>
-              </div>
-            </Link>
-          ))}
+          {PROGRAM_DETAIL_PAGES.map((program) => {
+            const isAlphaProgram = program.path === "/alpha";
+
+            return (
+              <Link
+                key={program.path}
+                to={program.path}
+                className="block overflow-hidden rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+              >
+                <div className={`relative h-[190px] ${isAlphaProgram ? "bg-white" : "bg-[#1b1e21]"}`}>
+                  <img
+                    src={PROGRAM_PREVIEW_IMAGES[program.path] ?? youthMainPhoto}
+                    alt=""
+                    aria-hidden="true"
+                    className={`absolute inset-0 size-full object-center ${
+                      isAlphaProgram
+                        ? "object-contain p-8 opacity-100"
+                        : "object-cover opacity-80"
+                    }`}
+                  />
+                  {!isAlphaProgram && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
+                  )}
+                  <p
+                    className={`absolute bottom-4 left-5 font-['Montserrat',sans-serif] text-[22px] font-black leading-[1.05] ${
+                      isAlphaProgram ? "text-[#ed1c14]" : "text-white"
+                    }`}
+                  >
+                    {program.title}
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="font-['Montserrat',sans-serif] text-[24px] font-bold leading-[1.2] text-[#15181c]">
+                    {program.title}
+                  </p>
+                  <p className="mt-4 font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#46505a]">
+                    {program.tagline}
+                  </p>
+                  <p className="mt-5 font-['Lato',sans-serif] text-[15px] font-bold text-[#d41c24]">
+                    Pelajari lagi -&gt;
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </MobileSection>
 

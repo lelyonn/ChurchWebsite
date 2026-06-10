@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
+import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import { SITE_INFO } from "../../app/config/site";
@@ -856,41 +857,14 @@ function ImageLabelOverlay() {
 
 function RichVisualPlaceholderAlpha() {
   return (
-    <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] overflow-clip rounded-[28px] top-[-1px] w-[600px]" data-name="Rich visual placeholder / Alpha">
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] top-[-1px] w-[330px]" data-name="Visual left wash" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[269px] top-[-1px] w-[330px]" data-name="Visual right wash" />
-      <div className="absolute left-[434px] size-[260px] top-[-81px]" data-name="Visual large soft circle">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 260 260">
-          <circle cx="130" cy="130" fill="var(--fill-0, #B51B2A)" fillOpacity="0.12" id="Visual large soft circle" r="130" />
-        </svg>
-      </div>
-      <div className="absolute left-[504px] size-[180px] top-[184px]" data-name="Visual lower circle">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 180 180">
-          <circle cx="90" cy="90" fill="var(--fill-0, #7A4B48)" fillOpacity="0.14" id="Visual lower circle" r="90" />
-        </svg>
-      </div>
-      <div className="absolute left-[35px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #F6F2EA)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[71px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #C8B7A3)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[107px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #6D6259)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[143px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #8B5D50)" id="People palette dot" r="23" />
-        </svg>
-      </div>
+    <div className="absolute bg-white border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] overflow-clip rounded-[28px] top-[-1px] w-[600px]" data-name="Rich visual placeholder / Alpha">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_10%,rgba(237,28,20,0.16),transparent_34%),linear-gradient(135deg,#ffffff_0%,#fff7f3_100%)]" />
+      <img
+        src={alphaLogo}
+        alt="Alpha"
+        className="absolute left-[84px] top-[20px] h-[220px] w-[432px] object-contain"
+      />
       <SubtleDotGrid1 />
-      <ImageLabelOverlay />
     </div>
   );
 }
