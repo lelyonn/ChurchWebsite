@@ -6,6 +6,7 @@ import redGrain from "../../assets/decor/red-grain.jpg";
 import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
+import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import { SITE_INFO } from "../../app/config/site";
 import svgPaths from "./svg-v1jk2ee0lz";
@@ -529,6 +530,48 @@ function Section02AboutGeisCcc() {
   );
 }
 
+function SectionPastoralMessageHome() {
+  return (
+    <section className="absolute left-0 top-[1890px] h-[1120px] w-[1440px] overflow-hidden bg-[#151313]" data-name="Section / Pastoral Message">
+      <div className="absolute left-0 top-0 h-[5px] w-[1440px] bg-[#d41c24]" />
+      <p className="absolute left-[140px] top-[82px] w-[360px] font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+        Our Pastors
+      </p>
+      <h2 className="absolute left-[140px] top-[124px] w-[560px] font-['Montserrat',sans-serif] text-[72px] font-black leading-[0.95] text-[#f8f8f6]">
+        Ps. Denso
+        <br />
+        & Ps. Glory
+      </h2>
+      <div className="absolute left-[70px] top-[300px] h-[620px] w-[600px] overflow-hidden rounded-[8px] border border-white/10 bg-black">
+        <img
+          src={pastorsPhoto}
+          alt="Ps. Denso dan Ps. Glory"
+          className="absolute inset-0 size-full object-cover object-bottom grayscale"
+        />
+        <div className="absolute inset-0 bg-black/18" />
+      </div>
+      <div className="absolute left-[735px] top-[250px] w-[560px]">
+        <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.18em] text-[#f3b7bd]">
+          Zakharia 4:6
+        </p>
+        <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[34px] text-[#f8f8f6]">
+          "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan dengan Roh-Ku, firman TUHAN semesta alam."
+        </p>
+        <div className="mt-8 space-y-4 font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
+          <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
+          <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
+          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CalendarIconRed() {
   return (
     <div className="absolute left-[31px] size-[30px] top-[33px]" data-name="Calendar icon red">
@@ -559,8 +602,7 @@ Ckids"
         <p className="leading-[35px]">Ckids</p>
       </div>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Minggu</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">09.00 - 10.15</p>
-      <Link to="/ckids" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">09.00 - 10.15</p>
     </div>
   );
 }
@@ -588,8 +630,7 @@ function ScheduleCardYouthService() {
       <CalendarIconRed1 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Youth Service</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Minggu</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">11.00 - 12.15</p>
-      <Link to="/youth" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">11.00 - 12.15</p>
     </div>
   );
 }
@@ -617,8 +658,7 @@ function ScheduleCardPowerHouse() {
       <CalendarIconRed2 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Power House</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Jumat</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[211px] w-[264px]">18.00</p>
-      <Link to="/powerhouse" className="absolute bottom-[20px] left-[31px] font-['Lato',sans-serif] text-[15px] font-bold text-[#f3b7bd] no-underline transition-colors hover:text-white">View More →</Link>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">18.00</p>
     </div>
   );
 }
@@ -687,7 +727,7 @@ function PrimaryRedServiceCta1() {
 
 function Section03ServiceSchedule() {
   return (
-    <div className="absolute bg-[#1b1e21] h-[754px] left-0 top-[1890px] w-[1440px] overflow-hidden" data-name="Section 03 / Service Schedule" id="services">
+    <div className="absolute bg-[#1b1e21] h-[754px] left-0 top-[3010px] w-[1440px] overflow-hidden" data-name="Section 03 / Service Schedule" id="services">
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[720px] not-italic text-[#d41c24] text-[14px] text-center top-[96px] tracking-[4.76px] w-[1200px]">JADWAL IBADAH</p>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[86px] left-[720px] text-[#f8f8f6] text-[76px] text-center top-[136px] w-[1200px]">Bertemu setiap minggu</p>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[34px] left-[720px] not-italic text-[#d7d9da] text-[24px] text-center top-[245px] w-[1200px]">Pilih waktu yang paling sesuai. Semua orang diterima dengan hangat.</p>
@@ -1364,7 +1404,7 @@ function AltOrnamentSubtleDotGrid() {
 
 function AltRouteAboutVisitUs() {
   return (
-    <div className="absolute bg-[#1b1e21] h-[873px] left-0 top-[4424px] w-[1440px] overflow-hidden" data-name="ALT / Route /about - Visit Us" id="visit-us">
+    <div className="absolute bg-[#1b1e21] h-[873px] left-0 top-[5544px] w-[1440px] overflow-hidden" data-name="ALT / Route /about - Visit Us" id="visit-us">
       <img src={redGrain} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.16] mix-blend-soft-light" />
       <div className="absolute left-[1260px] size-[518.4px] top-[643px]" data-name="ALT ornament / taupe bottom orb">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 518.4 518.4">
@@ -1403,7 +1443,7 @@ function AltRouteAboutVisitUs() {
 
 function RouteProgramsProgramJourneyDesktop() {
   return (
-    <div className="absolute bg-[#f8f6f0] h-[1780px] left-0 top-[2644px] w-[1440px]" data-name="Route /programs - Program & Journey Desktop" id="programs">
+    <div className="absolute bg-[#f8f6f0] h-[1780px] left-0 top-[3764px] w-[1440px]" data-name="Route /programs - Program & Journey Desktop" id="programs">
       <img src={warmWallpaper} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.045] mix-blend-multiply" />
       <div className="absolute left-[1172px] size-[430px] top-[-171.44px]" data-name="Top red mist">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 430 430">
@@ -1515,7 +1555,7 @@ function AltOrnamentSubtleDotGrid1() {
 function SiteFooter() {
   return (
     <footer
-      className="absolute bg-[#101316] h-[280px] left-0 top-[5297px] w-[1440px] overflow-hidden"
+      className="absolute bg-[#101316] h-[280px] left-0 top-[6417px] w-[1440px] overflow-hidden"
       data-name="Site Footer"
     >
       <div className="absolute left-[64px] top-[56px] w-[420px]">
@@ -1585,16 +1625,16 @@ function SiteFooter() {
 export default function AltHomepageDesktop() {
   return (
     <div
-      className="bg-white relative w-[1440px] h-[5700px] min-h-[5700px] mx-auto overflow-hidden"
+      className="bg-white relative w-[1440px] h-[6697px] min-h-[6697px] mx-auto overflow-hidden"
       data-name="ALT / Homepage Desktop"
     >
       <div
-        className="absolute bg-[rgba(255,253,248,0.42)] h-[180px] left-0 top-[2518.54px] w-[1440px]"
+        className="absolute bg-[rgba(255,253,248,0.42)] h-[180px] left-0 top-[3638.54px] w-[1440px]"
         data-name="ALT ornament / soft horizontal band"
       />
 
       <div
-        className="absolute left-[1260px] size-[518.4px] top-[5069px]"
+        className="absolute left-[1260px] size-[518.4px] top-[6189px]"
         data-name="ALT ornament / taupe bottom orb"
       >
         <svg
@@ -1658,6 +1698,7 @@ export default function AltHomepageDesktop() {
 
       <Section01HeroVideo />
       <Section02AboutGeisCcc />
+      <SectionPastoralMessageHome />
       <Section03ServiceSchedule />
       <RouteProgramsProgramJourneyDesktop />
       <AltRouteAboutVisitUs />

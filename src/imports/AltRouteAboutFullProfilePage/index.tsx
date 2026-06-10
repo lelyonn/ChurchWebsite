@@ -3,6 +3,7 @@ import svgPaths from "./svg-06l1rck7wx";
 import CoreValuesAccordion from "../../app/components/CoreValuesAccordion";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
+import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 
 function ButtonViewServiceScheduleSchedule() {
   return (
@@ -947,15 +948,45 @@ function DarkLeadershipCard() {
 
 function RouteLeadershipOptionalPastoralProfile() {
   return (
-    <div className="absolute bg-[#1b1e21] h-[820px] left-0 top-[1580px] w-[1440px]" data-name="Route /leadership - Optional Pastoral Profile">
-      <DarkLeadershipCard />
+    <div className="absolute bg-[#151313] h-[1180px] left-0 overflow-hidden top-[1580px] w-[1440px]" data-name="Route /leadership - Optional Pastoral Profile">
+      <div className="absolute bg-[#d41c24] h-[5px] left-0 top-0 w-[1440px]" />
+      <p className="absolute font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.28em] left-[140px] text-[#f3b7bd] top-[82px] w-[360px]">Our Pastors</p>
+      <h2 className="absolute font-['Montserrat',sans-serif] font-black leading-[0.95] left-[140px] text-[#f8f8f6] text-[72px] top-[124px] w-[560px]">
+        Ps. Denso
+        <br />
+        & Ps. Glory
+      </h2>
+      <div className="absolute h-[620px] left-[70px] overflow-hidden rounded-[8px] border border-white/10 bg-black top-[300px] w-[600px]">
+        <img
+          src={pastorsPhoto}
+          alt="Ps. Denso dan Ps. Glory"
+          className="absolute inset-0 size-full object-cover object-bottom grayscale"
+        />
+        <div className="absolute inset-0 bg-black/18" />
+      </div>
+      <div className="absolute left-[735px] top-[250px] w-[560px]">
+        <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.18em] text-[#f3b7bd]">Zakharia 4:6</p>
+        <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[34px] text-[#f8f8f6]">
+          "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan dengan Roh-Ku, firman TUHAN semesta alam."
+        </p>
+        <div className="mt-8 space-y-4 font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
+          <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
+          <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
+          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+        </div>
+      </div>
     </div>
   );
 }
 
 function RouteAbout5CoreValues() {
   return (
-    <div className="absolute bg-[#f3f0e9] h-[1580px] left-0 top-[2366px] w-[1440px]" data-name="Route /about - 5 Core Values">
+    <div className="absolute bg-[#f3f0e9] h-[1940px] left-0 top-[2366px] w-[1440px]" data-name="Route /about - 5 Core Values">
       <img src={redFluidShape} alt="" aria-hidden="true" className="pointer-events-none absolute -right-[150px] top-[90px] h-[480px] w-[480px] rotate-12 rounded-full object-cover opacity-[0.08] mix-blend-multiply" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[720px] not-italic text-[#d41c24] text-[13px] text-center top-[70px] tracking-[3.64px] w-[1440px]">NILAI KAMI</p>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[90px] left-[720px] text-[#15181c] text-[80px] text-center top-[110px] w-[1440px]">5 Core Values</p>
@@ -1093,7 +1124,7 @@ function GoogleMapsPlaceholderCard() {
 
 function RouteAboutVisitUs() {
   return (
-    <div className="absolute bg-[#1b1e21] h-[700px] left-0 top-[4716px] w-[1440px] overflow-hidden" data-name="Route /about - Visit Us">
+    <div className="absolute bg-[#1b1e21] h-[700px] left-0 top-[5076px] w-[1440px] overflow-hidden" data-name="Route /about - Visit Us">
       <img src={redGrain} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.14] mix-blend-soft-light" />
       <div className="absolute left-[1220px] size-[460px] top-[-120px]" data-name="ornament / soft red mist">
         <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 460 460">

@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import CoreValuesAccordion from "../components/CoreValuesAccordion";
 import PrimaryActionLink from "../components/PrimaryActionLink";
 import { SITE_INFO } from "../config/site";
+import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 
 export default function MobileAboutPage() {
   return (
@@ -66,6 +67,70 @@ export default function MobileAboutPage() {
         </div>
       </section>
 
+      <section className="bg-[#151313] px-6 py-16 text-white">
+        <p className="font-['Montserrat',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+          Our Pastors
+        </p>
+        <h2 className="mt-4 font-['Montserrat',sans-serif] text-[44px] font-black leading-[0.95] text-[#f8f8f6]">
+          Ps. Denso
+          <br />
+          & Ps. Glory
+        </h2>
+        <div className="mt-8 overflow-hidden rounded-[8px] border border-white/10 bg-black">
+          <img
+            src={pastorsPhoto}
+            alt="Ps. Denso dan Ps. Glory"
+            className="h-[420px] w-full object-cover object-[50%_72%] grayscale"
+          />
+        </div>
+        <div className="mt-8 border-l-2 border-[#d41c24] pl-5">
+          <p className="font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.18em] text-[#f3b7bd]">
+            Zakharia 4:6
+          </p>
+          <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[1.35] text-[#f8f8f6]">
+            "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan
+            dengan Roh-Ku, firman TUHAN semesta alam."
+          </p>
+        </div>
+        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
+          <p>
+            Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan
+            karena kekuatan atau kehebatan manusia, melainkan karena tangan
+            Tuhan yang setia menopang.
+          </p>
+          <p>
+            Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap
+            hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.
+          </p>
+          <p>
+            Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada
+            Kristus, Sang Kepala Gereja dan sumber kehidupan kita.
+          </p>
+          <p>
+            Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak
+            selalu mudah.
+          </p>
+          <p>
+            Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi
+            visi yang Tuhan percayakan kepada gereja ini.
+          </p>
+          <p>
+            Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman
+            kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.
+          </p>
+          <p>
+            Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk
+            berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa
+            kepada Kristus.
+          </p>
+          <p>
+            Dan ketika tahun-tahun berikutnya terbentang di hadapan kita,
+            biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran
+            Tuhan yang menyertai gereja-Nya dari generasi ke generasi.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-[#f3f0e9] px-6 py-16">
         <p className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.28em] text-[#d41c24]">
           Nilai Kami
@@ -91,6 +156,25 @@ export default function MobileAboutPage() {
         <p className="mt-5 font-['Lato',sans-serif] text-[17px] leading-[1.7] text-[#d7d9da]">
           {SITE_INFO.location.street}, {SITE_INFO.location.area}
         </p>
+        <div className="mt-8 overflow-hidden rounded-[8px] border border-white/10 bg-[#f8f6f0] shadow-[0_20px_42px_rgba(0,0,0,0.22)]">
+          <iframe
+            title="GEIS CCC Location - Google Maps"
+            src="https://www.google.com/maps?q=Jl.+RM+Said+No.+233,+Manahan,+Solo&output=embed"
+            className="h-[260px] w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a
+            href={SITE_INFO.location.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between bg-[#b51b2a] px-5 py-4 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
+          >
+            Open Google Maps
+            <span aria-hidden="true">-&gt;</span>
+          </a>
+        </div>
         <Link
           to="/"
           className="mt-8 inline-flex font-['Lato',sans-serif] text-[16px] font-bold text-[#f3b7bd] no-underline"

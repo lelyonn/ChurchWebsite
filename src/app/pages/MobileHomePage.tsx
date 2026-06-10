@@ -6,6 +6,7 @@ import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
+import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
 import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
@@ -301,6 +302,43 @@ export default function MobileHomePage() {
         </Link>
       </MobileSection>
 
+      <MobileSection className="bg-[#151313] text-white">
+        <p className="font-['Montserrat',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+          Our Pastors
+        </p>
+        <h2 className="mt-4 font-['Montserrat',sans-serif] text-[44px] font-black leading-[0.95] text-[#f8f8f6]">
+          Ps. Denso
+          <br />
+          & Ps. Glory
+        </h2>
+        <div className="mt-8 overflow-hidden rounded-[8px] border border-white/10 bg-black">
+          <img
+            src={pastorsPhoto}
+            alt="Ps. Denso dan Ps. Glory"
+            className="h-[420px] w-full object-cover object-[50%_72%] grayscale"
+          />
+        </div>
+        <div className="mt-8 border-l-2 border-[#d41c24] pl-5">
+          <p className="font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.18em] text-[#f3b7bd]">
+            Zakharia 4:6
+          </p>
+          <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[1.35] text-[#f8f8f6]">
+            "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan
+            dengan Roh-Ku, firman TUHAN semesta alam."
+          </p>
+        </div>
+        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
+          <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
+          <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
+          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+        </div>
+      </MobileSection>
+
       <MobileSection id="services" className="bg-[#1b1e21] text-white">
         <SectionLabel>Jadwal Ibadah</SectionLabel>
         <h2 className="mt-4 font-['Playfair_Display',serif] text-[42px] font-bold leading-[1.08] text-[#f8f8f6]">
@@ -422,9 +460,10 @@ export default function MobileHomePage() {
             const preview = MINISTRY_PREVIEW_CONTENT[ministry.to];
 
             return (
-              <article
+              <Link
                 key={ministry.to}
-                className="overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] shadow-[0_16px_34px_rgba(0,0,0,0.18)]"
+                to={ministry.to}
+                className="block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] no-underline shadow-[0_16px_34px_rgba(0,0,0,0.18)]"
               >
                 <div className="relative h-[170px] bg-[#1b1e21]">
                   <img
@@ -442,15 +481,8 @@ export default function MobileHomePage() {
                   <p className="font-['Lato',sans-serif] text-[15px] leading-[1.65] text-[#d7d9da]">
                     {preview.tagline}
                   </p>
-                  <Link
-                    to={ministry.to}
-                    className="mt-5 flex h-[54px] items-center justify-between rounded-[8px] bg-[#d41c24] px-5 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
-                  >
-                    View More
-                    <ExternalLink className="size-4" aria-hidden="true" />
-                  </Link>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>
@@ -473,27 +505,25 @@ export default function MobileHomePage() {
         <p className="mt-3 font-['Lato',sans-serif] text-[17px] leading-[1.6] text-[#d7d9da]">
           {SITE_INFO.location.street}, {SITE_INFO.location.area}
         </p>
-        <a
-          href={SITE_INFO.location.mapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative mt-8 block min-h-[210px] overflow-hidden rounded-[8px] border border-white/10 bg-[#f8f6f0] text-[#15181c] no-underline shadow-[0_20px_42px_rgba(0,0,0,0.22)]"
-        >
-          <div className="absolute inset-0 opacity-70 [background-image:linear-gradient(90deg,rgba(181,27,42,0.16)_1px,transparent_1px),linear-gradient(rgba(181,27,42,0.16)_1px,transparent_1px)] [background-size:38px_38px]" />
-          <div className="absolute -left-10 top-12 h-16 w-[135%] -rotate-12 rounded-full bg-[#d8d0c4]/80" />
-          <div className="absolute left-8 top-7 h-36 w-24 rotate-[22deg] rounded-full border-[10px] border-[#d41c24]/18" />
-          <div className="absolute right-8 top-8 grid size-14 place-items-center rounded-full bg-[#b51b2a] text-white shadow-[0_14px_28px_rgba(181,27,42,0.32)]">
-            <MapPin className="size-7" aria-hidden="true" />
-          </div>
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#15181c] to-[#15181c]/0 px-5 pb-5 pt-20 text-white">
-            <p className="font-['Montserrat',sans-serif] text-[18px] font-black">
-              Google Maps
-            </p>
-            <p className="mt-1 font-['Lato',sans-serif] text-[13px] leading-[1.45] text-white/78">
-              {SITE_INFO.location.street}, {SITE_INFO.location.area}
-            </p>
-          </div>
-        </a>
+        <div className="mt-8 overflow-hidden rounded-[8px] border border-white/10 bg-[#f8f6f0] shadow-[0_20px_42px_rgba(0,0,0,0.22)]">
+          <iframe
+            title="GEIS CCC Location - Google Maps"
+            src="https://www.google.com/maps?q=Jl.+RM+Said+No.+233,+Manahan,+Solo&output=embed"
+            className="h-[260px] w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a
+            href={SITE_INFO.location.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between bg-[#b51b2a] px-5 py-4 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
+          >
+            Open Google Maps
+            <ExternalLink className="size-4" aria-hidden="true" />
+          </a>
+        </div>
         <div className="mt-4 grid gap-3">
           <MobileContactPreview
             href={SITE_INFO.social.instagramUrl}

@@ -52,6 +52,6 @@ export const INSTAGRAM_RECENT_POSTS = [
 export const EMBEDDED_FOOTER_PATHS = ["/"] as const;
 
 export const FIGMA_PAGE_SIZES = {
-  home: { width: 1440, height: 5577 },
-  about: { width: 1440, height: 5420 },
+  home: { width: 1440, height: 6697 },
+  about: { width: 1440, height: 5780 },
 } as const;
