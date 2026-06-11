@@ -950,13 +950,13 @@ function RouteLeadershipOptionalPastoralProfile() {
   return (
     <div className="absolute bg-[#151313] h-[1180px] left-0 overflow-hidden top-[1580px] w-[1440px]" data-name="Route /leadership - Optional Pastoral Profile">
       <div className="absolute bg-[#d41c24] h-[5px] left-0 top-0 w-[1440px]" />
-      <p className="absolute font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.28em] left-[140px] text-[#f3b7bd] top-[82px] w-[360px]">Our Pastors</p>
-      <h2 className="absolute font-['Montserrat',sans-serif] font-black leading-[0.95] left-[140px] text-[#f8f8f6] text-[72px] top-[124px] w-[560px]">
+      <h2 className="absolute font-['Montserrat',sans-serif] text-[96px] font-black uppercase leading-[0.9] tracking-[0] left-[140px] text-[#f8f8f6] top-[58px] w-[650px]">Our Pastors</h2>
+      <p className="absolute font-['Playfair_Display',serif] font-bold italic leading-[1.08] left-[144px] text-[#f3b7bd] text-[36px] top-[252px] w-[560px]">
         Ps. Denso
         <br />
         & Ps. Glory
-      </h2>
-      <div className="absolute h-[620px] left-[70px] overflow-hidden rounded-[8px] border border-white/10 bg-black top-[300px] w-[600px]">
+      </p>
+      <div className="absolute h-[620px] left-[70px] overflow-hidden rounded-[8px] border border-white/10 bg-black top-[380px] w-[600px]">
         <img
           src={pastorsPhoto}
           alt="Ps. Denso dan Ps. Glory"
@@ -1138,7 +1138,7 @@ function RouteAboutVisitUs() {
       </div>
       <p className="absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] text-[#f3b7bd] text-[13px] top-[90px] tracking-[3.64px] w-[200px]">LOKASI</p>
       <p className="absolute font-['Playfair_Display',serif] font-bold leading-[80px] left-[45px] text-[#f8f8f6] text-[72px] top-[130px] w-[500px]">Visit Us</p>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] text-[25px] text-white top-[245px] w-[620px]">GEIS Christian Creative Church</p>
+      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] text-[25px] text-white top-[245px] w-[620px]">Geis CCC</p>
       <p className="absolute font-['Lato',sans-serif] font-normal leading-[34px] left-[45px] text-[#d7d9da] text-[24px] top-[300px] w-[620px]">Jl. RM Said No. 233, Manahan, Solo</p>
       <ButtonGoogleMaps />
       <ButtonGeisccc />

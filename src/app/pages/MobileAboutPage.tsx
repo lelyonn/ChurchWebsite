@@ -68,14 +68,14 @@ export default function MobileAboutPage() {
       </section>
 
       <section className="bg-[#151313] px-6 py-16 text-white">
-        <p className="font-['Montserrat',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+        <h2 className="font-['Montserrat',sans-serif] text-[52px] font-black uppercase leading-[0.95] tracking-[0] text-[#f8f8f6]">
           Our Pastors
-        </p>
-        <h2 className="mt-4 font-['Montserrat',sans-serif] text-[44px] font-black leading-[0.95] text-[#f8f8f6]">
+        </h2>
+        <p className="mt-4 font-['Playfair_Display',serif] text-[30px] font-bold italic leading-[1.1] text-[#f3b7bd]">
           Ps. Denso
           <br />
           & Ps. Glory
-        </h2>
+        </p>
         <div className="mt-8 overflow-hidden rounded-[8px] border border-white/10 bg-black">
           <img
             src={pastorsPhoto}
