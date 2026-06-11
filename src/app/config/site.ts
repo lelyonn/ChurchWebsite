@@ -1,5 +1,5 @@
 export const SITE_INFO = {
-  name: "GEIS Christian Creative Church",
+  name: "Geis CCC",
   shortName: "GEIS CCC",
   fullName: "Gereja El-Shaddai Injil Sepenuh",
   tagline: "Gereja yang Kreatif, Relevan, dan berdampak bagi generasi saat ini.",
@@ -14,7 +14,7 @@ export const SITE_INFO = {
     whatsappUrl:
       "https://api.whatsapp.com/send/?phone=6282135329709&text&type=phone_number&app_absent=0",
   },
-  copyright: "\u00a9 2026 GEIS Christian Creative Church. All rights reserved.",
+  copyright: "\u00a9 2026 Geis CCC. All rights reserved.",
 } as const;
 
 export const HOME_ANCHOR_LINKS = [

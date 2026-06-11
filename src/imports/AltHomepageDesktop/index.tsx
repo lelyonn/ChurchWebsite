@@ -170,7 +170,7 @@ function GeisChristianCreativeChurch() {
     <div className="absolute left-[610px] top-[18px] flex w-[220px] flex-col items-center" data-name="GC Logo">
       <img
         src={gcLogo}
-        alt="GEIS Christian Creative Church"
+        alt="Geis CCC"
         className="h-[112px] w-[112px] object-contain"
       />
       <div className="[word-break:break-word] mt-[-2px] font-['Lato',sans-serif] font-bold leading-[0] not-italic opacity-88 text-[12px] text-center text-white tracking-[2.16px] w-[198px]">
@@ -533,15 +533,15 @@ function SectionPastoralMessageHome() {
   return (
     <section className="absolute left-0 top-[1890px] h-[1120px] w-[1440px] overflow-hidden bg-[#151313]" data-name="Section / Pastoral Message">
       <div className="absolute left-0 top-0 h-[5px] w-[1440px] bg-[#d41c24]" />
-      <p className="absolute left-[140px] top-[82px] w-[360px] font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.28em] text-[#f3b7bd]">
+      <h2 className="absolute left-[140px] top-[58px] w-[650px] font-['Montserrat',sans-serif] text-[96px] font-black uppercase leading-[0.9] tracking-[0] text-[#f8f8f6]">
         Our Pastors
-      </p>
-      <h2 className="absolute left-[140px] top-[124px] w-[560px] font-['Montserrat',sans-serif] text-[72px] font-black leading-[0.95] text-[#f8f8f6]">
+      </h2>
+      <p className="absolute left-[144px] top-[252px] w-[560px] font-['Playfair_Display',serif] text-[36px] font-bold italic leading-[1.08] text-[#f3b7bd]">
         Ps. Denso
         <br />
         & Ps. Glory
-      </h2>
-      <div className="absolute left-[70px] top-[300px] h-[620px] w-[600px] overflow-hidden rounded-[8px] border border-white/10 bg-black">
+      </p>
+      <div className="absolute left-[70px] top-[380px] h-[620px] w-[600px] overflow-hidden rounded-[8px] border border-white/10 bg-black">
         <img
           src={pastorsPhoto}
           alt="Ps. Denso dan Ps. Glory"
@@ -1427,7 +1427,7 @@ function AltRouteAboutVisitUs() {
       </div>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] not-italic text-[#f3b7bd] text-[13px] top-[90px] tracking-[3.64px] w-[200px]">LOKASI</p>
       <p className="[word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[80px] left-[45px] text-[#f8f8f6] text-[72px] top-[130px] w-[500px]">Visit Us</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] not-italic text-[25px] text-white top-[245px] w-[620px]">GEIS Christian Creative Church</p>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] not-italic text-[25px] text-white top-[245px] w-[620px]">Geis CCC</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[34px] left-[45px] not-italic text-[#d7d9da] text-[24px] top-[300px] w-[620px]">Jl. RM Said No. 233, Manahan, Solo</p>
       <ButtonGoogleMaps />
       <ButtonGeisccc />
@@ -1559,7 +1559,7 @@ function SiteFooter() {
     >
       <div className="absolute left-[64px] top-[56px] w-[420px]">
         <p className="font-['Montserrat',sans-serif] font-bold text-white text-[22px] leading-[28px] mb-3">
-          GEIS Christian Creative Church
+          Geis CCC
         </p>
         <p className="font-['Lato',sans-serif] font-normal text-[#a8acb1] text-[15px] leading-[24px]">
           Gereja yang Kreatif, Relevan, dan berdampak bagi generasi saat ini.
@@ -1612,7 +1612,7 @@ function SiteFooter() {
 
       <div className="absolute bg-[rgba(255,255,255,0.08)] h-[1px] left-[64px] top-[218px] w-[1312px]" />
       <p className="absolute left-[64px] top-[238px] font-['Lato',sans-serif] font-normal text-[#7a7e83] text-[13px]">
-        © 2026 GEIS Christian Creative Church. All rights reserved.
+        © 2026 Geis CCC. All rights reserved.
       </p>
       <p className="absolute right-[64px] top-[238px] font-['Lato',sans-serif] font-normal text-[#7a7e83] text-[13px]">
         Made with care in Solo, Indonesia.
