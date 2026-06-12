@@ -3,6 +3,7 @@ import CoreValuesAccordion from "../components/CoreValuesAccordion";
 import PrimaryActionLink from "../components/PrimaryActionLink";
 import { SITE_INFO } from "../config/site";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
+import { COMMUNITY_PHOTOS } from "../data/communityPhotos";
 
 export default function MobileAboutPage() {
   return (
@@ -33,6 +34,46 @@ export default function MobileAboutPage() {
         </div>
       </section>
 
+      <section className="bg-[#1b1e21] px-6 py-16 text-white">
+        <h2 className="font-['Montserrat',sans-serif] text-[42px] font-black leading-[1.05]">
+          YOU BELONG HERE
+        </h2>
+        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#d7d9da]">
+          <p>
+            GEIS CCC adalah komunitas iman, kreativitas, dan pertumbuhan. Di
+            sini setiap orang dapat mengenal Tuhan, menemukan komunitas, dan
+            melangkah dalam tujuan hidupnya.
+          </p>
+          <p>
+            Sebagai Christian Creative Church di Manahan, Solo, GEIS CCC hadir
+            untuk menjadi rumah rohani yang kreatif, relevan, dan berdampak bagi
+            generasi masa kini.
+          </p>
+          <p>
+            GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh. Kami
+            percaya gereja bukan hanya tempat yang dikunjungi, tetapi komunitas
+            tempat orang bertumbuh, dilayani, dan diutus untuk menjadi dampak.
+          </p>
+          <p>
+            Kami membangun budaya penyembahan, pemuridan, pelayanan, dan
+            kreativitas agar setiap jemaat dapat mengenal Tuhan lebih dalam dan
+            menjalankan Amanat Agung dengan relevan.
+          </p>
+          <p>
+            Website ini menjadi pintu masuk bagi pengunjung baru, jemaat, anak
+            muda, dan tim internal untuk mengenal identitas, jadwal, nilai,
+            program, dan lokasi GEIS CCC.
+          </p>
+        </div>
+        <div className="mt-10 overflow-hidden rounded-[8px]">
+          <img
+            src={COMMUNITY_PHOTOS.worshipCommunity}
+            alt="Worship Community"
+            className="h-[340px] w-full object-cover"
+          />
+        </div>
+      </section>
+
       <section className="bg-[#fffdf8] px-6 py-16">
         <div className="space-y-5">
           {[
@@ -54,7 +95,7 @@ export default function MobileAboutPage() {
           ].map((item) => (
             <article
               key={item.title}
-              className="rounded-[8px] border border-[#e2ded6] bg-white p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+              className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-white p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
             >
               <h2 className="font-['Montserrat',sans-serif] text-[24px] font-bold leading-[1.2]">
                 {item.title}
@@ -63,6 +104,86 @@ export default function MobileAboutPage() {
                 {item.body}
               </p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-black">
+        <div className="flex overflow-x-auto hide-scrollbar">
+          {[
+            COMMUNITY_PHOTOS.loveCommunity,
+            COMMUNITY_PHOTOS.worshipTeam,
+            COMMUNITY_PHOTOS.youthService,
+            COMMUNITY_PHOTOS.worshipLeader,
+            COMMUNITY_PHOTOS.ckidsClassroom,
+            COMMUNITY_PHOTOS.worshipResponse,
+          ].map((photoSrc, idx) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 w-[240px] h-[170px] border-r border-[#333]"
+            >
+              <img
+                src={photoSrc}
+                alt={`Gallery ${idx + 1}`}
+                className="w-full h-full object-cover opacity-80"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#f8f6f0] px-6 py-16 text-[#15181c]">
+        <h2 className="font-['Montserrat',sans-serif] text-[42px] font-black leading-[1.05]">
+          THE FOUNDATION
+        </h2>
+        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#46505a]">
+          <p>
+            Iman kami berpusat kepada Yesus Kristus. Kami percaya setiap orang
+            diciptakan serupa gambar Allah, memiliki nilai, potensi, dan tujuan.
+          </p>
+          <p>
+            Gereja bukan hanya tempat untuk datang, tetapi gerakan yang diikuti:
+            tempat orang bertumbuh dalam iman, menemukan komunitas, dan membawa
+            harapan bagi dunia.
+          </p>
+          <p>
+            Kami percaya masa depan penuh harapan, dan tidak ada orang yang
+            dipanggil untuk berjalan sendirian.
+          </p>
+        </div>
+        <div className="mt-10 overflow-hidden rounded-[8px]">
+          <img
+            src={COMMUNITY_PHOTOS.worshipHands}
+            alt="The Foundation"
+            className="h-[340px] w-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="relative flex h-[60px] w-full items-center overflow-hidden bg-black">
+        <style>
+          {`
+            @keyframes marquee {
+              0% { transform: translateX(0%); }
+              100% { transform: translateX(-100%); }
+            }
+            .animate-marquee-group {
+              animation: marquee 15s linear infinite;
+            }
+          `}
+        </style>
+        <div className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
+          {Array(6).fill("YOU BELONG HERE").map((text, i) => (
+            <span key={i} className="mx-6 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase text-[#000fff]">
+              {text}
+            </span>
+          ))}
+        </div>
+        <div aria-hidden="true" className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
+          {Array(6).fill("YOU BELONG HERE").map((text, i) => (
+            <span key={i} className="mx-6 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase text-[#000fff]">
+              {text}
+            </span>
           ))}
         </div>
       </section>

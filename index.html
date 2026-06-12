@@ -9,7 +9,72 @@
       <meta name="description" content="Website resmi Geis CCC di Solo: jadwal ibadah, program, komunitas, dan informasi kunjungan." />
       <link rel="icon" type="image/png" href="./favicon.png" />
       <link rel="apple-touch-icon" href="./favicon.png" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      <style>
+        html, body { height: 100%; margin: 0; }
+        #root { height: 100%; }
+        .geis-initial-loader {
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          display: grid;
+          place-items: center;
+          background: #111315;
+          color: #f8f8f6;
+          font-family: Arial, sans-serif;
+        }
+        .geis-initial-loader__inner {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          text-align: center;
+        }
+        .geis-initial-loader__mark {
+          position: relative;
+          display: grid;
+          width: 112px;
+          height: 112px;
+          place-items: center;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.04);
+          box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+        }
+        .geis-initial-loader__mark::before {
+          content: "";
+          position: absolute;
+          inset: -10px;
+          border: 1px solid rgba(212, 28, 36, 0.55);
+          border-top-color: rgba(255, 255, 255, 0.72);
+          border-radius: inherit;
+          animation: geis-initial-spin 1.15s linear infinite;
+        }
+        .geis-initial-loader img {
+          position: relative;
+          width: 62px;
+          height: 62px;
+          object-fit: contain;
+        }
+        .geis-initial-loader__title {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 900;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+        }
+        .geis-initial-loader__label {
+          margin: 0;
+          color: #f3b7bd;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+        }
+        @keyframes geis-initial-spin {
+          to { transform: rotate(360deg); }
+        }
+      </style>
       <script>
         (function restoreGitHubPagesRoute(location) {
           if (location.search[1] !== "/") return;
@@ -34,7 +99,17 @@
 
     <body>
       
-      <div id="root"></div>
+      <div id="root">
+        <div class="geis-initial-loader">
+          <div class="geis-initial-loader__inner">
+            <div class="geis-initial-loader__mark">
+              <img src="./favicon.png" alt="" />
+            </div>
+            <p class="geis-initial-loader__title">Geis CCC</p>
+            <p class="geis-initial-loader__label">Loading</p>
+          </div>
+        </div>
+      </div>
       <script type="module" src="/src/main.tsx"></script>
       
     </body>
