@@ -274,7 +274,7 @@ export default function MobileHomePage() {
           kreatif, relevan, dan berdampak bagi generasi saat ini.
         </p>
         <div className="mt-8 grid grid-cols-1 gap-4">
-          <div className="rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
+          <div className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
             <p className="font-['Montserrat',sans-serif] text-[22px] font-bold">
               Visi
             </p>
@@ -282,7 +282,7 @@ export default function MobileHomePage() {
               Menjadi gereja yang kreatif dan relevan bagi generasi.
             </p>
           </div>
-          <div className="rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
+          <div className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
             <p className="font-['Montserrat',sans-serif] text-[22px] font-bold">
               Misi
             </p>
@@ -350,7 +350,7 @@ export default function MobileHomePage() {
             <Link
               key={item.title}
               to="/schedule"
-              className="flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.04] p-5 no-underline"
+              className="geis-pop-card flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.04] p-5 no-underline"
             >
               <span className="grid size-11 shrink-0 place-items-center rounded-[8px] bg-[#d41c24]/15 text-[#f3b7bd]">
                 <CalendarDays className="size-5" aria-hidden="true" />
@@ -398,7 +398,7 @@ export default function MobileHomePage() {
               <Link
                 key={program.path}
                 to={program.path}
-                className="block overflow-hidden rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+                className="geis-pop-card block overflow-hidden rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] no-underline shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
               >
                 <div className={`relative h-[190px] ${isAlphaProgram ? "bg-white" : "bg-[#1b1e21]"}`}>
                   <img
@@ -461,7 +461,7 @@ export default function MobileHomePage() {
               <Link
                 key={ministry.to}
                 to={ministry.to}
-                className="block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] no-underline shadow-[0_16px_34px_rgba(0,0,0,0.18)]"
+                className="geis-pop-card block overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] no-underline shadow-[0_16px_34px_rgba(0,0,0,0.18)]"
               >
                 <div className="relative h-[170px] bg-[#1b1e21]">
                   <img

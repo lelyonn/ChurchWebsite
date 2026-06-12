@@ -4,6 +4,9 @@ import CoreValuesAccordion from "../../app/components/CoreValuesAccordion";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
+import worshipCommunity from "../../assets/images/community/worship-community.jpg";
+import worshipHands from "../../assets/images/community/worship-hands.jpg";
+import { COMMUNITY_PHOTOS } from "../../app/data/communityPhotos";
 
 function ButtonViewServiceScheduleSchedule() {
   return (
@@ -70,71 +73,8 @@ function SocialIconYouTube() {
 
 function LargeWorshipCommunityPhoto() {
   return (
-    <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[660px] left-[140px] overflow-clip top-[620px] w-[540px]" data-name="Large worship community photo">
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[660px] left-[-1px] top-[-1px] w-[540px]" data-name="Photo warm base" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[231px] left-[-1px] top-[-1px] w-[540px]" data-name="Photo top shade" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[297px] left-[-1px] top-[362px] w-[540px]" data-name="Photo bottom shade" />
-      <div className="absolute left-[-1px] size-[36px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[82px] size-[48px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[165px] size-[60px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[248px] size-[72px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <div className="absolute left-[331px] size-[36px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[414px] size-[48px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[497px] size-[60px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[40px] size-[72px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <div className="absolute left-[123px] size-[36px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[206px] size-[48px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[289px] size-[60px] top-[564px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[372px] size-[72px] top-[588px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[17px] left-[17px] not-italic text-[#000fff] text-[12px] top-[17px] w-[504px]">Large worship community photo</p>
+    <div className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[660px] left-[140px] overflow-clip top-[620px] w-[540px] rounded-[16px] shadow-[0_18px_48px_rgba(0,0,0,0.12)]" data-name="Large worship community photo">
+      <img src={worshipCommunity} alt="Worship Community" className="w-full h-full object-cover" />
     </div>
   );
 }
@@ -709,83 +649,40 @@ function HorizontalGalleryPlaceholder5() {
 
 function FoundationWorshipPhotoPlaceholder() {
   return (
-    <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[310px] left-[140px] overflow-clip top-[1895px] w-[540px]" data-name="Foundation worship photo placeholder">
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[310px] left-[-1px] top-[-1px] w-[540px]" data-name="Photo warm base" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[108.5px] left-[-1px] top-[-1px] w-[540px]" data-name="Photo top shade" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[139.5px] left-[-1px] top-[169.5px] w-[540px]" data-name="Photo bottom shade" />
-      <div className="absolute left-[-1px] size-[36px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[82px] size-[48px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[165px] size-[60px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[248px] size-[72px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <div className="absolute left-[331px] size-[36px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[414px] size-[48px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[497px] size-[60px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[40px] size-[72px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <div className="absolute left-[123px] size-[36px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-          <circle cx="18" cy="18" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="18" />
-        </svg>
-      </div>
-      <div className="absolute left-[206px] size-[48px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" fill="var(--fill-0, #81766D)" fillOpacity="0.88" id="Human silhouette" r="24" />
-        </svg>
-      </div>
-      <div className="absolute left-[289px] size-[60px] top-[214px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 60 60">
-          <circle cx="30" cy="30" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="30" />
-        </svg>
-      </div>
-      <div className="absolute left-[372px] size-[72px] top-[238px]" data-name="Human silhouette">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 72 72">
-          <circle cx="36" cy="36" fill="var(--fill-0, #6C3A3A)" fillOpacity="0.88" id="Human silhouette" r="36" />
-        </svg>
-      </div>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[17px] left-[17px] not-italic text-[#000fff] text-[12px] top-[17px] w-[504px]">Foundation worship photo placeholder</p>
+    <div className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[310px] left-[140px] overflow-clip top-[1895px] w-[540px] rounded-[16px] shadow-[0_18px_48px_rgba(0,0,0,0.12)]" data-name="Foundation worship photo placeholder">
+      <img src={worshipHands} alt="The Foundation" className="w-full h-full object-cover" />
     </div>
   );
 }
 
 function BlackBeliefTicker() {
   return (
-    <div className="[word-break:break-word] absolute bg-black font-['Montserrat',sans-serif] font-bold h-[76px] leading-[22px] left-0 not-italic text-[#000fff] text-[16px] text-center top-[2290px] w-[1440px]" data-name="Black belief ticker">
-      <p className="-translate-x-1/2 absolute left-[140px] top-[27px] w-[280px]">BELIEVE. BELONG. BECOME.</p>
-      <p className="-translate-x-1/2 absolute left-[440px] top-[27px] w-[280px]">THE FUTURE IS FULL OF HOPE.</p>
-      <p className="-translate-x-1/2 absolute left-[740px] top-[27px] w-[280px]">YOU BELONG HERE.</p>
-      <p className="-translate-x-1/2 absolute left-[1040px] top-[27px] w-[280px]">BELIEVE. BELONG. BECOME.</p>
-      <p className="-translate-x-1/2 absolute left-[1340px] top-[27px] w-[280px]">THE FUTURE IS FULL OF HOPE.</p>
+    <div className="absolute bg-black h-[76px] left-0 top-[2290px] w-[1440px] overflow-hidden flex items-center" data-name="Black belief ticker">
+      <style>
+        {`
+          @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+          }
+          .animate-marquee-group {
+            animation: marquee 20s linear infinite;
+          }
+        `}
+      </style>
+      <div className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
+        {Array(8).fill("YOU BELONG HERE").map((text, i) => (
+          <span key={i} className="font-['Montserrat',sans-serif] font-bold text-white text-[16px] uppercase mx-8">
+            {text}
+          </span>
+        ))}
+      </div>
+      <div aria-hidden="true" className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
+        {Array(8).fill("YOU BELONG HERE").map((text, i) => (
+          <span key={i} className="font-['Montserrat',sans-serif] font-bold text-white text-[16px] uppercase mx-8">
+            {text}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -1186,12 +1083,22 @@ export default function AltRouteAboutFullProfilePage() {
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[820px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Kami percaya gereja hadir untuk menyatakan kasih Kristus dan membangun rumah rohani bagi banyak orang.</p>
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[28px] left-[1090px] not-italic text-[21px] text-black top-[1222px] w-[250px]">OUR MISSION</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[1090px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Misi kami adalah memaksimalkan potensi jemaat untuk melaksanakan Amanat Agung.</p>
-      <HorizontalGalleryPlaceholder />
-      <HorizontalGalleryPlaceholder1 />
-      <HorizontalGalleryPlaceholder2 />
-      <HorizontalGalleryPlaceholder3 />
-      <HorizontalGalleryPlaceholder4 />
-      <HorizontalGalleryPlaceholder5 />
+      {[
+        COMMUNITY_PHOTOS.loveCommunity,
+        COMMUNITY_PHOTOS.worshipTeam,
+        COMMUNITY_PHOTOS.youthService,
+        COMMUNITY_PHOTOS.worshipLeader,
+        COMMUNITY_PHOTOS.ckidsClassroom,
+        COMMUNITY_PHOTOS.worshipResponse,
+      ].map((photoSrc, idx) => (
+        <div
+          key={idx}
+          className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[170px] overflow-clip top-[1460px] w-[240px] bg-black"
+          style={{ left: `${idx * 240}px` }}
+        >
+          <img src={photoSrc} alt="Gallery" className="w-full h-full object-cover opacity-80" />
+        </div>
+      ))}
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[58px] left-[140px] not-italic text-[48px] text-black top-[1780px] w-[600px]">THE FOUNDATION</p>
       <FoundationWorshipPhotoPlaceholder />
       <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[820px] not-italic text-[17px] text-black top-[1830px] w-[500px] whitespace-pre-wrap">

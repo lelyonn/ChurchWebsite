@@ -3,7 +3,9 @@ import { Outlet, useLocation } from "react-router";
 import { EMBEDDED_FOOTER_PATHS } from "../config/site";
 import GlobalHomeLogo from "../components/GlobalHomeLogo";
 import GlobalRouteMenu from "../components/GlobalRouteMenu";
+import PageLoadingOverlay from "../components/PageLoadingOverlay";
 import PointerEffects from "../components/PointerEffects";
+import ScrollReveal from "../components/ScrollReveal";
 import SiteFooter from "../components/SiteFooter";
 import StickyNav from "../components/StickyNav";
 
@@ -114,6 +116,8 @@ export default function RootLayout() {
     <div className="geis-app-shell min-h-screen w-full bg-[#f8f6f0] overflow-x-hidden flex flex-col">
       <AnchorNavigation />
       <ScrollToTop />
+      <PageLoadingOverlay />
+      <ScrollReveal />
       <PointerEffects />
       <GlobalHomeLogo />
       <StickyNav />

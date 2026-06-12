@@ -391,6 +391,104 @@
     color: #050505 !important;
   }
 
+  .geis-pop-card {
+    position: relative;
+    isolation: isolate;
+    transform-origin: center;
+    will-change: transform, box-shadow, filter;
+    transition:
+      transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 460ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 360ms ease,
+      filter 360ms ease;
+  }
+
+  .geis-pop-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.22), transparent 30%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 42%);
+    opacity: 0;
+    transition: opacity 360ms ease;
+  }
+
+  .geis-pop-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .geis-pop-card:hover,
+  .geis-pop-card:focus-within {
+    transform: translateY(-10px) scale(1.018);
+    border-color: rgba(212, 28, 36, 0.42) !important;
+    box-shadow: 0 26px 64px rgba(0, 0, 0, 0.18) !important;
+    filter: saturate(1.04);
+  }
+
+  .geis-pop-card:hover::after,
+  .geis-pop-card:focus-within::after {
+    opacity: 1;
+  }
+
+  .geis-pop-card:active {
+    transform: translateY(-4px) scale(0.996);
+  }
+
+  .geis-scroll-reveal {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(0, 24px, 0);
+    transition:
+      opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 760ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, filter, transform;
+  }
+
+  .geis-reveal-heading {
+    transform: translate3d(0, 34px, 0);
+    transition-duration: 920ms;
+  }
+
+  .geis-reveal-card {
+    transform: translate3d(0, 30px, 0) scale(0.985);
+    transition-duration: 820ms;
+  }
+
+  .geis-reveal-action {
+    transform: translate3d(0, 16px, 0);
+    transition-duration: 680ms;
+  }
+
+  .geis-reveal-fade-only {
+    transform: none;
+  }
+
+  .geis-scroll-reveal.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  .geis-reveal-fade-only.is-visible {
+    transform: none;
+  }
+
+  .geis-pop-card.geis-scroll-reveal.is-visible:hover,
+  .geis-pop-card.geis-scroll-reveal.is-visible:focus-within {
+    transform: translateY(-10px) scale(1.018);
+  }
+
+  .geis-pop-card.geis-scroll-reveal.is-visible:active {
+    transform: translateY(-4px) scale(0.996);
+  }
+
   .geis-nav-trigger {
     transition:
       transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -434,6 +532,23 @@
     stroke-width: 1px;
   }
 
+  .geis-float-soft {
+    animation: geis-float-soft 7s ease-in-out infinite;
+  }
+
+  .geis-float-soft-delay {
+    animation: geis-float-soft 8.5s ease-in-out infinite;
+    animation-delay: -2.6s;
+  }
+
+  .geis-slow-pan {
+    animation: geis-slow-pan 18s ease-in-out infinite alternate;
+  }
+
+  .geis-glow-pulse {
+    animation: geis-glow-pulse 5.5s ease-in-out infinite;
+  }
+
   @keyframes geis-menu-enter {
     from {
       opacity: 0;
@@ -468,6 +583,54 @@
     }
   }
 
+  @keyframes geis-float-soft {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate3d(0, -18px, 0) rotate(4deg);
+    }
+  }
+
+  @keyframes geis-slow-pan {
+    from {
+      transform: scale(1.04) translate3d(-12px, 0, 0);
+    }
+
+    to {
+      transform: scale(1.1) translate3d(12px, -8px, 0);
+    }
+  }
+
+  @keyframes geis-glow-pulse {
+    0%,
+    100% {
+      opacity: 0.32;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.54;
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes geis-loading-bar {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    50% {
+      transform: translateX(80%);
+    }
+
+    100% {
+      transform: translateX(240%);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .geis-marquee {
       animation: none;
@@ -478,9 +641,38 @@
       animation: none;
     }
 
+    .geis-float-soft,
+    .geis-float-soft-delay,
+    .geis-slow-pan,
+    .geis-glow-pulse {
+      animation: none;
+    }
+
+    .geis-pop-card,
+    .geis-pop-card:hover,
+    .geis-pop-card:focus-within,
+    .geis-pop-card:active {
+      transform: none;
+      transition: none;
+    }
+
+    .geis-scroll-reveal,
+    .geis-scroll-reveal.is-visible {
+      opacity: 1;
+      filter: none;
+      transform: none;
+      transition: none;
+    }
+
     .geis-pointer-glow,
     .geis-click-ripple {
       display: none;
+    }
+
+    [class*="geis-loading-bar"],
+    [class*="animate-"] {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
     }
 
   }

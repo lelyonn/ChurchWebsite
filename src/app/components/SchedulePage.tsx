@@ -12,6 +12,7 @@ import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
 import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import { INSTAGRAM_RECENT_POSTS, SITE_INFO } from "../config/site";
+import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
 import { SCHEDULE_ITEMS } from "../data/schedules";
 import {
   Accordion,
@@ -29,6 +30,7 @@ const ckidsTopics = [
 ];
 
 const youthGalleryPhotos = [
+  { src: COMMUNITY_PHOTOS.youthService, alt: "Youth service group photo" },
   { src: youthPhotoOne, alt: "Youth community group photo" },
   { src: youthPhotoTwo, alt: "Youth worship moment" },
   { src: youthPhotoThree, alt: "Youth community candid" },
@@ -36,30 +38,30 @@ const youthGalleryPhotos = [
 ];
 
 const sundayServicePhotos = [
-  { src: youthHaloPhoto, alt: "Sunday service community moment" },
-  { src: youthPhotoOne, alt: "GEIS CCC Sunday gathering" },
-  { src: youthPhotoFour, alt: "Church community group photo" },
-  { src: youthBgPhoto, alt: "Worship service moment" },
-  { src: youthMainPhoto, alt: "Youth and Sunday service moment" },
+  WORSHIP_PHOTOS[0],
+  WORSHIP_PHOTOS[1],
+  WORSHIP_PHOTOS[2],
+  WORSHIP_PHOTOS[3],
+  WORSHIP_PHOTOS[4],
 ];
 
 const recentPostCards = [
   {
-    image: youthPhotoOne,
+    image: COMMUNITY_PHOTOS.loveCommunity,
     label: "Community",
     title: "This Is Us!",
     body: "Potongan momen keluarga GEIS CCC, worship, dan kebersamaan setelah ibadah.",
     href: INSTAGRAM_RECENT_POSTS[0],
   },
   {
-    image: youthHaloPhoto,
+    image: WORSHIP_PHOTOS[0].src,
     label: "Anniversary",
     title: "Three Years Together",
     body: "Cerita syukur, tawa, dan momen perayaan 3 tahun kebaikan Tuhan.",
     href: INSTAGRAM_RECENT_POSTS[1],
   },
   {
-    image: youthBgPhoto,
+    image: WORSHIP_PHOTOS[1].src,
     label: "Behind The Scene",
     title: "Intip Keseruan Kami",
     body: "Cuplikan singkat aktivitas, pelayanan, dan energi komunitas GEIS CCC.",
@@ -77,7 +79,7 @@ function MinistryViewMoreLink({ to }: { to: string }) {
       to={to}
       className="geis-button-hover mt-8 inline-flex h-[56px] w-full items-center justify-between rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline sm:w-[220px]"
     >
-      View More
+      <span>View More</span>
       <ExternalLink className="size-5" aria-hidden="true" />
     </Link>
   );
@@ -95,7 +97,7 @@ function RecentPostCard({
       href={post.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative block min-h-[360px] overflow-hidden rounded-[14px] border border-white/10 bg-[#111418] text-white no-underline shadow-[0_22px_48px_rgba(0,0,0,0.32)] ${
+      className={`geis-pop-card group relative block min-h-[360px] overflow-hidden rounded-[14px] border border-white/10 bg-[#111418] text-white no-underline shadow-[0_22px_48px_rgba(0,0,0,0.32)] ${
         featured ? "md:col-span-2 md:min-h-[460px]" : "md:min-h-[460px]"
       }`}
     >
@@ -326,33 +328,37 @@ function CkidsLogo() {
 }
 
 function CkidsGallery() {
-  const panels = [
-    { bg: "#d6e8bd", block: "#78806c", label: "Faith" },
-    { bg: "#d9b8cf", block: "#806d7a", label: "Creative" },
-    { bg: "#9fd4f2", block: "#5f788d", label: "Safe" },
-  ];
-
   return (
-    <div className="grid md:grid-cols-3">
-      {panels.map((panel) => (
-        <div
-          key={panel.bg}
-          className="group relative flex h-[250px] items-center justify-center overflow-hidden p-7 md:h-[310px]"
-          style={{ backgroundColor: panel.bg }}
-        >
-          <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(90deg,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(rgba(0,0,0,0.08)_1px,transparent_1px)] [background-size:28px_28px]" />
-          <div
-            className="relative h-[160px] w-full max-w-[290px] overflow-hidden shadow-[0_18px_34px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:-translate-y-2 md:h-[200px]"
-            style={{ backgroundColor: panel.block }}
+    <div className="relative overflow-hidden bg-[#fffdf8] px-4 py-8 md:px-10 md:py-12">
+      <img
+        src={redGrain}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.08] mix-blend-multiply"
+      />
+      <div className="relative mx-auto grid max-w-[1180px] gap-4 md:grid-cols-6">
+        {CKIDS_PHOTOS.map((photo, index) => (
+          <figure
+            key={photo.src}
+            className={`geis-pop-card group relative min-h-[230px] overflow-hidden rounded-[14px] border border-[#e2ded6] bg-[#15181c] shadow-[0_18px_38px_rgba(0,0,0,0.12)] ${
+              index === 0 ? "md:col-span-3 md:min-h-[360px]" : "md:col-span-3 md:min-h-[260px] lg:col-span-2"
+            }`}
           >
-            <div className="absolute inset-x-0 bottom-0 bg-black/22 px-5 py-4">
-              <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase text-white">
-                {panel.label}
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105"
+              style={{ objectPosition: photo.objectPosition }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-black/12 to-transparent" />
+            <figcaption className="absolute bottom-0 left-0 right-0 p-5">
+              <p className="font-['Montserrat',sans-serif] text-[17px] font-black uppercase tracking-[0.08em] text-white md:text-[20px]">
+                {photo.label}
               </p>
-            </div>
-          </div>
-        </div>
-      ))}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   );
 }
@@ -470,17 +476,41 @@ function YouthSection() {
   ];
 
   return (
-    <section className="bg-[#cfcfcf]">
+    <section className="relative overflow-hidden bg-[#e7e2db]">
+      <img
+        src={redGrain}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.12] mix-blend-multiply"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_30%,rgba(181,27,42,0.16),transparent_28%),radial-gradient(circle_at_86%_58%,rgba(17,18,20,0.13),transparent_30%),linear-gradient(180deg,#eee9e2_0%,#d9d4ce_52%,#111418_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-[310px] h-[560px] opacity-[0.28] [background-image:linear-gradient(90deg,rgba(181,27,42,0.18)_1px,transparent_1px),linear-gradient(rgba(17,20,24,0.12)_1px,transparent_1px)] [background-size:42px_42px] md:top-[360px]"
+      />
+      <img
+        src={redFluidShape}
+        alt=""
+        aria-hidden="true"
+        className="geis-float-soft pointer-events-none absolute -left-24 top-[390px] h-72 w-72 rotate-12 rounded-full object-cover opacity-[0.08] mix-blend-multiply md:left-12 md:top-[440px] md:h-96 md:w-96"
+      />
+      <div
+        aria-hidden="true"
+        className="geis-glow-pulse pointer-events-none absolute right-[-130px] top-[420px] h-[360px] w-[360px] rounded-full bg-[#b51b2a]/18 blur-3xl md:right-[4%] md:h-[520px] md:w-[520px]"
+      />
       <div className="relative overflow-hidden rounded-b-[24px] bg-[#111214] shadow-[0_20px_38px_rgba(0,0,0,0.24)]">
         <img
-          src={youthBgPhoto}
+          src={COMMUNITY_PHOTOS.youthService}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] object-cover object-center opacity-70 md:block"
+          className="geis-slow-pan pointer-events-none absolute inset-y-0 right-0 size-full object-cover object-center opacity-40 md:w-[64%] md:opacity-78"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#111214] via-[#111214]/86 to-[#111214]/18" />
-        <div className="absolute right-[7%] top-8 h-20 w-20 rounded-full border border-white/10 bg-white/[0.025] md:h-24 md:w-24" />
-        <div className="absolute bottom-[-70px] right-[14%] h-44 w-44 rounded-full border border-[#ef2735]/20 md:h-52 md:w-52" />
+        <div className="geis-float-soft absolute right-[7%] top-8 h-20 w-20 rounded-full border border-white/10 bg-white/[0.025] md:h-24 md:w-24" />
+        <div className="geis-float-soft-delay absolute bottom-[-70px] right-[14%] h-44 w-44 rounded-full border border-[#ef2735]/20 md:h-52 md:w-52" />
         <div className="relative z-10 px-6 py-16 md:px-11 md:py-20">
           <h2 className="font-['Montserrat',sans-serif] text-[56px] font-black leading-[0.86] text-white md:text-[96px] lg:text-[118px]">
             YOUTH
@@ -491,20 +521,21 @@ function YouthSection() {
         </div>
       </div>
 
-      <div className="px-6 py-10 md:px-11 md:py-12">
-        <div className="relative mx-auto max-w-[1280px] overflow-hidden bg-[#111214] px-7 py-8 shadow-[0_18px_30px_rgba(0,0,0,0.16)] md:px-16 md:py-12">
+      <div className="relative z-10 px-5 py-10 md:px-11 md:py-14">
+        <div className="geis-pop-card relative mx-auto max-w-[1280px] overflow-hidden rounded-[18px] border border-white/28 bg-[#111214] px-6 py-8 shadow-[0_28px_70px_rgba(17,18,20,0.24)] md:rounded-[4px] md:px-16 md:py-12">
           <img
-            src={youthMainPhoto}
+            src={COMMUNITY_PHOTOS.youthService}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 size-full object-contain object-center opacity-70 md:object-cover"
+            className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_52%] opacity-74"
           />
-          <div className="absolute inset-0 bg-[#b51b2a]/34" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,18,20,0.42),rgba(181,27,42,0.44)_54%,rgba(17,18,20,0.22))]" />
+          <div className="absolute inset-0 opacity-45 [background-image:radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.18),transparent_22%),linear-gradient(135deg,rgba(255,255,255,0.16)_0_1px,transparent_1px_28px)]" />
           <img
             src={redFluidShape}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full object-cover opacity-14 mix-blend-screen md:h-64 md:w-64"
+            className="geis-float-soft pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full object-cover opacity-14 mix-blend-screen md:h-64 md:w-64"
           />
           <div className="absolute bottom-[-36px] left-[52%] h-20 w-20 rotate-45 bg-black/10" />
           <div className="relative z-10 grid min-h-[210px] gap-8 py-3 md:grid-cols-[1fr_300px] md:items-end">
@@ -516,7 +547,7 @@ function YouthSection() {
                 Kreatif dan <span className="geis-serif-accent">relevan.</span>
               </h3>
             </div>
-            <div className="border-l-4 border-white pl-6">
+            <div className="rounded-[12px] border border-white/24 bg-black/18 p-5 backdrop-blur-sm md:border-l-4 md:border-l-white md:bg-transparent md:p-0 md:pl-6 md:backdrop-blur-0">
               <p className="font-['Montserrat',sans-serif] text-[24px] font-black text-white md:text-[30px]">
                 Minggu
               </p>
@@ -532,7 +563,7 @@ function YouthSection() {
         </div>
       </div>
 
-      <div className="relative overflow-hidden bg-[#0f1115] py-8">
+      <div className="relative z-10 overflow-hidden bg-[#0f1115] py-8">
         <div className="absolute -left-10 top-3 h-20 w-20 rounded-full border border-[#f05a66]/35" />
         <div className="absolute right-[18%] top-8 h-5 w-5 rotate-45 bg-[#f05a66]" />
         <svg
@@ -593,7 +624,7 @@ function PowerhouseSection() {
           </h2>
           <MinistryViewMoreLink to="/powerhouse" />
         </div>
-        <div className="rounded-[8px] border border-white/12 bg-white/[0.06] p-7 backdrop-blur-md md:p-10">
+        <div className="geis-pop-card rounded-[8px] border border-white/12 bg-white/[0.06] p-7 backdrop-blur-md md:p-10">
           <p className="font-['Montserrat',sans-serif] text-[24px] font-black text-white md:text-[34px]">
             {schedule?.day ?? "Setiap Jumat"}
           </p>
@@ -634,7 +665,7 @@ function MorningPrayerSection() {
               "Saat teduh pagi untuk memulai hari dengan renungan firman Tuhan dan doa bersama."}
           </p>
         </div>
-        <div className="rounded-[8px] border border-[#e2ded6] bg-white p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)] md:p-9">
+        <div className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-white p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)] md:p-9">
           <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.16em] text-[#d41c24]">
             {schedule?.day ?? "Senin - Sabtu"}
           </p>

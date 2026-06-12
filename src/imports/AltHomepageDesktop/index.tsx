@@ -449,7 +449,7 @@ function Section01HeroVideo() {
 
 function CardVision() {
   return (
-    <div className="[word-break:break-word] absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[380px] left-[750px] not-italic rounded-[34px] top-[146px] w-[316px]" data-name="Card / Vision">
+    <div className="geis-pop-card [word-break:break-word] absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[380px] left-[750px] not-italic rounded-[34px] top-[146px] w-[316px]" data-name="Card / Vision">
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[33px] text-[#d41c24] text-[30px] top-[35px] w-[70px]">+ +</p>
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] text-[35px] text-black top-[111px] w-[220px]">Visi</p>
       <div className="absolute font-['Lato',sans-serif] font-bold h-[96px] leading-[0] left-[33px] text-[#46505a] text-[22px] top-[165px] w-[235px]">
@@ -463,7 +463,7 @@ function CardVision() {
 
 function CardMission() {
   return (
-    <div className="[word-break:break-word] absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[322px] left-[1090px] not-italic rounded-[34px] top-[206px] w-[316px]" data-name="Card / Mission">
+    <div className="geis-pop-card [word-break:break-word] absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[322px] left-[1090px] not-italic rounded-[34px] top-[206px] w-[316px]" data-name="Card / Mission">
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[35px] text-[#d41c24] text-[34px] top-[45px] w-[60px]">→</p>
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[35px] text-[35px] text-black top-[111px] w-[220px]">Misi</p>
       <div className="absolute font-['Lato',sans-serif] font-bold leading-[0] left-[35px] text-[#46505a] text-[21px] top-[165px] w-[230px]">
@@ -591,7 +591,7 @@ function CalendarIconRed() {
 function ScheduleCardSundayServiceCkids() {
   return (
     <div
-      className="absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[31px] rounded-[30px] top-[302px] w-[328px]"
+      className="geis-pop-card absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[31px] rounded-[30px] top-[302px] w-[328px]"
       data-name="Schedule card / Sunday Service &
 Ckids"
     >
@@ -625,7 +625,7 @@ function CalendarIconRed1() {
 
 function ScheduleCardYouthService() {
   return (
-    <div className="absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[381px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Youth Service">
+    <div className="geis-pop-card absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[381px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Youth Service">
       <CalendarIconRed1 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Youth Service</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Minggu</p>
@@ -653,7 +653,7 @@ function CalendarIconRed2() {
 
 function ScheduleCardPowerHouse() {
   return (
-    <div className="absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[731px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Power House">
+    <div className="geis-pop-card absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[731px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Power House">
       <CalendarIconRed2 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Power House</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Jumat</p>
@@ -681,7 +681,7 @@ function CalendarIconRed3() {
 
 function ScheduleCardPagiBersamaTuhan() {
   return (
-    <div className="absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[1081px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Pagi Bersama Tuhan">
+    <div className="geis-pop-card absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[1081px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Pagi Bersama Tuhan">
       <CalendarIconRed3 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Pagi Bersama Tuhan</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Senin - Sabtu</p>
@@ -913,7 +913,7 @@ function RichVisualPlaceholderAlpha() {
 
 function FeatureProgramCardAlpha() {
   return (
-    <div className="absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[560px] left-[92px] rounded-[32px] top-[420px] w-[600px]" data-name="Feature program card / Alpha">
+    <div className="geis-pop-card absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[560px] left-[92px] rounded-[32px] top-[420px] w-[600px]" data-name="Feature program card / Alpha">
       <RichVisualPlaceholderAlpha />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] not-italic text-[29px] text-black top-[304px] w-[532px]">Alpha</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[33px] not-italic text-[#4b5560] text-[18px] top-[359px] w-[524px]">Ruang untuk mengenal iman, bertanya, berdiskusi, dan mengalami Tuhan secara pribadi. Alpha cocok untuk pengunjung baru, anak muda, atau siapa pun yang ingin memahami dasar iman Kristen dalam suasana terbuka.</p>
@@ -1014,7 +1014,7 @@ function RichVisualPlaceholderSpiritualJourney() {
 
 function FeatureProgramCardSpiritualJourney() {
   return (
-    <div className="absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[560px] left-[748px] rounded-[32px] top-[420px] w-[600px]" data-name="Feature program card / Spiritual Journey">
+    <div className="geis-pop-card absolute bg-[#fffdf8] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[560px] left-[748px] rounded-[32px] top-[420px] w-[600px]" data-name="Feature program card / Spiritual Journey">
       <RichVisualPlaceholderSpiritualJourney />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] not-italic text-[29px] text-black top-[304px] w-[532px]">Spiritual Journey</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[33px] not-italic text-[#4b5560] text-[18px] top-[359px] w-[524px]">Perjalanan pemuridan untuk membantu setiap pribadi bertumbuh dalam iman, identitas, dan tujuan hidup. Program ini menolong jemaat memahami proses pertumbuhan rohani secara lebih terarah.</p>
@@ -1167,7 +1167,7 @@ function HomecellPhotoCluster() {
 
 function CommunityFeatureSection() {
   return (
-    <div className="absolute bg-white border border-[#ded7cc] border-solid drop-shadow-[0px_22px_22px_rgba(0,0,0,0.1)] h-[470px] left-[130px] rounded-[36px] top-[1160px] w-[1180px]" data-name="Community feature section">
+    <div className="geis-pop-card absolute bg-white border border-[#ded7cc] border-solid drop-shadow-[0px_22px_22px_rgba(0,0,0,0.1)] h-[470px] left-[130px] rounded-[36px] top-[1160px] w-[1180px]" data-name="Community feature section">
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[17px] left-[55px] not-italic text-[#d41c24] text-[12px] top-[53px] tracking-[3.6px] w-[400px]">KOMUNITAS</p>
       <p className="[word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[66px] left-[55px] text-[#15181c] text-[58px] top-[91px] w-[430px]">Homecell</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[31px] left-[55px] not-italic text-[#4b5560] text-[18px] top-[179px] w-[470px]">Ruang untuk bertumbuh bersama dalam Tuhan. Homecell menjadi tempat untuk saling mengenal, berdoa, berdiskusi, dan berjalan bersama dalam komunitas yang lebih dekat.</p>
