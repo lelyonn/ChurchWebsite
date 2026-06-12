@@ -26,7 +26,7 @@ const MINISTRY_CONTENT: Record<
     title: "Youth",
     tagline: "Ruang anak muda untuk bertumbuh, terhubung, dan berjalan bersama Tuhan.",
     body:
-      "Konten lengkap Youth sedang disiapkan. Halaman ini sudah siap sebagai route resmi untuk navigasi website.",
+      "Proses!.",
     status: "Coming Soon",
   },
   ckids: {
@@ -42,7 +42,7 @@ const MINISTRY_CONTENT: Record<
     title: "Powerhouse",
     tagline: "Ruang generasi untuk mengalami Tuhan dan bergerak dalam tujuan-Nya.",
     body:
-      "Konten lengkap Powerhouse sedang disiapkan. Halaman ini sudah siap sebagai route resmi untuk navigasi website.",
+      "Proses!.",
     status: "Coming Soon",
   },
 };
