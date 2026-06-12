@@ -9,6 +9,7 @@ import gcLogo from "../../assets/images/gc-logo.png";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import { SITE_INFO } from "../../app/config/site";
+import { COMMUNITY_PHOTOS } from "../../app/data/communityPhotos";
 import svgPaths from "./svg-v1jk2ee0lz";
 
 const SOCIAL_LINKS = {
@@ -427,7 +428,7 @@ function Section01HeroVideo() {
           <circle cx="2" cy="2" fill="var(--fill-0, white)" fillOpacity="0.045" id="Subtle film grain" r="2" />
         </svg>
       </div>
-      <p className="[word-break:break-word] absolute border-l border-white/35 font-['Lato',sans-serif] font-black leading-[18px] left-[690px] pl-[18px] opacity-86 text-[12px] text-white top-[319px] tracking-[2.4px] uppercase w-[245px]">{SITE_INFO.fullName}</p>
+      <p className="[word-break:break-word] absolute border-l border-white/35 font-['Lato',sans-serif] font-black leading-[18px] left-[690px] pl-[18px] opacity-[0.86] text-[12px] text-white top-[319px] tracking-[2.4px] uppercase w-[245px]">{SITE_INFO.fullName}</p>
       <div className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[0] left-[360px] not-italic text-[76px] text-white top-[277px] tracking-[-2.28px] w-[434px]">
         <p className="leading-[78px] mb-0">GEIS</p>
         <p className="leading-[78px] mb-0">CHRISTIAN</p>
@@ -556,7 +557,7 @@ function SectionPastoralMessageHome() {
         <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[34px] text-[#f8f8f6]">
           "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan dengan Roh-Ku, firman TUHAN semesta alam."
         </p>
-        <div className="mt-8 space-y-4 font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
+        <div className="mt-8 space-y-4 text-justify font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
           <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
@@ -973,41 +974,18 @@ function ImageLabelOverlay1() {
 
 function RichVisualPlaceholderSpiritualJourney() {
   return (
-    <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] overflow-clip rounded-[28px] top-[-1px] w-[600px]" data-name="Rich visual placeholder / Spiritual Journey">
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] top-[-1px] w-[330px]" data-name="Visual left wash" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[269px] top-[-1px] w-[330px]" data-name="Visual right wash" />
-      <div className="absolute left-[434px] size-[260px] top-[-81px]" data-name="Visual large soft circle">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 260 260">
-          <circle cx="130" cy="130" fill="var(--fill-0, #FFF7EC)" fillOpacity="0.55" id="Visual large soft circle" r="130" />
-        </svg>
+    <div className="absolute bg-[#15181c] border border-[rgba(207,198,186,0.8)] border-solid h-[260px] left-[-1px] overflow-hidden rounded-[28px] top-[-1px] w-[600px]" data-name="Rich visual / Spiritual Journey">
+      <img
+        src={COMMUNITY_PHOTOS.worshipTeam}
+        alt="Spiritual Journey worship moment"
+        className="absolute inset-0 size-full object-cover object-[50%_46%] opacity-[0.82]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/64 via-black/14 to-transparent" />
+      <div className="absolute bottom-[28px] left-[35px] rounded-[12px] bg-[#fbf9f4] px-5 py-4 shadow-[0_12px_28px_rgba(0,0,0,0.16)]">
+        <p className="font-['Lato',sans-serif] text-[14px] font-bold leading-[20px] text-[#15181c]">
+          Spiritual Journey
+        </p>
       </div>
-      <div className="absolute left-[504px] size-[180px] top-[184px]" data-name="Visual lower circle">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 180 180">
-          <circle cx="90" cy="90" fill="var(--fill-0, #6D6259)" fillOpacity="0.14" id="Visual lower circle" r="90" />
-        </svg>
-      </div>
-      <div className="absolute left-[35px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #F6F2EA)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[71px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #C8B7A3)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[107px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #6D6259)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <div className="absolute left-[143px] size-[46px] top-[35px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46 46">
-          <circle cx="23" cy="23" fill="var(--fill-0, #8B5D50)" id="People palette dot" r="23" />
-        </svg>
-      </div>
-      <SubtleDotGrid2 />
-      <ImageLabelOverlay1 />
     </div>
   );
 }
@@ -1129,37 +1107,20 @@ function SubtleDotGrid3() {
 function HomecellOverlayLabel() {
   return (
     <div className="absolute bg-[#fbf9f4] border border-[#d3cabe] border-solid h-[58px] left-[44px] rounded-[14px] top-[225px] w-[430px]" data-name="Homecell overlay label">
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[17px] not-italic text-[#15181c] text-[14px] top-[18px] w-[360px]">Homecell foto</p>
+      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[17px] not-italic text-[#15181c] text-[14px] top-[18px] w-[360px]">Homecell Community</p>
     </div>
   );
 }
 
 function HomecellPhotoCluster() {
   return (
-    <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[320px] left-[599px] overflow-clip rounded-[28px] top-[74px] w-[520px]" data-name="Homecell photo cluster">
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[320px] left-[-1px] top-[-1px] w-[260px]" data-name="Photo left wash" />
-      <div className="absolute bg-[rgba(216,208,196,0.95)] border border-[rgba(207,198,186,0.8)] border-solid h-[320px] left-[249px] top-[-1px] w-[270px]" data-name="Photo right wash" />
-      <div className="absolute left-[37px] size-[49.68px] top-[41px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 49.68 49.68">
-          <circle cx="24.84" cy="24.84" fill="var(--fill-0, #F6F2EA)" id="People palette dot" r="24.84" />
-        </svg>
-      </div>
-      <div className="absolute left-[75.88px] size-[49.68px] top-[41px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 49.68 49.68">
-          <circle cx="24.84" cy="24.84" fill="var(--fill-0, #C8B7A3)" id="People palette dot" r="24.84" />
-        </svg>
-      </div>
-      <div className="absolute left-[114.76px] size-[49.68px] top-[41px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 49.68 49.68">
-          <circle cx="24.84" cy="24.84" fill="var(--fill-0, #6D6259)" id="People palette dot" r="24.84" />
-        </svg>
-      </div>
-      <div className="absolute left-[153.64px] size-[49.68px] top-[41px]" data-name="People palette dot">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 49.68 49.68">
-          <circle cx="24.84" cy="24.84" fill="var(--fill-0, #8B5D50)" id="People palette dot" r="24.84" />
-        </svg>
-      </div>
-      <SubtleDotGrid3 />
+    <div className="absolute bg-[#15181c] border border-[rgba(207,198,186,0.8)] border-solid h-[320px] left-[599px] overflow-hidden rounded-[28px] top-[74px] w-[520px]" data-name="Homecell photo cluster">
+      <img
+        src={COMMUNITY_PHOTOS.loveCommunity}
+        alt="Homecell community GEIS CCC"
+        className="absolute inset-0 size-full object-cover object-[50%_45%] opacity-90"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/52 via-black/8 to-transparent" />
       <HomecellOverlayLabel />
     </div>
   );

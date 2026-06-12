@@ -521,6 +521,19 @@
     padding-left: 100%;
   }
 
+  .geis-about-ticker-track {
+    animation: geis-about-ticker 28s linear infinite;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .geis-curved-marquee {
     filter: drop-shadow(0 8px 0 rgba(255, 255, 255, 0.06));
   }
@@ -583,6 +596,16 @@
     }
   }
 
+  @keyframes geis-about-ticker {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   @keyframes geis-float-soft {
     0%,
     100% {
@@ -635,6 +658,11 @@
     .geis-marquee {
       animation: none;
       padding-left: 0;
+    }
+
+    .geis-about-ticker-track {
+      animation: none;
+      transform: none;
     }
 
     .geis-menu-panel {

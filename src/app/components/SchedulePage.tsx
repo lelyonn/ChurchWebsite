@@ -8,9 +8,6 @@ import youthPhotoOne from "../../assets/images/carousel/youth-1.jpg";
 import youthPhotoTwo from "../../assets/images/carousel/youth-2.jpg";
 import youthPhotoThree from "../../assets/images/carousel/youth-3.jpg";
 import youthPhotoFour from "../../assets/images/carousel/youth-4.jpg";
-import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
-import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
-import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import { INSTAGRAM_RECENT_POSTS, SITE_INFO } from "../config/site";
 import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
 import { SCHEDULE_ITEMS } from "../data/schedules";
@@ -527,7 +524,7 @@ function YouthSection() {
             src={COMMUNITY_PHOTOS.youthService}
             alt=""
             aria-hidden="true"
-            className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_52%] opacity-74"
+            className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_52%] opacity-[0.74]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,18,20,0.42),rgba(181,27,42,0.44)_54%,rgba(17,18,20,0.22))]" />
           <div className="absolute inset-0 opacity-45 [background-image:radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.18),transparent_22%),linear-gradient(135deg,rgba(255,255,255,0.16)_0_1px,transparent_1px_28px)]" />

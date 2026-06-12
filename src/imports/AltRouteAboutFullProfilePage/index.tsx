@@ -4,8 +4,6 @@ import CoreValuesAccordion from "../../app/components/CoreValuesAccordion";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
-import worshipCommunity from "../../assets/images/community/worship-community.jpg";
-import worshipHands from "../../assets/images/community/worship-hands.jpg";
 import { COMMUNITY_PHOTOS } from "../../app/data/communityPhotos";
 
 function ButtonViewServiceScheduleSchedule() {
@@ -74,7 +72,7 @@ function SocialIconYouTube() {
 function LargeWorshipCommunityPhoto() {
   return (
     <div className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[660px] left-[140px] overflow-clip top-[620px] w-[540px] rounded-[16px] shadow-[0_18px_48px_rgba(0,0,0,0.12)]" data-name="Large worship community photo">
-      <img src={worshipCommunity} alt="Worship Community" className="w-full h-full object-cover" />
+      <img src={COMMUNITY_PHOTOS.worshipCommunity} alt="Worship Community" className="h-full w-full object-cover object-[50%_55%]" />
     </div>
   );
 }
@@ -650,7 +648,7 @@ function HorizontalGalleryPlaceholder5() {
 function FoundationWorshipPhotoPlaceholder() {
   return (
     <div className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[310px] left-[140px] overflow-clip top-[1895px] w-[540px] rounded-[16px] shadow-[0_18px_48px_rgba(0,0,0,0.12)]" data-name="Foundation worship photo placeholder">
-      <img src={worshipHands} alt="The Foundation" className="w-full h-full object-cover" />
+      <img src={COMMUNITY_PHOTOS.worshipHands} alt="The Foundation" className="h-full w-full object-cover object-[48%_52%]" />
     </div>
   );
 }
@@ -658,27 +656,9 @@ function FoundationWorshipPhotoPlaceholder() {
 function BlackBeliefTicker() {
   return (
     <div className="absolute bg-black h-[76px] left-0 top-[2290px] w-[1440px] overflow-hidden flex items-center" data-name="Black belief ticker">
-      <style>
-        {`
-          @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-100%); }
-          }
-          .animate-marquee-group {
-            animation: marquee 20s linear infinite;
-          }
-        `}
-      </style>
-      <div className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
-        {Array(8).fill("YOU BELONG HERE").map((text, i) => (
-          <span key={i} className="font-['Montserrat',sans-serif] font-bold text-white text-[16px] uppercase mx-8">
-            {text}
-          </span>
-        ))}
-      </div>
-      <div aria-hidden="true" className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
-        {Array(8).fill("YOU BELONG HERE").map((text, i) => (
-          <span key={i} className="font-['Montserrat',sans-serif] font-bold text-white text-[16px] uppercase mx-8">
+      <div className="geis-about-ticker-track flex w-max items-center gap-16 whitespace-nowrap px-10">
+        {Array(14).fill("YOU BELONG HERE.").map((text, i) => (
+          <span key={i} className="font-['Montserrat',sans-serif] text-[16px] font-black uppercase tracking-[0.18em] text-[#f3b7bd]">
             {text}
           </span>
         ))}
@@ -866,7 +846,7 @@ function RouteLeadershipOptionalPastoralProfile() {
         <p className="mt-4 font-['Playfair_Display',serif] text-[25px] font-bold italic leading-[34px] text-[#f8f8f6]">
           "Bukan dengan keperkasaan dan bukan dengan kekuatan, melainkan dengan Roh-Ku, firman TUHAN semesta alam."
         </p>
-        <div className="mt-8 space-y-4 font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
+        <div className="mt-8 space-y-4 text-justify font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
           <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
@@ -1079,6 +1059,20 @@ export default function AltRouteAboutFullProfilePage() {
       </div>
       <WhatWeBelieveImagePlaceholder />
       <OurMissionImagePlaceholder />
+      <div className="absolute left-[820px] top-[1015px] h-[180px] w-[250px] overflow-hidden rounded-[12px] border border-[rgba(207,198,186,0.8)] bg-black shadow-[0_14px_32px_rgba(0,0,0,0.12)]">
+        <img
+          src={COMMUNITY_PHOTOS.worshipResponse}
+          alt="Jemaat GEIS CCC menyembah Tuhan"
+          className="h-full w-full object-cover object-[50%_44%] opacity-90"
+        />
+      </div>
+      <div className="absolute left-[1090px] top-[1015px] h-[180px] w-[250px] overflow-hidden rounded-[12px] border border-[rgba(207,198,186,0.8)] bg-black shadow-[0_14px_32px_rgba(0,0,0,0.12)]">
+        <img
+          src={COMMUNITY_PHOTOS.loveCommunity}
+          alt="Komunitas keluarga GEIS CCC"
+          className="h-full w-full object-cover object-[50%_44%] opacity-90"
+        />
+      </div>
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[28px] left-[820px] not-italic text-[21px] text-black top-[1222px] w-[250px]">WHAT WE BELIEVE</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[820px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Kami percaya gereja hadir untuk menyatakan kasih Kristus dan membangun rumah rohani bagi banyak orang.</p>
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[28px] left-[1090px] not-italic text-[21px] text-black top-[1222px] w-[250px]">OUR MISSION</p>
@@ -1096,7 +1090,7 @@ export default function AltRouteAboutFullProfilePage() {
           className="absolute border border-[rgba(207,198,186,0.8)] border-solid h-[170px] overflow-clip top-[1460px] w-[240px] bg-black"
           style={{ left: `${idx * 240}px` }}
         >
-          <img src={photoSrc} alt="Gallery" className="w-full h-full object-cover opacity-80" />
+          <img src={photoSrc} alt="Gallery" className="h-full w-full object-cover object-center opacity-[0.86]" />
         </div>
       ))}
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[58px] left-[140px] not-italic text-[48px] text-black top-[1780px] w-[600px]">THE FOUNDATION</p>

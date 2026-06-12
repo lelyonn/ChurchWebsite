@@ -7,12 +7,11 @@ import redGrain from "../../assets/decor/red-grain.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
-import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
-import youthHaloPhoto from "../../assets/images/carousel/youth-halo.jpg";
 import youthMainPhoto from "../../assets/images/carousel/youth-main.jpg";
 import heroBackgroundVideo from "../../assets/videos/homepage-hero-background.mp4";
 import SiteFooter from "../components/SiteFooter";
 import { MINISTRY_ROUTE_LINKS, SITE_INFO } from "../config/site";
+import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
 import { PROGRAM_DETAIL_PAGES } from "../data/programs";
 import { SCHEDULE_ITEMS } from "../data/schedules";
 
@@ -79,8 +78,8 @@ function MobileSocialLink({
 
 const PROGRAM_PREVIEW_IMAGES: Record<string, string> = {
   "/alpha": alphaLogo,
-  "/SJ": youthBgPhoto,
-  "/homecell": youthMainPhoto,
+  "/SJ": WORSHIP_PHOTOS[1].src,
+  "/homecell": COMMUNITY_PHOTOS.loveCommunity,
 };
 
 const MINISTRY_PREVIEW_CONTENT: Record<
@@ -92,15 +91,15 @@ const MINISTRY_PREVIEW_CONTENT: Record<
 > = {
   "/youth": {
     tagline: "Ruang anak muda untuk bertumbuh, terhubung, dan berjalan bersama Tuhan.",
-    image: youthBgPhoto,
+    image: COMMUNITY_PHOTOS.youthService,
   },
   "/ckids": {
     tagline: "Ruang yang aman, kreatif, dan penuh sukacita untuk anak-anak mengenal Tuhan.",
-    image: redFluidShape,
+    image: CKIDS_PHOTOS[0].src,
   },
   "/powerhouse": {
     tagline: "Ruang doa, pujian, dan pencarian hadirat Tuhan bersama komunitas.",
-    image: redGrain,
+    image: WORSHIP_PHOTOS[4].src,
   },
 };
 
@@ -325,7 +324,7 @@ export default function MobileHomePage() {
             dengan Roh-Ku, firman TUHAN semesta alam."
           </p>
         </div>
-        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
+        <div className="mt-8 space-y-5 text-justify font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
           <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
