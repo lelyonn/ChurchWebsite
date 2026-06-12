@@ -69,7 +69,7 @@ export default function MobileAboutPage() {
           <img
             src={COMMUNITY_PHOTOS.worshipCommunity}
             alt="Worship Community"
-            className="h-[340px] w-full object-cover"
+            className="h-[340px] w-full object-cover object-[50%_55%]"
           />
         </div>
       </section>
@@ -125,7 +125,7 @@ export default function MobileAboutPage() {
               <img
                 src={photoSrc}
                 alt={`Gallery ${idx + 1}`}
-                className="w-full h-full object-cover opacity-80"
+                className="h-full w-full object-cover object-center opacity-[0.86]"
               />
             </div>
           ))}
@@ -155,33 +155,18 @@ export default function MobileAboutPage() {
           <img
             src={COMMUNITY_PHOTOS.worshipHands}
             alt="The Foundation"
-            className="h-[340px] w-full object-cover"
+            className="h-[340px] w-full object-cover object-[48%_52%]"
           />
         </div>
       </section>
 
       <section className="relative flex h-[60px] w-full items-center overflow-hidden bg-black">
-        <style>
-          {`
-            @keyframes marquee {
-              0% { transform: translateX(0%); }
-              100% { transform: translateX(-100%); }
-            }
-            .animate-marquee-group {
-              animation: marquee 15s linear infinite;
-            }
-          `}
-        </style>
-        <div className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
-          {Array(6).fill("YOU BELONG HERE").map((text, i) => (
-            <span key={i} className="mx-6 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase text-[#000fff]">
-              {text}
-            </span>
-          ))}
-        </div>
-        <div aria-hidden="true" className="flex min-w-full shrink-0 items-center justify-around animate-marquee-group">
-          {Array(6).fill("YOU BELONG HERE").map((text, i) => (
-            <span key={i} className="mx-6 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase text-[#000fff]">
+        <div className="geis-about-ticker-track flex w-max items-center gap-10 whitespace-nowrap px-6">
+          {Array(14).fill("YOU BELONG HERE.").map((text, i) => (
+            <span
+              key={i}
+              className="font-['Montserrat',sans-serif] text-[14px] font-black uppercase tracking-[0.16em] text-[#f3b7bd]"
+            >
               {text}
             </span>
           ))}
@@ -213,7 +198,7 @@ export default function MobileAboutPage() {
             dengan Roh-Ku, firman TUHAN semesta alam."
           </p>
         </div>
-        <div className="mt-8 space-y-5 font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
+        <div className="mt-8 space-y-5 text-justify font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
           <p>
             Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan
             karena kekuatan atau kehebatan manusia, melainkan karena tangan
