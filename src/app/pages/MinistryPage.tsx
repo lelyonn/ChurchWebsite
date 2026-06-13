@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { Link } from "react-router";
+import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import ckidsHeroVideo from "../../assets/videos/ckids-hero.mp4";
 import { SITE_INFO } from "../config/site";
 import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
@@ -49,10 +50,10 @@ const MINISTRY_CONTENT: Record<
 
 const YOUTH_ROUTE_PHOTOS = [
   {
-    src: COMMUNITY_PHOTOS.youthService,
+    src: youthBgPhoto,
     alt: "Youth Service GEIS CCC",
     label: "Youth Service",
-    objectPosition: "50% 54%",
+    objectPosition: "50% 34%",
   },
   {
     src: WORSHIP_PHOTOS[1].src,
@@ -131,11 +132,11 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
   const isYouth = ministry === "youth";
   const isPowerhouse = ministry === "powerhouse";
   const heroPhoto = isYouth
-    ? COMMUNITY_PHOTOS.youthService
+    ? youthBgPhoto
     : isPowerhouse
       ? WORSHIP_PHOTOS[4].src
       : null;
-  const heroObjectPosition = isYouth ? "50% 54%" : "50% 44%";
+  const heroObjectPosition = isYouth ? "50% 34%" : "50% 44%";
   const galleryPhotos = isCkids
     ? CKIDS_PHOTOS
     : isYouth

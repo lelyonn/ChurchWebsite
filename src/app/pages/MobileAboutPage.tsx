@@ -16,7 +16,7 @@ export default function MobileAboutPage() {
           A Home For Generation.
         </h1>
         <p className="mt-6 font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#46505a]">
-          GEIS CCC adalah gereja yang kreatif, relevan, dan berdampak bagi
+          GEIS CCC adalah Gereja yang kreatif, relevan, dan berdampak bagi
           generasi saat ini. Kami percaya setiap orang bisa bertumbuh dalam
           iman, menemukan tujuan, dan berjalan bersama dalam komunitas.
         </p>
@@ -51,7 +51,7 @@ export default function MobileAboutPage() {
           </p>
           <p>
             GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh. Kami
-            percaya gereja bukan hanya tempat yang dikunjungi, tetapi komunitas
+            percaya Gereja bukan hanya tempat yang dikunjungi, tetapi komunitas
             tempat orang bertumbuh, dilayani, dan diutus untuk menjadi dampak.
           </p>
           <p>
@@ -80,7 +80,7 @@ export default function MobileAboutPage() {
             {
               title: "What We Believe",
               body:
-                "Kami percaya gereja adalah rumah bagi pertumbuhan iman, komunitas, dan kehidupan yang semakin dekat dengan Yesus.",
+                "Kami percaya Gereja adalah rumah bagi pertumbuhan iman, komunitas, dan kehidupan yang semakin dekat dengan Yesus.",
             },
             {
               title: "Our Mission",
@@ -206,7 +206,7 @@ export default function MobileAboutPage() {
           </p>
           <p>
             Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap
-            hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.
+            hadir memimpin Gereja-Nya dengan kasih yang tidak pernah berubah.
           </p>
           <p>
             Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada
@@ -218,21 +218,21 @@ export default function MobileAboutPage() {
           </p>
           <p>
             Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi
-            visi yang Tuhan percayakan kepada gereja ini.
+            visi yang Tuhan percayakan kepada Gereja ini.
           </p>
           <p>
             Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman
             kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.
           </p>
           <p>
-            Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk
+            Kerinduan saya agar Gereja ini tidak hanya menjadi rumah untuk
             berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa
             kepada Kristus.
           </p>
           <p>
             Dan ketika tahun-tahun berikutnya terbentang di hadapan kita,
             biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran
-            Tuhan yang menyertai gereja-Nya dari generasi ke generasi.
+            Tuhan yang menyertai Gereja-Nya dari generasi ke generasi.
           </p>
         </div>
       </section>

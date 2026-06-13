@@ -441,29 +441,29 @@
 
   .geis-scroll-reveal {
     opacity: 0;
-    filter: blur(8px);
-    transform: translate3d(0, 24px, 0);
+    filter: blur(3px);
+    transform: translate3d(0, 18px, 0);
     transition:
-      opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
-      filter 760ms cubic-bezier(0.22, 1, 0.36, 1),
-      transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 520ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, filter, transform;
   }
 
   .geis-reveal-heading {
-    transform: translate3d(0, 34px, 0);
-    transition-duration: 920ms;
+    transform: translate3d(0, 24px, 0);
+    transition-duration: 620ms;
   }
 
   .geis-reveal-card {
-    transform: translate3d(0, 30px, 0) scale(0.985);
-    transition-duration: 820ms;
+    transform: translate3d(0, 22px, 0) scale(0.99);
+    transition-duration: 560ms;
   }
 
   .geis-reveal-action {
-    transform: translate3d(0, 16px, 0);
-    transition-duration: 680ms;
+    transform: translate3d(0, 12px, 0);
+    transition-duration: 480ms;
   }
 
   .geis-reveal-fade-only {

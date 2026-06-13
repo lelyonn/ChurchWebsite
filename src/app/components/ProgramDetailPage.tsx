@@ -141,7 +141,7 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
           </h2>
           <p className="font-['Lato',sans-serif] font-normal text-[18px] md:text-[22px] text-[#d7d9da] leading-[1.6] mb-10 md:mb-12 max-w-2xl mx-auto opacity-90">
             Hubungi admin kami untuk informasi lebih lanjut atau langsung
-            kunjungi gereja kami.
+            kunjungi Gereja kami.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center max-w-[900px] mx-auto">
             <PrimaryActionLink

@@ -93,7 +93,7 @@ export const PROGRAM_DETAIL_PAGES: ProgramDetail[] = [
       {
         heading: "Bagaimana mengikutinya?",
         body:
-          "Alpha biasanya berlangsung dalam beberapa sesi mingguan di gereja. Hubungi admin kami melalui WhatsApp untuk informasi jadwal terbaru dan cara mendaftar pada batch berikutnya.",
+          "Alpha biasanya berlangsung dalam beberapa sesi mingguan di Gereja. Hubungi admin kami melalui WhatsApp untuk informasi jadwal terbaru dan cara mendaftar pada batch berikutnya.",
       },
     ],
   },
