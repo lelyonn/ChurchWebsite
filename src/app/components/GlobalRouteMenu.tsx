@@ -48,21 +48,35 @@ export default function GlobalRouteMenu() {
     >
       <button
         type="button"
-        className="geis-nav-trigger grid size-12 place-items-center rounded-[8px] border border-white/20 bg-[#6d1019] text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621]"
-        aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        className="geis-nav-trigger flex h-12 items-center gap-2 rounded-[8px] border border-white/20 bg-[#6d1019] px-3 text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621]"
+        aria-label={open ? "Tutup menu navigasi" : "Buka menu navigasi"}
         aria-expanded={open}
         onClick={() => setOpen((current) => !current)}
       >
-        {open ? <X className="size-8" aria-hidden="true" /> : <Menu className="size-9" aria-hidden="true" />}
+        {open ? <X className="size-7" aria-hidden="true" /> : <Menu className="size-7" aria-hidden="true" />}
+        <span className="font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.08em]">
+          {open ? "Tutup" : "Menu"}
+        </span>
       </button>
 
       {open && (
-        <nav className="geis-menu-panel fixed right-4 top-[76px] max-h-[calc(100dvh-96px)] w-[min(292px,calc(100vw-32px))] overflow-y-auto rounded-[8px] border border-white/10 bg-[#17100f]/96 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-xl md:absolute md:right-0 md:top-auto md:mt-3 md:w-[270px]">
-          <p className="mb-2 px-4 py-2 font-['Montserrat',sans-serif] text-[11px] font-bold uppercase tracking-[0.18em] text-[#f3b7bd]">
-            {SITE_INFO.shortName}
-          </p>
+        <nav
+          className="geis-menu-panel fixed right-4 top-[76px] max-h-[calc(100dvh-96px)] w-[min(326px,calc(100vw-32px))] overflow-y-auto rounded-[8px] border border-white/10 bg-[#17100f]/96 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)] backdrop-blur-xl md:absolute md:right-0 md:top-auto md:mt-3 md:w-[310px]"
+          aria-label="Menu utama website"
+        >
+          <div className="mb-3 rounded-[6px] border border-white/8 bg-white/[0.04] px-4 py-3">
+            <p className="font-['Montserrat',sans-serif] text-[11px] font-bold uppercase tracking-[0.18em] text-[#f3b7bd]">
+              {SITE_INFO.shortName}
+            </p>
+            <p className="mt-2 font-['Lato',sans-serif] text-[14px] leading-[20px] text-[#f7ece8]">
+              Pilih menu di bawah untuk membuka halaman website.
+            </p>
+          </div>
 
           <div className="space-y-1">
+            <p className="px-4 pb-1 pt-2 font-['Montserrat',sans-serif] text-[10px] font-black uppercase tracking-[0.16em] text-white/45">
+              Menu Utama
+            </p>
             {MAIN_ROUTE_LINKS.map((link) => (
               <Link key={link.to} to={link.to} className={linkClass(link.to)}>
                 {link.label}
@@ -77,7 +91,7 @@ export default function GlobalRouteMenu() {
               aria-expanded={programsOpen}
               onClick={() => setProgramsOpen((current) => !current)}
             >
-              Programs
+              Program Gereja
               <ChevronDown
                 className={`size-4 transition-transform ${programsOpen ? "rotate-180" : ""}`}
                 aria-hidden="true"
@@ -106,7 +120,7 @@ export default function GlobalRouteMenu() {
               aria-expanded={ministriesOpen}
               onClick={() => setMinistriesOpen((current) => !current)}
             >
-              Ministries
+              Pelayanan
               <ChevronDown
                 className={`size-4 transition-transform ${ministriesOpen ? "rotate-180" : ""}`}
                 aria-hidden="true"

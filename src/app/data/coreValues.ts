@@ -22,7 +22,7 @@ export const CORE_VALUES: CoreValueDetail[] = [
     scripture:
       "Yohanes 4:23 - Tetapi saatnya akan datang dan sudah tiba sekarang, bahwa penyembah-penyembah benar akan menyembah Bapa dalam roh dan kebenaran; sebab Bapa menghendaki penyembah-penyembah demikian.",
     paragraphs: [
-      "Untuk menjadi gereja yang creative dan relevan, setiap individu harus terhubung dengan Tuhan Yesus secara konsisten melalui penyembahan yang dijadikan gaya hidup sehari-hari.",
+      "Untuk menjadi Gereja yang creative dan relevan, setiap individu harus terhubung dengan Tuhan Yesus secara konsisten melalui penyembahan yang dijadikan gaya hidup sehari-hari.",
       "Hidup yang menyembah akan menghasilkan:",
     ],
     sections: [

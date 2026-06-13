@@ -813,7 +813,7 @@ function DarkLeadershipCard() {
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[19px] not-italic text-[#1b1e21] text-[30px] top-[59px] w-[520px]">{`Ps. Glory & Ps. Denso`}</p>
       <PastorCommunityPhotoPlaceholder />
       <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[39px] not-italic text-[#000fff] text-[13px] top-[454px] w-[520px] whitespace-pre-wrap">
-        <p className="leading-[22px] mb-0">Bagian ini bisa dipakai di halaman About penuh jika gereja ingin menampilkan gembala, tim pastoral, atau leadership church. Untuk homepage, cukup preview singkat agar tidak terlalu panjang.</p>
+        <p className="leading-[22px] mb-0">Bagian ini bisa dipakai di halaman About penuh jika Gereja ingin menampilkan gembala, tim pastoral, atau leadership church. Untuk homepage, cukup preview singkat agar tidak terlalu panjang.</p>
         <p className="leading-[22px] mb-0">​</p>
         <p className="leading-[22px]">​</p>
       </div>
@@ -848,13 +848,13 @@ function RouteLeadershipOptionalPastoralProfile() {
         </p>
         <div className="mt-8 space-y-4 text-justify font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
-          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin Gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
           <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
-          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada Gereja ini.</p>
           <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
-          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
-          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+          <p>Kerinduan saya agar Gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai Gereja-Nya dari generasi ke generasi.</p>
         </div>
       </div>
     </div>
@@ -1051,7 +1051,7 @@ export default function AltRouteAboutFullProfilePage() {
       <ButtonViewServiceScheduleSchedule1 />
       <LargeWorshipCommunityPhoto />
       <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[820px] not-italic text-[17px] text-black top-[625px] w-[470px] whitespace-pre-wrap">
-        <p className="leading-[29px] mb-0">GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh. Kami percaya gereja bukan hanya tempat yang dikunjungi, tetapi komunitas tempat orang bertumbuh, dilayani, dan diutus untuk menjadi dampak.</p>
+        <p className="leading-[29px] mb-0">GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh. Kami percaya Gereja bukan hanya tempat yang dikunjungi, tetapi komunitas tempat orang bertumbuh, dilayani, dan diutus untuk menjadi dampak.</p>
         <p className="leading-[29px] mb-0">​</p>
         <p className="leading-[29px] mb-0">Kami membangun budaya penyembahan, pemuridan, pelayanan, dan kreativitas agar setiap jemaat dapat mengenal Tuhan lebih dalam dan menjalankan Amanat Agung dengan relevan.</p>
         <p className="leading-[29px] mb-0">​</p>
@@ -1074,7 +1074,7 @@ export default function AltRouteAboutFullProfilePage() {
         />
       </div>
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[28px] left-[820px] not-italic text-[21px] text-black top-[1222px] w-[250px]">WHAT WE BELIEVE</p>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[820px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Kami percaya gereja hadir untuk menyatakan kasih Kristus dan membangun rumah rohani bagi banyak orang.</p>
+      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[820px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Kami percaya Gereja hadir untuk menyatakan kasih Kristus dan membangun rumah rohani bagi banyak orang.</p>
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[28px] left-[1090px] not-italic text-[21px] text-black top-[1222px] w-[250px]">OUR MISSION</p>
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[24px] left-[1090px] not-italic text-[15px] text-black top-[1260px] w-[250px]">Misi kami adalah memaksimalkan potensi jemaat untuk melaksanakan Amanat Agung.</p>
       {[

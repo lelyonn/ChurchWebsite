@@ -269,7 +269,7 @@ export default function MobileHomePage() {
         </h2>
         <p className="mt-6 font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#46505a]">
           GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh yang
-          berlokasi di Manahan, Solo. Kami hadir untuk menjadi gereja yang
+          berlokasi di Manahan, Solo. Kami hadir untuk menjadi Gereja yang
           kreatif, relevan, dan berdampak bagi generasi saat ini.
         </p>
         <div className="mt-8 grid grid-cols-1 gap-4">
@@ -278,7 +278,7 @@ export default function MobileHomePage() {
               Visi
             </p>
             <p className="mt-3 font-['Lato',sans-serif] text-[16px] leading-[1.65] text-[#46505a]">
-              Menjadi gereja yang kreatif dan relevan bagi generasi.
+              Menjadi Gereja yang kreatif dan relevan bagi generasi.
             </p>
           </div>
           <div className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-[#fffdf8] p-6 shadow-[0_12px_28px_rgba(0,0,0,0.08)]">
@@ -326,13 +326,13 @@ export default function MobileHomePage() {
         </div>
         <div className="mt-8 space-y-5 text-justify font-['Lato',sans-serif] text-[16px] leading-[1.75] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
-          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin Gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
           <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
-          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada Gereja ini.</p>
           <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
-          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
-          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+          <p>Kerinduan saya agar Gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai Gereja-Nya dari generasi ke generasi.</p>
         </div>
       </MobileSection>
 

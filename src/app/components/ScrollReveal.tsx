@@ -60,7 +60,7 @@ export default function ScrollReveal() {
       return;
     }
 
-    elements.forEach((element, index) => {
+    elements.forEach((element) => {
       element.classList.add("geis-scroll-reveal");
       element.classList.add(`geis-reveal-${getRevealKind(element)}`);
 
@@ -68,19 +68,29 @@ export default function ScrollReveal() {
         element.classList.add("geis-reveal-fade-only");
       }
 
-      element.style.setProperty("--reveal-delay", `${Math.min(index % 8, 7) * 45}ms`);
+      element.style.setProperty("--reveal-delay", "0ms");
     });
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
+        entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((first, second) => {
+            const topDiff = first.boundingClientRect.top - second.boundingClientRect.top;
 
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
+            if (Math.abs(topDiff) > 8) {
+              return topDiff;
+            }
+
+            return first.boundingClientRect.left - second.boundingClientRect.left;
+          })
+          .forEach((entry, index) => {
+            const element = entry.target as HTMLElement;
+
+            element.style.setProperty("--reveal-delay", `${Math.min(index, 8) * 34}ms`);
+            element.classList.add("is-visible");
+            observer.unobserve(element);
+          });
       },
       {
         rootMargin: "0px 0px -10% 0px",

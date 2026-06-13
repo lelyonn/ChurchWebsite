@@ -8,6 +8,7 @@ import youthPhotoOne from "../../assets/images/carousel/youth-1.jpg";
 import youthPhotoTwo from "../../assets/images/carousel/youth-2.jpg";
 import youthPhotoThree from "../../assets/images/carousel/youth-3.jpg";
 import youthPhotoFour from "../../assets/images/carousel/youth-4.jpg";
+import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
 import { INSTAGRAM_RECENT_POSTS, SITE_INFO } from "../config/site";
 import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
 import { SCHEDULE_ITEMS } from "../data/schedules";
@@ -27,11 +28,11 @@ const ckidsTopics = [
 ];
 
 const youthGalleryPhotos = [
-  { src: COMMUNITY_PHOTOS.youthService, alt: "Youth service group photo" },
-  { src: youthPhotoOne, alt: "Youth community group photo" },
-  { src: youthPhotoTwo, alt: "Youth worship moment" },
-  { src: youthPhotoThree, alt: "Youth community candid" },
-  { src: youthPhotoFour, alt: "Youth friends at GEIS CCC" },
+  { src: youthBgPhoto, alt: "Youth service group photo", objectPosition: "50% 34%" },
+  { src: youthPhotoOne, alt: "Youth community group photo", objectPosition: "50% 38%" },
+  { src: youthPhotoTwo, alt: "Youth worship moment", objectPosition: "50% 38%" },
+  { src: youthPhotoThree, alt: "Youth community candid", objectPosition: "50% 36%" },
+  { src: youthPhotoFour, alt: "Youth friends at GEIS CCC", objectPosition: "50% 38%" },
 ];
 
 const sundayServicePhotos = [
@@ -74,7 +75,7 @@ function MinistryViewMoreLink({ to }: { to: string }) {
   return (
     <Link
       to={to}
-      className="geis-button-hover mt-8 inline-flex h-[56px] w-full items-center justify-between rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline sm:w-[220px]"
+      className="geis-button-hover mt-5 inline-flex h-[56px] w-full items-center justify-between rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline sm:w-[220px]"
     >
       <span>View More</span>
       <ExternalLink className="size-5" aria-hidden="true" />
@@ -420,7 +421,8 @@ function YouthPhotoCarousel() {
             key={activePhoto.src}
             src={activePhoto.src}
             alt={activePhoto.alt}
-            className="h-[360px] w-full object-contain object-center opacity-75 transition-all duration-700 md:h-[600px] md:object-cover"
+            className="h-[360px] w-full object-cover opacity-75 transition-all duration-700 md:h-[600px]"
+            style={{ objectPosition: activePhoto.objectPosition }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/48 via-black/8 to-black/28" />
 
@@ -500,12 +502,12 @@ function YouthSection() {
       />
       <div className="relative overflow-hidden rounded-b-[24px] bg-[#111214] shadow-[0_20px_38px_rgba(0,0,0,0.24)]">
         <img
-          src={COMMUNITY_PHOTOS.youthService}
+          src={youthBgPhoto}
           alt=""
           aria-hidden="true"
-          className="geis-slow-pan pointer-events-none absolute inset-y-0 right-0 size-full object-cover object-center opacity-40 md:w-[64%] md:opacity-78"
+          className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_34%] opacity-[0.46] md:opacity-[0.78]"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#111214] via-[#111214]/86 to-[#111214]/18" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#111214_0%,rgba(17,18,20,0.96)_23%,rgba(17,18,20,0.72)_45%,rgba(17,18,20,0.22)_72%,rgba(17,18,20,0.1)_100%)]" />
         <div className="geis-float-soft absolute right-[7%] top-8 h-20 w-20 rounded-full border border-white/10 bg-white/[0.025] md:h-24 md:w-24" />
         <div className="geis-float-soft-delay absolute bottom-[-70px] right-[14%] h-44 w-44 rounded-full border border-[#ef2735]/20 md:h-52 md:w-52" />
         <div className="relative z-10 px-6 py-16 md:px-11 md:py-20">
@@ -521,10 +523,10 @@ function YouthSection() {
       <div className="relative z-10 px-5 py-10 md:px-11 md:py-14">
         <div className="geis-pop-card relative mx-auto max-w-[1280px] overflow-hidden rounded-[18px] border border-white/28 bg-[#111214] px-6 py-8 shadow-[0_28px_70px_rgba(17,18,20,0.24)] md:rounded-[4px] md:px-16 md:py-12">
           <img
-            src={COMMUNITY_PHOTOS.youthService}
+            src={youthBgPhoto}
             alt=""
             aria-hidden="true"
-            className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_52%] opacity-[0.74]"
+            className="geis-slow-pan pointer-events-none absolute inset-0 size-full object-cover object-[50%_36%] opacity-[0.74]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,18,20,0.42),rgba(181,27,42,0.44)_54%,rgba(17,18,20,0.22))]" />
           <div className="absolute inset-0 opacity-45 [background-image:radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.18),transparent_22%),linear-gradient(135deg,rgba(255,255,255,0.16)_0_1px,transparent_1px_28px)]" />
@@ -544,7 +546,7 @@ function YouthSection() {
                 Kreatif dan <span className="geis-serif-accent">relevan.</span>
               </h3>
             </div>
-            <div className="rounded-[12px] border border-white/24 bg-black/18 p-5 backdrop-blur-sm md:border-l-4 md:border-l-white md:bg-transparent md:p-0 md:pl-6 md:backdrop-blur-0">
+            <div className="rounded-[12px] border border-white/24 bg-black/18 p-5 backdrop-blur-sm md:flex md:min-h-[210px] md:flex-col md:justify-center md:border-l-4 md:border-l-white md:bg-transparent md:p-0 md:pl-6 md:backdrop-blur-0">
               <p className="font-['Montserrat',sans-serif] text-[24px] font-black text-white md:text-[30px]">
                 Minggu
               </p>

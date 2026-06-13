@@ -428,7 +428,7 @@ function Section01HeroVideo() {
           <circle cx="2" cy="2" fill="var(--fill-0, white)" fillOpacity="0.045" id="Subtle film grain" r="2" />
         </svg>
       </div>
-      <p className="[word-break:break-word] absolute border-l border-white/35 font-['Lato',sans-serif] font-black leading-[18px] left-[690px] pl-[18px] opacity-[0.86] text-[12px] text-white top-[319px] tracking-[2.4px] uppercase w-[245px]">{SITE_INFO.fullName}</p>
+      <p className="[word-break:break-word] absolute border-l border-white/35 font-['Lato',sans-serif] font-black leading-[18px] left-[610px] pl-[18px] opacity-[0.86] text-[12px] text-white top-[319px] tracking-[2.4px] uppercase w-[245px]">{SITE_INFO.fullName}</p>
       <div className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[0] left-[360px] not-italic text-[76px] text-white top-[277px] tracking-[-2.28px] w-[434px]">
         <p className="leading-[78px] mb-0">GEIS</p>
         <p className="leading-[78px] mb-0">CHRISTIAN</p>
@@ -454,7 +454,7 @@ function CardVision() {
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[33px] text-[#d41c24] text-[30px] top-[35px] w-[70px]">+ +</p>
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[38px] left-[33px] text-[35px] text-black top-[111px] w-[220px]">Visi</p>
       <div className="absolute font-['Lato',sans-serif] font-bold h-[96px] leading-[0] left-[33px] text-[#46505a] text-[22px] top-[165px] w-[235px]">
-        <p className="leading-[31px] mb-0">Menjadi gereja yang</p>
+        <p className="leading-[31px] mb-0">Menjadi Gereja yang</p>
         <p className="leading-[31px] mb-0">kreatif dan relevan bagi</p>
         <p className="leading-[31px]">generasi.</p>
       </div>
@@ -521,7 +521,7 @@ function Section02AboutGeisCcc() {
       <p className="[word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[76px] left-[30px] text-[#15181c] text-[84px] top-[190px] w-[720px]">A Home For Generation.</p>
       <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[30px] not-italic text-[#46505a] text-[23px] top-[380px] w-[680px]">
         <p className="leading-[40px] mb-0">GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh</p>
-        <p className="leading-[40px]">yang berlokasi di Manahan, Solo. Sebagai Gereja, GEIS CCC hadir untuk menjadi gereja yang Kreatif, Relevan, dan berdampak bagi generasi saat ini.</p>
+        <p className="leading-[40px]">yang berlokasi di Manahan, Solo. Sebagai Gereja, GEIS CCC hadir untuk menjadi Gereja yang Kreatif, Relevan, dan berdampak bagi generasi saat ini.</p>
       </div>
       <CardVision />
       <CardMission />
@@ -559,13 +559,13 @@ function SectionPastoralMessageHome() {
         </p>
         <div className="mt-8 space-y-4 text-justify font-['Lato',sans-serif] text-[16px] leading-[26px] text-[#d7d9da]">
           <p>Jika hari ini kita berdiri dan merayakan perjalanan ini, bukan karena kekuatan atau kehebatan manusia, melainkan karena tangan Tuhan yang setia menopang.</p>
-          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin gereja-Nya dengan kasih yang tidak pernah berubah.</p>
+          <p>Di tengah suka dan duka, kelimpahan dan keterbatasan, Dia tetap hadir memimpin Gereja-Nya dengan kasih yang tidak pernah berubah.</p>
           <p>Karena itu, mari GEIS CCC, teruslah menambatkan hati kepada Kristus, Sang Kepala Gereja dan sumber kehidupan kita.</p>
           <p>Tetaplah setia mengikut Dia, sekalipun jalan yang ditempuh tidak selalu mudah.</p>
-          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada gereja ini.</p>
+          <p>Marilah kita berjalan seiring, sehati, dan sepikir dalam menggenapi visi yang Tuhan percayakan kepada Gereja ini.</p>
           <p>Bertumbuhlah dalam pengenalan yang benar akan Tuhan, sehingga iman kita berakar kuat dan menghasilkan buah bagi kemuliaan nama-Nya.</p>
-          <p>Kerinduan saya agar gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
-          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai gereja-Nya dari generasi ke generasi.</p>
+          <p>Kerinduan saya agar Gereja ini tidak hanya menjadi rumah untuk berkumpul, tetapi juga menjadi terang yang membawa banyak jiwa kepada Kristus.</p>
+          <p>Dan ketika tahun-tahun berikutnya terbentang di hadapan kita, biarlah setiap langkah tetap menjadi kesaksian tentang kebesaran Tuhan yang menyertai Gereja-Nya dari generasi ke generasi.</p>
         </div>
       </div>
     </section>
