@@ -31,22 +31,23 @@ export default function GlobalHomeLogo() {
     >
       <Link
         to="/"
-        aria-label="Go to homepage"
+        aria-label="Kembali ke Beranda GEIS CCC"
         className="mx-auto flex h-full w-fit items-center justify-center gap-3 text-white no-underline transition-transform duration-300 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
       >
-        <span className="flex flex-col items-center">
-          <img
-            src={gcLogo}
-            alt=""
-            className="h-[40px] w-[40px] object-contain max-md:h-[30px] max-md:w-[30px]"
-          />
-          <span className="mt-1.5 text-center font-['Lato',sans-serif] text-[6px] font-black uppercase leading-[0.95] tracking-[0.18em] max-md:text-[5px]">
-            Christian Creative
-            <br />
-            Church
+        <img
+          src={gcLogo}
+          alt="Logo GEIS CCC"
+          className="h-[40px] w-[40px] object-contain max-md:h-[32px] max-md:w-[32px]"
+        />
+        <div className="flex flex-col">
+          <span className="font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.14em] text-white max-md:text-[11px]">
+            {SITE_INFO.shortName}
           </span>
-        </span>
-        <span className="border-l border-white/18 pl-3 font-['Lato',sans-serif] text-[9px] font-black uppercase leading-[1.25] tracking-[0.2em] text-white/78 max-md:text-[6px] max-md:tracking-[0.14em]">
+          <span className="font-['Lato',sans-serif] text-[10px] font-bold uppercase tracking-[0.16em] text-[#f3b7bd] max-md:text-[9px]">
+            Christian Creative Church
+          </span>
+        </div>
+        <span className="hidden sm:block border-l border-white/20 pl-3 font-['Lato',sans-serif] text-[11px] font-semibold uppercase tracking-[0.16em] text-white/75">
           {SITE_INFO.fullName}
         </span>
       </Link>

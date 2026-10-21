@@ -6,8 +6,8 @@ import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
-import BackHeader from "./BackHeader";
-import PrimaryActionLink from "./PrimaryActionLink";
+import BackHeader from "../components/BackHeader";
+import PrimaryActionLink from "../components/PrimaryActionLink";
 
 type ProgramDetailPageProps = {
   program: ProgramDetail;

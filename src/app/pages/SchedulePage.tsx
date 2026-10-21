@@ -17,7 +17,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion";
+} from "../components/ui/accordion";
 
 const ckidsTopics = [
   {
@@ -77,7 +77,7 @@ function MinistryViewMoreLink({ to }: { to: string }) {
       to={to}
       className="geis-button-hover mt-5 inline-flex h-[56px] w-full items-center justify-between rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline sm:w-[220px]"
     >
-      <span>View More</span>
+      <span>Lihat Selengkapnya</span>
       <ExternalLink className="size-5" aria-hidden="true" />
     </Link>
   );
@@ -211,7 +211,7 @@ function SundayServicePhotoCarousel() {
       />
       <div className="absolute inset-0 bg-[#181313]/30" />
       <div className="absolute bottom-7 left-7 right-7 border-t border-white/35 pt-5">
-        <p className="font-['Roboto_Mono',monospace] text-[12px] uppercase text-white/80">
+        <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.16em] text-white/80">
           GEIS CCC / Sunday Gathering
         </p>
       </div>

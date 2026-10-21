@@ -106,7 +106,7 @@ Kalau tidak bisa dibuka:
 | Homepage mobile | `src/app/pages/MobileHomePage.tsx` |
 | About desktop | `src/imports/AltRouteAboutFullProfilePage/index.tsx` |
 | About mobile | `src/app/pages/MobileAboutPage.tsx` |
-| Halaman schedule | `src/app/components/SchedulePage.tsx` |
+| Halaman schedule | `src/app/pages/SchedulePage.tsx` |
 | Logo Alpha | `src/assets/images/alpha-logo.png` |
 | Foto pastors | `src/assets/images/pastors-photo.jpeg` |
 | Video Ckids | `src/assets/videos/ckids-hero.mp4` |
@@ -120,11 +120,11 @@ Kalau tidak bisa dibuka:
 ```text
 src/
   app/
-    components/       Komponen reusable: nav, footer, schedule, detail page.
+    components/       Komponen reusable: nav, footer, accordion, header.
     config/           Info global website: link, kontak, ukuran frame Figma.
     data/             Konten yang aman diedit: jadwal, program, values.
     layouts/          Layout utama, anchor scroll, shell website.
-    pages/            Halaman route React, terutama versi mobile dan ministry.
+    pages/            Halaman route React: Home, About, Schedule, Ministry, Programs.
     routes.tsx        Daftar semua URL website.
   assets/
     decor/            Gambar dekorasi.

@@ -9,7 +9,7 @@ type BackHeaderProps = {
 
 export default function BackHeader({
   title,
-  backLabel = "Back to Home",
+  backLabel = "Kembali ke Beranda",
   backTo = "/",
 }: BackHeaderProps) {
   return (

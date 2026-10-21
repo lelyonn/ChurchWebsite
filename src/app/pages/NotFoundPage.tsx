@@ -14,7 +14,7 @@ export default function NotFoundPage() {
           to="/"
           className="geis-button-hover inline-flex rounded-md bg-[#b51b2a] px-6 py-3 font-['Lato',sans-serif] font-bold text-white no-underline"
         >
-          Back to Home
+          Kembali ke Beranda
         </Link>
       </div>
     </div>

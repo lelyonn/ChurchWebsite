@@ -17,7 +17,7 @@ import { SCHEDULE_ITEMS } from "../data/schedules";
 
 function SectionLabel({ children }: { children: string }) {
   return (
-    <p className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.28em] text-[#d41c24]">
+    <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#d41c24]">
       {children}
     </p>
   );
@@ -175,6 +175,8 @@ export default function MobileHomePage() {
           loop
           muted={!soundEnabled}
           playsInline
+          preload="metadata"
+          poster={COMMUNITY_PHOTOS.worshipCommunity}
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-black/34" />
@@ -190,19 +192,19 @@ export default function MobileHomePage() {
             <p className="font-['Montserrat',sans-serif] text-[18px] font-bold tracking-[0.12em]">
               GEIS CCC
             </p>
-            <p className="mt-1 font-['Lato',sans-serif] text-[9px] font-bold tracking-[0.2em] opacity-90">
+            <p className="mt-1 font-['Lato',sans-serif] text-[11px] font-bold tracking-[0.16em] opacity-90">
               CHRISTIAN CREATIVE CHURCH
             </p>
           </div>
 
           <div>
-            <p className="mb-4 font-['Roboto_Mono',monospace] text-[17px] tracking-[0.12em]">
+            <p className="mb-4 font-['Lato',sans-serif] text-[14px] font-bold uppercase tracking-[0.22em] text-[#f3b7bd]">
               welcome to
             </p>
             <h1 className="font-['Montserrat',sans-serif] text-[52px] font-black leading-[0.95] tracking-[0]">
               <span className="flex items-end gap-3">
                 <span>GEIS</span>
-                <span className="mb-1 max-w-[130px] font-['Lato',sans-serif] text-[8px] font-black uppercase leading-[1.25] tracking-[0.18em] text-white/72">
+                <span className="mb-1 max-w-[130px] font-['Lato',sans-serif] text-[11px] font-black uppercase leading-[1.25] tracking-[0.14em] text-white/72">
                   {SITE_INFO.fullName}
                 </span>
               </span>
@@ -210,7 +212,7 @@ export default function MobileHomePage() {
               <span className="block">CREATIVE</span>
               <span className="block">CHURCH</span>
             </h1>
-            <p className="mt-7 max-w-[320px] font-['Roboto_Mono',monospace] text-[18px] leading-[1.6]">
+            <p className="mt-7 max-w-[320px] font-['Lato',sans-serif] text-[18px] leading-[1.6] text-white/90">
               a warm church community in Solo where people grow in faith.
             </p>
             <a
@@ -218,7 +220,7 @@ export default function MobileHomePage() {
               className="geis-button-hover mt-7 flex min-h-[76px] w-full max-w-full items-center justify-between rounded-[6px] bg-[#b51b2a] px-5 no-underline"
             >
               <p className="font-['Montserrat',sans-serif] text-[20px] font-bold leading-[1.25] text-white">
-                Join Us Every Sunday
+                Lihat Jadwal Ibadah
               </p>
               <span className="font-['Montserrat',sans-serif] text-[34px] font-bold text-white">
                 -&gt;
@@ -248,7 +250,7 @@ export default function MobileHomePage() {
                   )}
                 </span>
                 <span className="absolute -top-12 left-[50%] z-20 hidden origin-left -translate-x-[50%] scale-0 whitespace-nowrap rounded-lg border border-gray-300 bg-white px-3 py-2 font-['Lato',sans-serif] text-sm font-bold text-[#15181c] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 md:block">
-                  {soundEnabled ? "Sound On" : "Sound Off"}
+                  {soundEnabled ? "Suara Nyala" : "Suara Hening"}
                 </span>
               </button>
             </div>
@@ -294,8 +296,8 @@ export default function MobileHomePage() {
           to="/about"
           className="geis-button-hover mt-8 flex h-[58px] items-center justify-between rounded-[8px] bg-[#b51b2a] px-6 font-['Lato',sans-serif] text-[16px] font-bold text-white no-underline"
         >
-          More Information
-          <span>-&gt;</span>
+          Lihat Selengkapnya
+          <span aria-hidden="true">&rarr;</span>
         </Link>
       </MobileSection>
 
@@ -369,8 +371,8 @@ export default function MobileHomePage() {
           to="/schedule"
           className="geis-button-hover mt-7 flex h-[58px] items-center justify-between rounded-[8px] bg-[#b51b2a] px-6 font-['Lato',sans-serif] text-[16px] font-bold text-white no-underline"
         >
-          More Information
-          <span>-&gt;</span>
+          Lihat Selengkapnya
+          <span aria-hidden="true">&rarr;</span>
         </Link>
       </MobileSection>
 
@@ -492,9 +494,9 @@ export default function MobileHomePage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 size-full object-cover opacity-20 mix-blend-soft-light"
         />
-        <SectionLabel>Lokasi</SectionLabel>
+        <SectionLabel>Lokasi Gereja</SectionLabel>
         <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] font-bold leading-[1.05] text-[#f8f8f6]">
-          Visit Us
+          Lokasi & Petunjuk Arah
         </h2>
         <p className="mt-6 font-['Montserrat',sans-serif] text-[20px] font-bold leading-[1.4]">
           {SITE_INFO.name}
@@ -517,7 +519,7 @@ export default function MobileHomePage() {
             rel="noopener noreferrer"
             className="flex items-center justify-between bg-[#b51b2a] px-5 py-4 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
           >
-            Open Google Maps
+            Buka Petunjuk Arah di Google Maps
             <ExternalLink className="size-4" aria-hidden="true" />
           </a>
         </div>

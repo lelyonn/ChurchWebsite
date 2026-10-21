@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import svgPaths from "./svg-06l1rck7wx";
 import CoreValuesAccordion from "../../app/components/CoreValuesAccordion";
+import { SITE_INFO } from "../../app/config/site";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
@@ -8,18 +9,18 @@ import { COMMUNITY_PHOTOS } from "../../app/data/communityPhotos";
 
 function ButtonViewServiceScheduleSchedule() {
   return (
-    <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[205px] w-[390px]" data-name="Button / VIEW SERVICE SCHEDULE → /schedule">
+    <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[205px] w-[390px]" data-name="Button / LIHAT JADWAL IBADAH → /schedule">
       <Link aria-label="View Service Schedule" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" to="/schedule" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">VIEW SERVICE SCHEDULE</p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">LIHAT JADWAL IBADAH</p>
     </div>
   );
 }
 
 function ButtonViewServiceScheduleSchedule1() {
   return (
-    <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[140px] w-[390px]" data-name="Button / VIEW SERVICE SCHEDULE → /schedule">
+    <div className="absolute bg-[#1b1e21] border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[140px] w-[390px]" data-name="Button / LIHAT JADWAL IBADAH → /schedule">
       <Link aria-label="Back to Home" className="absolute border border-[#1b1e21] border-solid inset-0 rounded-[6px]" to="/" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">BACK TO HOMEPAGES</p>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-white text-[14px] text-center top-[13px] w-[390px] pointer-events-none">KEMBALI KE BERANDA</p>
     </div>
   );
 }
@@ -27,7 +28,14 @@ function ButtonViewServiceScheduleSchedule1() {
 function ButtonOpenLocationLocation() {
   return (
     <div className="absolute bg-white border border-[#e2ded6] border-solid drop-shadow-[0px_12px_13px_rgba(0,0,0,0.08)] h-[48px] left-[930px] rounded-[6px] top-[265px] w-[390px]" data-name="Button / OPEN LOCATION → /location">
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-[#000111] text-[14px] text-center top-[13px] w-[390px]">OPEN LOCATION → /location</p>
+      <a
+        href={SITE_INFO.location.mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Buka Lokasi di Google Maps"
+        className="absolute border border-[#e2ded6] border-solid inset-0 rounded-[6px]"
+      />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[20px] left-[194px] not-italic text-[#000111] text-[14px] text-center top-[13px] w-[390px] pointer-events-none">BUKA LOKASI</p>
     </div>
   );
 }
@@ -959,7 +967,7 @@ function VisitArrow() {
 
 function ButtonGoogleMaps() {
   return (
-    <a href="https://share.google/gMQJXhHA3Pmvb8bCL" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[390px] w-[640px] no-underline" data-name="Button / Google Maps">
+    <a href={SITE_INFO.location.mapsUrl} target="_blank" rel="noopener noreferrer" aria-label="Google Maps" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[390px] w-[640px] no-underline" data-name="Button / Google Maps">
       <p className="font-['Lato',sans-serif] font-bold leading-[22px] text-white text-[16px]">Google Maps</p>
       <VisitArrow />
     </a>
@@ -968,7 +976,7 @@ function ButtonGoogleMaps() {
 
 function ButtonGeisccc() {
   return (
-    <a href="https://www.instagram.com/geisccc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @geisccc" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[470px] w-[640px] no-underline" data-name="Button / @geisccc">
+    <a href={SITE_INFO.social.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram @geisccc" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[470px] w-[640px] no-underline" data-name="Button / @geisccc">
       <p className="font-['Lato',sans-serif] font-bold leading-[22px] text-white text-[16px]">Instagram · @geisccc</p>
       <VisitArrow />
     </a>
@@ -977,7 +985,7 @@ function ButtonGeisccc() {
 
 function ButtonWhatsAppAdmin() {
   return (
-    <a href="https://api.whatsapp.com/send/?phone=6282135329709&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Admin" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[550px] w-[640px] no-underline" data-name="Button / WhatsApp Admin">
+    <a href={SITE_INFO.social.whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Admin" className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[45px] pl-[28px] pr-[26px] rounded-[8px] top-[550px] w-[640px] no-underline" data-name="Button / WhatsApp Admin">
       <p className="font-['Lato',sans-serif] font-bold leading-[22px] text-white text-[16px]">WhatsApp Admin</p>
       <VisitArrow />
     </a>
@@ -1013,10 +1021,18 @@ function RouteAboutVisitUs() {
           <circle cx="310" cy="310" fill="#D8D0C4" fillOpacity="0.08" r="310" />
         </svg>
       </div>
-      <p className="absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] text-[#f3b7bd] text-[13px] top-[90px] tracking-[3.64px] w-[200px]">LOKASI</p>
-      <p className="absolute font-['Playfair_Display',serif] font-bold leading-[80px] left-[45px] text-[#f8f8f6] text-[72px] top-[130px] w-[500px]">Visit Us</p>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] text-[25px] text-white top-[245px] w-[620px]">Geis CCC</p>
-      <p className="absolute font-['Lato',sans-serif] font-normal leading-[34px] left-[45px] text-[#d7d9da] text-[24px] top-[300px] w-[620px]">Jl. RM Said No. 233, Manahan, Solo</p>
+      <p className="absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] text-[#f3b7bd] text-[13px] top-[80px] tracking-[3.64px] w-[200px]">LOKASI</p>
+      <div className="absolute left-[45px] top-[116px] w-[640px] flex flex-col gap-3">
+        <h2 className="font-['Playfair_Display',serif] font-bold leading-[1.12] text-[#f8f8f6] text-[52px] m-0">
+          Lokasi & Petunjuk Arah
+        </h2>
+        <p className="font-['Montserrat',sans-serif] font-bold leading-[30px] text-[24px] text-white m-0">
+          Geis CCC
+        </p>
+        <p className="font-['Lato',sans-serif] font-normal leading-[26px] text-[#d7d9da] text-[19px] m-0">
+          Jl. RM Said No. 233, Manahan, Solo
+        </p>
+      </div>
       <ButtonGoogleMaps />
       <ButtonGeisccc />
       <ButtonWhatsAppAdmin />
@@ -1049,6 +1065,7 @@ export default function AltRouteAboutFullProfilePage() {
       <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[140px] not-italic text-[18px] text-black top-[320px] w-[760px]">Sebagai Christian Creative Church di Manahan, Solo, GEIS CCC hadir untuk menjadi rumah rohani yang kreatif, relevan, dan berdampak bagi generasi masa kini.</p>
       <ButtonViewServiceScheduleSchedule />
       <ButtonViewServiceScheduleSchedule1 />
+      <ButtonOpenLocationLocation />
       <LargeWorshipCommunityPhoto />
       <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[820px] not-italic text-[17px] text-black top-[625px] w-[470px] whitespace-pre-wrap">
         <p className="leading-[29px] mb-0">GEIS CCC adalah bagian dari Gereja El-Shaddai Injil Sepenuh. Kami percaya Gereja bukan hanya tempat yang dikunjungi, tetapi komunitas tempat orang bertumbuh, dilayani, dan diutus untuk menjadi dampak.</p>

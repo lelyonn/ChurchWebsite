@@ -5,7 +5,6 @@ const REVEAL_SELECTOR = [
   "h1",
   "h2",
   "h3",
-  "p",
   ".geis-pop-card",
   ".geis-button-hover",
   "article",

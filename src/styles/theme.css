@@ -196,26 +196,7 @@
     position: relative;
   }
 
-  .geis-app-shell::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image:
-      linear-gradient(rgba(181, 27, 42, 0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(181, 27, 42, 0.04) 1px, transparent 1px),
-      repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.018) 0 1px, transparent 1px 18px);
-    background-position:
-      0 0,
-      0 0,
-      center;
-    background-size:
-      42px 42px,
-      42px 42px,
-      100% 100%;
-    opacity: 0.7;
-  }
+
 
   [data-page-content='true'] :where(h1, h2, h3) {
     text-wrap: balance;
@@ -241,47 +222,9 @@
       linear-gradient(90deg, rgba(0, 0, 0, 0.08), transparent 42%, rgba(255, 255, 255, 0.06));
   }
 
-  .geis-pointer-glow {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 180px;
-    height: 180px;
-    pointer-events: none;
-    border-radius: 999px;
-    background: radial-gradient(circle, rgba(212, 28, 36, 0.16), transparent 64%);
-    mix-blend-mode: multiply;
-    opacity: 0;
-    transform: translate3d(
-      calc(var(--mouse-x, -999px) - 90px),
-      calc(var(--mouse-y, -999px) - 90px),
-      0
-    );
-    transition:
-      opacity 260ms ease,
-      transform 90ms linear;
-  }
 
-  @media (pointer: fine) {
-    .geis-pointer-glow {
-      opacity: 1;
-    }
-  }
 
   @media (pointer: coarse), (max-width: 767px) {
-    .geis-app-shell::before {
-      opacity: 0.34;
-      background-size:
-        56px 56px,
-        56px 56px,
-        100% 100%;
-    }
-
-    .geis-pointer-glow,
-    .geis-click-ripple {
-      display: none;
-    }
 
     .geis-button-hover:hover,
     .geis-button-hover:focus-visible,
@@ -299,22 +242,7 @@
     }
   }
 
-  .geis-click-host {
-    position: inherit;
-    overflow: inherit;
-  }
 
-  .geis-click-ripple {
-    position: fixed;
-    z-index: 120;
-    width: 14px;
-    height: 14px;
-    border-radius: 999px;
-    pointer-events: none;
-    background: rgba(255, 255, 255, 0.55);
-    transform: translate(-50%, -50%) scale(0);
-    animation: geis-click-ripple 620ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
 
   .geis-button-hover {
     position: relative;
@@ -574,17 +502,7 @@
     }
   }
 
-  @keyframes geis-click-ripple {
-    from {
-      opacity: 0.65;
-      transform: translate(-50%, -50%) scale(0);
-    }
 
-    to {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(18);
-    }
-  }
 
   @keyframes geis-marquee {
     from {
@@ -640,19 +558,7 @@
     }
   }
 
-  @keyframes geis-loading-bar {
-    0% {
-      transform: translateX(-100%);
-    }
 
-    50% {
-      transform: translateX(80%);
-    }
-
-    100% {
-      transform: translateX(240%);
-    }
-  }
 
   @media (prefers-reduced-motion: reduce) {
     .geis-marquee {
@@ -692,12 +598,6 @@
       transition: none;
     }
 
-    .geis-pointer-glow,
-    .geis-click-ripple {
-      display: none;
-    }
-
-    [class*="geis-loading-bar"],
     [class*="animate-"] {
       animation-duration: 1ms !important;
       animation-iteration-count: 1 !important;

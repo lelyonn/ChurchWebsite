@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import CoreValuesAccordion from "../components/CoreValuesAccordion";
 import PrimaryActionLink from "../components/PrimaryActionLink";
 import { SITE_INFO } from "../config/site";
+import SiteFooter from "../components/SiteFooter";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 import { COMMUNITY_PHOTOS } from "../data/communityPhotos";
 
@@ -9,7 +10,7 @@ export default function MobileAboutPage() {
   return (
     <div className="bg-[#f8f6f0] text-[#15181c]">
       <section className="px-6 pb-16 pt-28">
-        <p className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.28em] text-[#d41c24]">
+        <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#d41c24]">
           About GEIS CCC
         </p>
         <h1 className="mt-4 font-['Playfair_Display',serif] text-[46px] font-bold leading-[1.05]">
@@ -238,7 +239,7 @@ export default function MobileAboutPage() {
       </section>
 
       <section className="bg-[#f3f0e9] px-6 py-16">
-        <p className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.28em] text-[#d41c24]">
+        <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#d41c24]">
           Nilai Kami
         </p>
         <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] font-bold leading-[1.05] text-[#15181c]">
@@ -253,8 +254,8 @@ export default function MobileAboutPage() {
       </section>
 
       <section className="bg-[#1b1e21] px-6 py-16 text-white">
-        <p className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.28em] text-[#f3b7bd]">
-          Visit Us
+        <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#f3b7bd]">
+          Lokasi & Petunjuk Arah
         </p>
         <h2 className="mt-4 font-['Playfair_Display',serif] text-[42px] font-bold leading-[1.08] text-[#f8f8f6]">
           You belong here.
@@ -277,7 +278,7 @@ export default function MobileAboutPage() {
             rel="noopener noreferrer"
             className="flex items-center justify-between bg-[#b51b2a] px-5 py-4 font-['Montserrat',sans-serif] text-[12px] font-black uppercase tracking-[0.12em] text-white no-underline"
           >
-            Open Google Maps
+            Buka Petunjuk Arah di Google Maps
             <span aria-hidden="true">-&gt;</span>
           </a>
         </div>
@@ -288,6 +289,8 @@ export default function MobileAboutPage() {
           Kembali ke Home -&gt;
         </Link>
       </section>
+
+      <SiteFooter />
     </div>
   );
 }

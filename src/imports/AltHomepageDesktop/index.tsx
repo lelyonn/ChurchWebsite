@@ -12,12 +12,7 @@ import { SITE_INFO } from "../../app/config/site";
 import { COMMUNITY_PHOTOS } from "../../app/data/communityPhotos";
 import svgPaths from "./svg-v1jk2ee0lz";
 
-const SOCIAL_LINKS = {
-  instagram: "https://www.instagram.com/geisccc/",
-  maps: "https://share.google/gMQJXhHA3Pmvb8bCL",
-  whatsapp:
-    "https://api.whatsapp.com/send/?phone=6282135329709&text&type=phone_number&app_absent=0",
-} as const;
+
 
 function CtaArrow() {
   return (
@@ -46,7 +41,7 @@ function PrimaryRedServiceCta() {
       data-name="Primary red service CTA"
     >
       <p className="font-['Montserrat',sans-serif] font-bold leading-[29px] not-italic shrink-0 text-[24px] text-white">
-        Join Us Every Sunday
+        Lihat Jadwal Ibadah
       </p>
       <svg width="32" height="22" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
         <path d="M2 10H26M18 2L26 10L18 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,13 +96,13 @@ function SocialStrip() {
   return (
     <div className="absolute h-[96px] left-0 bottom-0 w-[1440px] pointer-events-none" data-name="Social links">
       <div className="pointer-events-auto">
-        <SocialHoverLink href={SOCIAL_LINKS.instagram} label="Instagram" left={36}>
+        <SocialHoverLink href={SITE_INFO.social.instagramUrl} label="Instagram" left={36}>
           <SocialIconInstagram />
         </SocialHoverLink>
-        <SocialHoverLink href={SOCIAL_LINKS.maps} label="Maps" left={116}>
+        <SocialHoverLink href={SITE_INFO.location.mapsUrl} label="Maps" left={116}>
           <MapPin className="size-[42px]" strokeWidth={2.2} aria-hidden="true" />
         </SocialHoverLink>
-        <SocialHoverLink href={SOCIAL_LINKS.whatsapp} label="WhatsApp" left={196}>
+        <SocialHoverLink href={SITE_INFO.social.whatsappUrl} label="WhatsApp" left={196}>
           <MessageCircle className="size-[42px]" strokeWidth={2.2} aria-hidden="true" />
         </SocialHoverLink>
       </div>
@@ -137,7 +132,7 @@ function VideoSoundButton({
         )}
       </span>
       <span className="absolute -top-14 left-[50%] z-20 origin-left -translate-x-[50%] scale-0 whitespace-nowrap rounded-lg border border-gray-300 bg-white px-3 py-2 font-['Lato',sans-serif] text-sm font-bold text-[#15181c] shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-        {enabled ? "Sound On" : "Sound Off"}
+        {enabled ? "Suara Nyala" : "Suara Hening"}
       </span>
     </button>
   );
@@ -216,6 +211,8 @@ function Section01HeroVideo() {
         loop
         muted={!soundEnabled}
         playsInline
+        preload="metadata"
+        poster={COMMUNITY_PHOTOS.worshipCommunity}
         aria-hidden="true"
       />
       <div className="absolute left-0 size-[3px] top-0" data-name="Subtle film grain">
@@ -435,7 +432,7 @@ function Section01HeroVideo() {
         <p className="leading-[78px] mb-0">CREATIVE</p>
         <p className="leading-[78px]">CHURCH</p>
       </div>
-      <div className="[word-break:break-word] absolute font-['Roboto_Mono',monospace] font-normal leading-[0] left-[356px] opacity-92 text-[25px] text-white top-[599px] w-[620px]">
+      <div className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[0] left-[356px] opacity-92 text-[24px] text-white top-[599px] w-[620px]">
         <p className="leading-[37px] mb-0">a warm church community in Solo</p>
         <p className="leading-[37px] mb-0">where people grow in faith,</p>
         <p className="leading-[37px]">find purpose, and follow Jesus together.</p>
@@ -503,11 +500,11 @@ function CtaMoreInformationHrefAbout() {
   return (
     <Link
       to="/about"
-      aria-label="More Information"
+      aria-label="Lihat Selengkapnya"
       className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[60px] items-center justify-between left-[30px] pl-[28px] pr-[26px] rounded-[8px] top-[570px] w-[640px] no-underline"
       data-name="CTA / More Information / href: /about"
     >
-      <p className="[word-break:break-word] font-['Lato',sans-serif] font-bold leading-[22px] not-italic relative shrink-0 text-white text-[16px]">More Information</p>
+      <p className="[word-break:break-word] font-['Lato',sans-serif] font-bold leading-[22px] not-italic relative shrink-0 text-white text-[16px]">Lihat Selengkapnya</p>
       <ButtonArrowIcon />
     </Link>
   );
@@ -713,11 +710,11 @@ function PrimaryRedServiceCta1() {
   return (
     <Link
       to="/schedule"
-      aria-label="More Information"
+      aria-label="Lihat Selengkapnya"
       className="geis-button-hover absolute bg-[#b51b2a] content-stretch flex h-[81px] items-center justify-between left-[461px] pl-[25px] pr-[22px] rounded-[4px] top-[611px] w-[467px] no-underline"
       data-name="Primary red service CTA"
     >
-      <p className="font-['Montserrat',sans-serif] font-bold leading-[29px] not-italic shrink-0 text-[24px] text-white">More Information</p>
+      <p className="font-['Montserrat',sans-serif] font-bold leading-[29px] not-italic shrink-0 text-[24px] text-white">Lihat Selengkapnya</p>
       <svg width="32" height="22" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
         <path d="M2 10H26M18 2L26 10L18 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -1141,7 +1138,7 @@ function CommunityFeatureSection() {
 function ButtonGoogleMaps() {
   return (
     <a
-      href="https://share.google/gMQJXhHA3Pmvb8bCL"
+      href={SITE_INFO.location.mapsUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Google Maps"
@@ -1157,7 +1154,7 @@ function ButtonGoogleMaps() {
 function ButtonGeisccc() {
   return (
     <a
-      href="https://www.instagram.com/geisccc/"
+      href={SITE_INFO.social.instagramUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Instagram @geisccc"
@@ -1173,7 +1170,7 @@ function ButtonGeisccc() {
 function ButtonWhatsAppAdmin() {
   return (
     <a
-      href="https://api.whatsapp.com/send/?phone=6282135329709&text&type=phone_number&app_absent=0"
+      href={SITE_INFO.social.whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp Admin"
@@ -1386,10 +1383,18 @@ function AltRouteAboutVisitUs() {
           <circle cx="220" cy="220" fill="var(--fill-0, #B51B2A)" fillOpacity="0.16" id="Polish location warm glow" r="220" />
         </svg>
       </div>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] not-italic text-[#f3b7bd] text-[13px] top-[90px] tracking-[3.64px] w-[200px]">LOKASI</p>
-      <p className="[word-break:break-word] absolute font-['Playfair_Display',serif] font-bold leading-[80px] left-[45px] text-[#f8f8f6] text-[72px] top-[130px] w-[500px]">Visit Us</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[34px] left-[45px] not-italic text-[25px] text-white top-[245px] w-[620px]">Geis CCC</p>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[34px] left-[45px] not-italic text-[#d7d9da] text-[24px] top-[300px] w-[620px]">Jl. RM Said No. 233, Manahan, Solo</p>
+      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-bold leading-[18px] left-[45px] not-italic text-[#f3b7bd] text-[13px] top-[80px] tracking-[3.64px] w-[200px]">LOKASI</p>
+      <div className="absolute left-[45px] top-[116px] w-[640px] flex flex-col gap-3">
+        <h2 className="[word-break:break-word] font-['Playfair_Display',serif] font-bold leading-[1.12] text-[#f8f8f6] text-[52px] m-0">
+          Lokasi & Petunjuk Arah
+        </h2>
+        <p className="[word-break:break-word] font-['Montserrat',sans-serif] font-bold leading-[30px] text-[24px] text-white m-0">
+          Geis CCC
+        </p>
+        <p className="[word-break:break-word] font-['Lato',sans-serif] font-normal leading-[26px] text-[#d7d9da] text-[19px] m-0">
+          Jl. RM Said No. 233, Manahan, Solo
+        </p>
+      </div>
       <ButtonGoogleMaps />
       <ButtonGeisccc />
       <ButtonWhatsAppAdmin />
@@ -1534,7 +1539,7 @@ function SiteFooter() {
         <a href="#about" className="block font-['Lato',sans-serif] font-normal text-white text-[15px] leading-[28px] hover:text-[#f3b7bd] transition-colors">About</a>
         <a href="#services" className="block font-['Lato',sans-serif] font-normal text-white text-[15px] leading-[28px] hover:text-[#f3b7bd] transition-colors">Services</a>
         <a href="#programs" className="block font-['Lato',sans-serif] font-normal text-white text-[15px] leading-[28px] hover:text-[#f3b7bd] transition-colors">Programs</a>
-        <a href="#visit-us" className="block font-['Lato',sans-serif] font-normal text-white text-[15px] leading-[28px] hover:text-[#f3b7bd] transition-colors">Visit Us</a>
+        <a href="#visit-us" className="block font-['Lato',sans-serif] font-normal text-white text-[15px] leading-[28px] hover:text-[#f3b7bd] transition-colors">Lokasi</a>
       </div>
 
       <div className="absolute left-[820px] top-[56px] w-[280px]">

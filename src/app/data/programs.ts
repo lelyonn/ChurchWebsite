@@ -26,11 +26,11 @@ export const PROGRAM_DETAIL_PAGES: ProgramDetail[] = [
     eyebrow: "PROGRAM GEIS CCC",
     title: "Alpha",
     tagline:
-      "Ruang terbuka untuk mengeksplorasi kehidupan, iman, dan tujuan melalui persahabatan, pengajaran, dan percakapan.",
+      "Adakah kehidupan yang lebih dari sekadar hidup? Ruang terbuka untuk mengeksplorasi makna hidup, iman, dan tujuan bersama teman baru.",
     intro:
       "Alpha adalah ruang untuk mengenal iman, bertanya, berdiskusi, dan mengalami Tuhan secara pribadi. Melalui video yang sederhana, waktu untuk terkoneksi, dan diskusi kelompok kecil, setiap orang diberi tempat yang aman untuk mengeksplorasi pertanyaan besar tentang kehidupan, iman, dan tujuan.",
     bgColor: "#e8f4f8",
-    websiteUrl: "https://indonesia.alpha.org/?lang=id",
+    websiteUrl: "https://indonesia.alpha.org/try-alpha/?lang=id",
     websiteLabel: "Website Alpha Indonesia",
     sections: [
       {

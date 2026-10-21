@@ -24,15 +24,25 @@ export default function GlobalRouteMenu() {
       }
     };
 
-    document.addEventListener("pointerdown", onPointerDown);
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
 
-    return () => document.removeEventListener("pointerdown", onPointerDown);
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
   }, [open]);
 
   const linkClass = (to: string) => {
     const isActive = pathname.toLowerCase() === to.toLowerCase();
 
-    return `block rounded-[6px] px-4 py-3 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.06em] no-underline transition-colors ${
+    return `block rounded-[6px] px-4 py-3 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.06em] no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${
       isActive
         ? "bg-[#b51b2a] text-white"
         : "text-[#f7ece8] hover:bg-white/10 hover:text-white"
@@ -48,7 +58,7 @@ export default function GlobalRouteMenu() {
     >
       <button
         type="button"
-        className="geis-nav-trigger flex h-12 items-center gap-2 rounded-[8px] border border-white/20 bg-[#6d1019] px-3 text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621]"
+        className="geis-nav-trigger flex h-12 items-center gap-2 rounded-[8px] border border-white/20 bg-[#6d1019] px-3 text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
         aria-label={open ? "Tutup menu navigasi" : "Buka menu navigasi"}
         aria-expanded={open}
         onClick={() => setOpen((current) => !current)}
@@ -74,7 +84,7 @@ export default function GlobalRouteMenu() {
           </div>
 
           <div className="space-y-1">
-            <p className="px-4 pb-1 pt-2 font-['Montserrat',sans-serif] text-[10px] font-black uppercase tracking-[0.16em] text-white/45">
+            <p className="px-4 pb-1 pt-2 font-['Montserrat',sans-serif] text-[10px] font-black uppercase tracking-[0.16em] text-white/75">
               Menu Utama
             </p>
             {MAIN_ROUTE_LINKS.map((link) => (

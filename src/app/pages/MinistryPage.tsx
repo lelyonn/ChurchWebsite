@@ -27,8 +27,8 @@ const MINISTRY_CONTENT: Record<
     title: "Youth",
     tagline: "Ruang anak muda untuk bertumbuh, terhubung, dan berjalan bersama Tuhan.",
     body:
-      "Proses!.",
-    status: "Coming Soon",
+      "Youth GEIS CCC hadir sebagai wadah komunitas anak muda untuk bertumbuh dalam iman, membangun relasi yang sehat, dan menemukan panggilan hidup melalui persekutuan dan ibadah yang relevan.",
+    status: "Youth Ministry",
   },
   ckids: {
     eyebrow: "GEIS CCC MINISTRY",
@@ -43,8 +43,8 @@ const MINISTRY_CONTENT: Record<
     title: "Powerhouse",
     tagline: "Ruang generasi untuk mengalami Tuhan dan bergerak dalam tujuan-Nya.",
     body:
-      "Proses!.",
-    status: "Coming Soon",
+      "Powerhouse hadir bagi generasi profesional dan dewasa muda untuk memperdalam relasi dengan Tuhan, memperlengkapi kepemimpinan, dan menjadi dampak positif di lingkungan kerja maupun masyarakat.",
+    status: "Young Adults Ministry",
   },
 };
 
@@ -90,7 +90,6 @@ function MinistryPhotoGallery({
 }) {
   return (
     <section className="relative overflow-hidden bg-[#f8f6f0] px-5 py-14 md:px-14 md:py-20">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:linear-gradient(90deg,rgba(181,27,42,0.16)_1px,transparent_1px),linear-gradient(rgba(17,20,24,0.1)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="relative mx-auto max-w-[1180px]">
         <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#d41c24]">
           Moments
@@ -182,6 +181,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
             loop
             playsInline
             preload="metadata"
+            poster={CKIDS_PHOTOS[0].src}
             aria-hidden="true"
           />
         ) : (
@@ -218,7 +218,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
                 className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/24 bg-white/12 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white backdrop-blur-md transition-colors hover:bg-white/18"
                 onClick={toggleVideoSound}
               >
-                <span>{soundEnabled ? "Sound On" : "Sound Off"}</span>
+                <span>{soundEnabled ? "Suara Nyala" : "Suara Hening"}</span>
                 {soundEnabled ? (
                   <Volume2 className="size-5" strokeWidth={2.4} aria-hidden="true" />
                 ) : (
@@ -230,7 +230,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
               to="/"
               className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] bg-[#d41c24] px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white no-underline transition-colors hover:bg-[#8f1621]"
             >
-              Back to Home
+              Kembali ke Beranda
               <ArrowRight className="size-5" aria-hidden="true" />
             </Link>
             <a
@@ -239,7 +239,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
               rel="noopener noreferrer"
               className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/22 bg-white/8 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white no-underline backdrop-blur-md transition-colors hover:bg-white/14"
             >
-              Ask Admin
+              Hubungi Admin via WhatsApp
               <ArrowRight className="size-5" aria-hidden="true" />
             </a>
           </div>

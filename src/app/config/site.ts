@@ -3,6 +3,10 @@ export const SITE_INFO = {
   shortName: "GEIS CCC",
   fullName: "Gereja El-Shaddai Injil Sepenuh",
   tagline: "Gereja yang Kreatif, Relevan, dan berdampak bagi generasi saat ini.",
+  contact: {
+    phone: "0821-3532-9709",
+    whatsappRaw: "6282135329709",
+  },
   location: {
     street: "Jl. RM Said No. 233",
     area: "Manahan, Solo",
@@ -22,7 +26,7 @@ export const HOME_ANCHOR_LINKS = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
   { href: "#programs", label: "Programs" },
-  { href: "#visit-us", label: "Visit us" },
+  { href: "#visit-us", label: "Lokasi" },
 ] as const;
 
 export const MAIN_ROUTE_LINKS = [
