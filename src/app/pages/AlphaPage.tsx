@@ -17,7 +17,6 @@ import {
 import { SITE_INFO } from "../config/site";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import BackHeader from "../components/BackHeader";
-import SiteFooter from "../components/SiteFooter";
 import {
   Accordion,
   AccordionContent,
@@ -522,7 +521,6 @@ export default function AlphaPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </div>
   );
 }

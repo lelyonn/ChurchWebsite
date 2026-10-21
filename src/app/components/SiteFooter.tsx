@@ -23,7 +23,7 @@ export default function SiteFooter() {
 
           <div>
             <p className="font-['Lato',sans-serif] font-bold text-[#f3b7bd] text-[11px] tracking-[2.8px] uppercase mb-5">
-              NAVIGATE
+              JELAJAHI
             </p>
             {FOOTER_NAV_LINKS.map((link) => (
               <Link key={link.to} to={link.to} className={footerLinkClassName}>
@@ -54,7 +54,7 @@ export default function SiteFooter() {
 
           <div>
             <p className="font-['Lato',sans-serif] font-bold text-[#f3b7bd] text-[11px] tracking-[2.8px] uppercase mb-5">
-              CONNECT
+              HUBUNGI KAMI
             </p>
             <a
               href={SITE_INFO.social.instagramUrl}

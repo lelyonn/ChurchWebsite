@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import CoreValuesAccordion from "../components/CoreValuesAccordion";
 import PrimaryActionLink from "../components/PrimaryActionLink";
 import { SITE_INFO } from "../config/site";
-import SiteFooter from "../components/SiteFooter";
 import pastorsPhoto from "../../assets/images/pastors-photo.jpeg";
 import { COMMUNITY_PHOTOS } from "../data/communityPhotos";
 
@@ -290,7 +289,6 @@ export default function MobileAboutPage() {
         </Link>
       </section>
 
-      <SiteFooter />
     </div>
   );
 }

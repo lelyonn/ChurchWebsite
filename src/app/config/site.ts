@@ -42,9 +42,10 @@ export const MINISTRY_ROUTE_LINKS = [
 ] as const;
 
 export const FOOTER_NAV_LINKS = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/schedule", label: "Schedule" },
+  { to: "/", label: "Beranda" },
+  { to: "/about", label: "Tentang Kami" },
+  { to: "/schedule", label: "Jadwal Ibadah" },
+  { to: "/alpha", label: "Program Alpha" },
 ] as const;
 
 export const INSTAGRAM_RECENT_POSTS = [
