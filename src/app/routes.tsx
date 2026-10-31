@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { PROGRAM_DETAIL_PAGES } from "./data/programs";
 import RootLayout from "./layouts/RootLayout";
 import AboutPage from "./pages/AboutPage";
@@ -21,6 +21,8 @@ export const router = createBrowserRouter([
       { path: "/", Component: HomePage },
       { path: "/about", Component: AboutPage },
       { path: "/schedule", Component: SchedulePage },
+      { path: "/pagi-bersama-tuhan", element: <Navigate to="/schedule#pagi-bersama-tuhan" replace /> },
+      { path: "/pbt", element: <Navigate to="/schedule#pagi-bersama-tuhan" replace /> },
       { path: "/youth", element: <MinistryPage ministry="youth" /> },
       { path: "/ckids", element: <MinistryPage ministry="ckids" /> },
       { path: "/powerhouse", element: <MinistryPage ministry="powerhouse" /> },

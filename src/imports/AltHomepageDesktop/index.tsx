@@ -679,12 +679,17 @@ function CalendarIconRed3() {
 
 function ScheduleCardPagiBersamaTuhan() {
   return (
-    <div className="geis-pop-card absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[1081px] rounded-[30px] top-[302px] w-[328px]" data-name="Schedule card / Pagi Bersama Tuhan">
+    <Link
+      to="/schedule#pagi-bersama-tuhan"
+      className="geis-pop-card group absolute bg-[#262a2d] border border-[rgba(74,78,82,0.85)] hover:border-[#d41c24] border-solid drop-shadow-[0px_14px_14px_rgba(0,0,0,0.1)] h-[286px] left-[1081px] rounded-[30px] top-[302px] w-[328px] no-underline block transition-all"
+      data-name="Schedule card / Pagi Bersama Tuhan"
+      aria-label="Pagi Bersama Tuhan - Buka Link Zoom dan Jadwal"
+    >
       <CalendarIconRed3 />
       <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-bold leading-[35px] left-[31px] not-italic text-[#f8f8f6] text-[25px] top-[103px] w-[264px]">Pagi Bersama Tuhan</p>
-      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Senin - Sabtu</p>
-      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">05.25 - 6.00</p>
-    </div>
+      <p className="[word-break:break-word] absolute font-['Lato',sans-serif] font-normal leading-[30px] left-[31px] not-italic text-[#d7d9da] text-[22px] top-[175px] w-[264px]">Senin - Jumat</p>
+      <p className="[word-break:break-word] absolute font-['Montserrat',sans-serif] font-black leading-[38px] left-[31px] not-italic text-[#f8f8f6] text-[31px] top-[219px] w-[264px]">05.25 WIB</p>
+    </Link>
   );
 }
 

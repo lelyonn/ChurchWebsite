@@ -347,25 +347,35 @@ export default function MobileHomePage() {
           Pilih waktu yang paling sesuai. Semua orang diterima dengan hangat.
         </p>
         <div className="mt-8 space-y-4">
-          {SCHEDULE_ITEMS.map((item) => (
-            <Link
-              key={item.title}
-              to="/schedule"
-              className="geis-pop-card flex items-center gap-4 rounded-[8px] border border-white/10 bg-white/[0.04] p-5 no-underline"
-            >
-              <span className="grid size-11 shrink-0 place-items-center rounded-[8px] bg-[#d41c24]/15 text-[#f3b7bd]">
-                <CalendarDays className="size-5" aria-hidden="true" />
-              </span>
-              <span>
-                <span className="block font-['Montserrat',sans-serif] text-[18px] font-bold leading-[1.25] text-[#f8f8f6]">
-                  {item.title}
-                </span>
-                <span className="mt-1 block font-['Lato',sans-serif] text-[14px] text-[#d7d9da]">
-                  {item.day} - {item.time}
-                </span>
-              </span>
-            </Link>
-          ))}
+          {SCHEDULE_ITEMS.map((item) => {
+            const isMorningPrayer = item.title === "Pagi Bersama Tuhan";
+            return (
+              <Link
+                key={item.title}
+                to={isMorningPrayer ? "/schedule#pagi-bersama-tuhan" : "/schedule"}
+                className="geis-pop-card flex items-center justify-between gap-4 rounded-[8px] border border-white/10 bg-white/[0.04] p-5 no-underline"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-[8px] bg-[#d41c24]/15 text-[#f3b7bd]">
+                    <CalendarDays className="size-5" aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block font-['Montserrat',sans-serif] text-[18px] font-bold leading-[1.25] text-[#f8f8f6]">
+                      {item.title}
+                    </span>
+                    <span className="mt-1 block font-['Lato',sans-serif] text-[14px] text-[#d7d9da]">
+                      {item.day} - {item.time}
+                    </span>
+                  </span>
+                </div>
+                {isMorningPrayer && (
+                  <span className="shrink-0 rounded-[4px] bg-[#d41c24]/20 px-2.5 py-1 text-[11px] font-bold text-[#ff7b85] border border-[#d41c24]/30">
+                    Zoom
+                  </span>
+                )}
+              </Link>
+            );
+          })}
         </div>
         <Link
           to="/schedule"

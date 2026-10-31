@@ -58,10 +58,10 @@ export const SCHEDULE_ITEMS: ScheduleItem[] = [
   },
   {
     title: "Pagi Bersama Tuhan",
-    day: "Senin - Sabtu",
-    time: "05.30",
+    day: "Senin - Jumat",
+    time: "05.25 WIB",
     description:
-      "Saat teduh pagi setiap hari untuk memulai hari dengan renungan firman Tuhan dan doa bersama. Waktu khusus untuk memperkuat hubungan pribadi dengan Tuhan sebelum memulai aktivitas sehari-hari. Program ini membantu membangun disiplin rohani dan memberikan fondasi yang kuat untuk menghadapi tantangan hari ini dengan iman yang teguh.",
+      "Saat teduh pagi setiap hari Senin s/d Jumat untuk memulai hari dengan renungan firman Tuhan dan doa bersama secara online melalui Zoom. Link dapat dibuka mulai pukul 05.25 WIB.",
     bgColor: "#f8ead4",
     placeholderBg: "rgba(255,255,255,0.55)",
     placeholderBorder: "rgba(200,170,110,0.35)",

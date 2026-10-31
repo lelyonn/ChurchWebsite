@@ -45,6 +45,7 @@ export const FOOTER_NAV_LINKS = [
   { to: "/", label: "Beranda" },
   { to: "/about", label: "Tentang Kami" },
   { to: "/schedule", label: "Jadwal Ibadah" },
+  { to: "/schedule#pagi-bersama-tuhan", label: "Pagi Bersama Tuhan" },
   { to: "/alpha", label: "Program Alpha" },
 ] as const;
 

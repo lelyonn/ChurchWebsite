@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, PlusCircle } from "lucide-react";
+import {
+  Calendar,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  Copy,
+  ExternalLink,
+  PlusCircle,
+  Video,
+} from "lucide-react";
 import { Link } from "react-router";
 import pixelJesus from "../../assets/decor/pixel-jesus.jpg";
 import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
@@ -641,39 +651,185 @@ function PowerhouseSection() {
 }
 
 function MorningPrayerSection() {
-  const schedule = getScheduleItem("Pagi Bersama Tuhan");
+  const [copiedField, setCopiedField] = useState<"id" | "passcode" | "url" | null>(null);
+
+  const zoomUrl =
+    "https://us05web.zoom.us/j/84914741479?pwd=Q3c3Um42MlQzV1ZaYkRkTytCTWRLdz09";
+  const meetingId = "849 1474 1479";
+  const passcode = "geisccc";
+
+  const handleCopy = (text: string, field: "id" | "passcode" | "url") => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => {
+      setCopiedField((current) => (current === field ? null : current));
+    }, 2000);
+  };
 
   return (
-    <section className="relative overflow-hidden bg-[#fffdf8] px-6 py-16 md:px-14 md:py-24">
+    <section
+      id="pagi-bersama-tuhan"
+      className="relative overflow-hidden bg-[#0c0f13] px-6 py-16 text-white md:px-14 md:py-24"
+    >
+      {/* Background Praying Image */}
       <img
-        src={redFluidShape}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full object-cover opacity-[0.08] mix-blend-multiply md:h-96 md:w-96"
+        src={COMMUNITY_PHOTOS.worshipPrayer}
+        alt="Jemaat berdoa dalam ibadah GEIS CCC"
+        className="pointer-events-none absolute inset-0 size-full object-cover object-[50%_40%] opacity-30 mix-blend-luminosity brightness-75 contrast-125"
       />
-      <div className="relative z-10 mx-auto grid max-w-[1180px] gap-8 md:grid-cols-[1fr_0.85fr] md:items-center">
+      {/* Overlays for readability and contrast */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0c0f13] via-[#0c0f13]/90 to-[#12161d]/95" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,28,36,0.24),transparent_65%)]" />
+
+      <div className="relative z-10 mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
-          <p className="font-['Lato',sans-serif] text-[11px] font-black uppercase tracking-[0.28em] text-[#d41c24]">
-            Daily Devotion
-          </p>
-          <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] font-bold leading-[1.02] text-[#15181c] md:text-[78px]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#d41c24]/40 bg-[#d41c24]/15 px-3.5 py-1 text-[11px] font-black uppercase tracking-[0.24em] text-[#ff7b85] backdrop-blur-md">
+            <span className="size-2 rounded-full bg-[#ff3b47] animate-pulse" />
+            Daily Devotion &bull; Doa Pagi
+          </div>
+
+          <h2 className="mt-4 font-['Playfair_Display',serif] text-[40px] font-bold leading-[1.05] text-[#f8f8f6] md:text-[68px]">
             Pagi Bersama Tuhan
           </h2>
-          <p className="mt-6 max-w-[720px] font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#46505a] md:text-[20px]">
-            {schedule?.description ??
-              "Saat teduh pagi untuk memulai hari dengan renungan firman Tuhan dan doa bersama."}
-          </p>
+
+          <div className="mt-6 space-y-3 font-['Lato',sans-serif] text-[17px] leading-[1.75] text-[#d7d9da] md:text-[19px]">
+            <p className="text-[20px] font-bold text-white">Selamat Pagi,</p>
+            <p>
+              Mari bergabung dalam{" "}
+              <span className="font-bold text-white">“Pagi Bersama Tuhan”</span>{" "}
+              dengan menggunakan link berikut 👇🏼
+            </p>
+          </div>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <a
+              href={zoomUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="geis-button-hover inline-flex h-[56px] items-center justify-center gap-3 rounded-[8px] bg-[#d41c24] px-7 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.1em] text-white no-underline shadow-[0_12px_28px_rgba(212,28,36,0.35)]"
+            >
+              <Video className="size-5 shrink-0" aria-hidden="true" />
+              <span>Gabung Zoom Meeting</span>
+              <ExternalLink className="size-4 shrink-0 opacity-80" aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="mt-8 border-t border-white/10 pt-5">
+            <p className="font-['Lato',sans-serif] text-[16px] font-semibold text-white/90">
+              Sampai jumpa 🙏
+            </p>
+          </div>
         </div>
-        <div className="geis-pop-card rounded-[8px] border border-[#e2ded6] bg-white p-7 shadow-[0_18px_40px_rgba(0,0,0,0.08)] md:p-9">
-          <p className="font-['Montserrat',sans-serif] text-[18px] font-black uppercase tracking-[0.16em] text-[#d41c24]">
-            {schedule?.day ?? "Senin - Sabtu"}
-          </p>
-          <p className="mt-4 font-['Montserrat',sans-serif] text-[58px] font-black leading-none text-[#15181c] md:text-[76px]">
-            {schedule?.time ?? "05.30"}
-          </p>
-          <p className="mt-4 font-['Lato',sans-serif] text-[15px] font-bold text-[#46505a] md:text-[17px]">
-            Mulai hari dengan firman dan doa.
-          </p>
+
+        {/* Right card: Access Credentials & Schedule Details */}
+        <div className="geis-pop-card relative overflow-hidden rounded-[14px] border border-white/15 bg-white/[0.05] p-6 shadow-[0_24px_50px_rgba(0,0,0,0.4)] backdrop-blur-xl md:p-8">
+          <div className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-[#d41c24]/20 blur-2xl" />
+
+          <div className="relative flex items-center justify-between border-b border-white/10 pb-4">
+            <div>
+              <p className="font-['Montserrat',sans-serif] text-[11px] font-black uppercase tracking-[0.18em] text-[#ff7b85]">
+                Akses Online
+              </p>
+              <p className="font-['Montserrat',sans-serif] text-[20px] font-bold text-white">
+                Zoom Cloud Meetings
+              </p>
+            </div>
+            <span className="grid size-10 place-items-center rounded-full bg-[#d41c24]/20 text-[#ff7b85]">
+              <Video className="size-5" aria-hidden="true" />
+            </span>
+          </div>
+
+          {/* Meeting ID */}
+          <div className="mt-5 rounded-[8px] border border-white/10 bg-black/40 p-4">
+            <div className="flex items-center justify-between">
+              <span className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.14em] text-white/60">
+                Meeting ID
+              </span>
+              <button
+                type="button"
+                onClick={() => handleCopy(meetingId.replace(/\s+/g, ""), "id")}
+                aria-label="Salin Meeting ID"
+                className="flex items-center gap-1.5 rounded-[4px] border border-white/15 bg-white/10 px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-white/20"
+              >
+                {copiedField === "id" ? (
+                  <>
+                    <Check className="size-3.5 text-emerald-400" />
+                    <span className="text-emerald-300">Tersalin</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="size-3.5" />
+                    <span>Salin</span>
+                  </>
+                )}
+              </button>
+            </div>
+            <p className="mt-1 font-['Montserrat',sans-serif] text-[22px] font-black tracking-wider text-white md:text-[25px]">
+              {meetingId}
+            </p>
+          </div>
+
+          {/* Passcode */}
+          <div className="mt-3 rounded-[8px] border border-white/10 bg-black/40 p-4">
+            <div className="flex items-center justify-between">
+              <span className="font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-[0.14em] text-white/60">
+                Passcode
+              </span>
+              <button
+                type="button"
+                onClick={() => handleCopy(passcode, "passcode")}
+                aria-label="Salin Passcode"
+                className="flex items-center gap-1.5 rounded-[4px] border border-white/15 bg-white/10 px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-white/20"
+              >
+                {copiedField === "passcode" ? (
+                  <>
+                    <Check className="size-3.5 text-emerald-400" />
+                    <span className="text-emerald-300">Tersalin</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="size-3.5" />
+                    <span>Salin</span>
+                  </>
+                )}
+              </button>
+            </div>
+            <p className="mt-1 font-['Montserrat',sans-serif] text-[20px] font-black tracking-widest text-[#ff8c95] md:text-[22px]">
+              {passcode}
+            </p>
+          </div>
+
+          {/* Timing & Day Note */}
+          <div className="mt-4 space-y-2 rounded-[8px] border border-[#d41c24]/30 bg-[#d41c24]/10 p-4 text-[13px] md:text-[14px]">
+            <div className="flex items-center gap-2.5 text-[#ffb4b9]">
+              <Clock className="size-4 shrink-0 text-[#ff7b85]" />
+              <span className="font-bold italic">Link dapat dibuka mulai pukul 05.25 WIB</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-[#f3d2d5]">
+              <Calendar className="size-4 shrink-0 text-[#ff7b85]" />
+              <span className="font-semibold italic">Setiap hari Senin s/d Jumat</span>
+            </div>
+          </div>
+
+          {/* Direct Link box */}
+          <div className="mt-4 flex items-center justify-between gap-2 rounded-[6px] border border-white/10 bg-black/50 px-3 py-2 text-[12px] text-white/70">
+            <span className="truncate font-mono text-[11px] text-white/80">
+              {zoomUrl}
+            </span>
+            <button
+              type="button"
+              onClick={() => handleCopy(zoomUrl, "url")}
+              aria-label="Salin Link Zoom Lengkap"
+              title="Salin Link Lengkap"
+              className="shrink-0 rounded p-1 text-white/80 transition hover:bg-white/10 hover:text-white"
+            >
+              {copiedField === "url" ? (
+                <Check className="size-4 text-emerald-400" />
+              ) : (
+                <Copy className="size-4" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </section>
