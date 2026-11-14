@@ -1,8 +1,18 @@
-import { CalendarDays, ExternalLink, MapPin, MessageCircle, Volume2, VolumeX } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarDays,
+  Clock,
+  ExternalLink,
+  MapPin,
+  MessageCircle,
+  Sparkles,
+  Users,
+  Video,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router";
-import pixelCross from "../../assets/decor/pixel-cross.jpg";
-import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
 import redGrain from "../../assets/decor/red-grain.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import gcLogo from "../../assets/images/gc-logo.png";
@@ -105,6 +115,55 @@ const MINISTRY_PREVIEW_CONTENT: Record<
   "/powerhouse": {
     tagline: "Ruang doa, pujian, dan pencarian hadirat Tuhan bersama komunitas.",
     image: WORSHIP_PHOTOS[4].src,
+  },
+};
+
+const SCHEDULE_CARD_META: Record<
+  string,
+  {
+    category: string;
+    venue: string;
+    timeBadge: string;
+    anchor: string;
+    icon: typeof Sparkles;
+    isOnline?: boolean;
+  }
+> = {
+  "Sunday Service": {
+    category: "Ibadah Utama Mingguan",
+    venue: "Gedung Utama GEIS CCC",
+    timeBadge: "09.00 WIB",
+    anchor: "/schedule#detail-sunday",
+    icon: Sparkles,
+  },
+  "Ckids": {
+    category: "Kids Church",
+    venue: "Ruang Ckids",
+    timeBadge: "09.00 WIB",
+    anchor: "/schedule#detail-ckids",
+    icon: Users,
+  },
+  "Youth Service": {
+    category: "Youth Community",
+    venue: "Gedung Utama",
+    timeBadge: "11.00 WIB",
+    anchor: "/schedule#detail-youth",
+    icon: Users,
+  },
+  "Power House": {
+    category: "Doa & Hadirat",
+    venue: "Ruang Doa Lantai 1",
+    timeBadge: "18.00 WIB",
+    anchor: "/schedule#detail-powerhouse",
+    icon: Clock,
+  },
+  "Pagi Bersama Tuhan": {
+    category: "Online Zoom",
+    venue: "Live Zoom Meeting",
+    timeBadge: "05.25 WIB",
+    anchor: "/schedule#pagi-bersama-tuhan",
+    icon: Video,
+    isOnline: true,
   },
 };
 
@@ -272,12 +331,6 @@ export default function MobileHomePage() {
 
       {/* 02. About Section */}
       <SectionWrapper id="about">
-        <img
-          src={redFluidShape}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-5 h-72 w-72 lg:h-96 lg:w-96 rotate-12 rounded-full object-cover opacity-[0.08] mix-blend-multiply"
-        />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6">
             <SectionLabel>Tentang GEIS CCC</SectionLabel>
@@ -365,7 +418,19 @@ export default function MobileHomePage() {
 
       {/* 04. Service Schedule Section */}
       <SectionWrapper id="services" className="bg-[#1b1e21] text-white">
-        <div className="text-center">
+        {/* Subtle ambient lighting & texture */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_15%_20%,rgba(181,27,42,0.22),transparent_42%),radial-gradient(circle_at_85%_75%,rgba(212,28,36,0.14),transparent_40%)]"
+        />
+        <img
+          src={redGrain}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 size-full object-cover opacity-[0.05] mix-blend-screen"
+        />
+
+        <div className="relative z-10 text-center">
           <SectionLabel>Jadwal Ibadah</SectionLabel>
           <h2 className="mt-4 font-['Playfair_Display',serif] text-[42px] md:text-[52px] lg:text-[62px] font-bold leading-[1.08] text-[#f8f8f6]">
             Bertemu setiap minggu
@@ -375,59 +440,166 @@ export default function MobileHomePage() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {SCHEDULE_ITEMS.map((item) => {
-            const isMorningPrayer = item.title === "Pagi Bersama Tuhan";
-            return (
-              <Link
-                key={item.title}
-                to={isMorningPrayer ? "/schedule#pagi-bersama-tuhan" : "/schedule"}
-                className="geis-pop-card flex flex-col justify-between rounded-[12px] border border-white/10 bg-white/[0.05] p-6 no-underline transition-all duration-300 hover:border-white/20 hover:bg-white/[0.08] shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="grid size-11 shrink-0 place-items-center rounded-[8px] bg-[#d41c24]/15 text-[#f3b7bd]">
-                      <CalendarDays className="size-5" aria-hidden="true" />
-                    </span>
-                    {isMorningPrayer && (
-                      <span className="rounded-[4px] border border-[#d41c24]/30 bg-[#d41c24]/20 px-2.5 py-1 text-[11px] font-bold text-[#ff7b85]">
-                        Zoom
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="mt-5 font-['Montserrat',sans-serif] text-[19px] lg:text-[20px] font-bold leading-[1.25] text-[#f8f8f6]">
-                    {item.title}
-                  </h3>
-                </div>
-                <div className="mt-4 border-t border-white/10 pt-3">
-                  <p className="font-['Lato',sans-serif] text-[14px] text-[#d7d9da]">
-                    {item.day} - {item.time}
-                  </p>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        {/* Editorial Bento Grid: 1 Featured Card + Symmetrical 2x2 Grid */}
+        {(() => {
+          const sundayItem = SCHEDULE_ITEMS[0];
+          const secondaryItems = SCHEDULE_ITEMS.slice(1);
+          const sundayMeta = SCHEDULE_CARD_META[sundayItem.title] ?? {
+            category: "Ibadah Utama Mingguan",
+            venue: "Gedung Utama GEIS CCC",
+            timeBadge: "09.00 WIB",
+            anchor: "/schedule#detail-sunday",
+            icon: Sparkles,
+          };
 
-        <div className="mt-10 text-center">
+          return (
+            <div className="relative z-10 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+              {/* Featured Hero Card: Sunday Service */}
+              <div className="col-span-1 md:col-span-2 lg:col-span-5 h-full">
+                <Link
+                  to={sundayMeta.anchor}
+                  className="geis-pop-card group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-white/15 bg-[#15181c] p-6 md:p-8 text-white no-underline shadow-[0_14px_35px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-[#b51b2a]/60 hover:shadow-[0_20px_45px_rgba(181,27,42,0.25)] hover:-translate-y-1 h-full min-h-[380px] md:min-h-[440px]"
+                >
+                  <img
+                    src={COMMUNITY_PHOTOS.worshipCommunity}
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 size-full object-cover object-center opacity-30 transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#15181c] via-[#15181c]/85 to-[#15181c]/55"
+                  />
+
+                  <div className="relative z-10">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[#b51b2a]/40 bg-[#b51b2a]/20 px-3.5 py-1.5 text-[11px] md:text-[12px] font-extrabold uppercase tracking-wider text-[#ff949d]">
+                        <Sparkles className="size-3.5 text-[#ff7b85]" aria-hidden="true" />
+                        <span>{sundayMeta.category}</span>
+                      </div>
+
+                      <div className="inline-flex items-center gap-1.5 rounded-[8px] border border-white/20 bg-black/40 px-3 py-1 font-['Montserrat',sans-serif] text-[13px] font-black text-white">
+                        <Clock className="size-3.5 text-[#ff7b85]" aria-hidden="true" />
+                        <span>{sundayMeta.timeBadge}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 md:mt-8">
+                      <p className="font-['Lato',sans-serif] text-[13px] md:text-[14px] font-bold uppercase tracking-[0.16em] text-[#ff7b85]">
+                        {sundayItem.day} &bull; {sundayItem.time}
+                      </p>
+                      <h3 className="mt-2 font-['Montserrat',sans-serif] text-[28px] md:text-[34px] lg:text-[36px] font-black leading-[1.1] text-[#f8f8f6]">
+                        {sundayItem.title}
+                      </h3>
+                      <p className="mt-4 font-['Lato',sans-serif] text-[14px] md:text-[15px] leading-[1.7] text-[#d7d9da]">
+                        {sundayItem.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative z-10 mt-8 border-t border-white/12 pt-5">
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="flex items-center gap-2 text-[13px] md:text-[14px] font-medium text-[#f4eeee]">
+                        <span className="grid size-7 place-items-center rounded-full bg-[#b51b2a]/30 text-[#ff949d]">
+                          <MapPin className="size-3.5" aria-hidden="true" />
+                        </span>
+                        <span>{sundayMeta.venue}</span>
+                      </div>
+
+                      <span className="inline-flex items-center gap-2 font-['Montserrat',sans-serif] text-[13px] md:text-[14px] font-bold text-white transition-colors group-hover:text-[#ff949d]">
+                        <span>Lihat Detail Ibadah</span>
+                        <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Symmetrical 2x2 Grid: 4 Secondary Services */}
+              <div className="col-span-1 md:col-span-2 lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 h-full">
+                  {secondaryItems.map((item) => {
+                    const meta = SCHEDULE_CARD_META[item.title] ?? {
+                      category: "Ibadah GEIS CCC",
+                      venue: "Gedung GEIS CCC",
+                      timeBadge: item.time,
+                      anchor: "/schedule",
+                      icon: CalendarDays,
+                    };
+                    const IconComponent = meta.icon;
+
+                    return (
+                      <Link
+                        key={item.title}
+                        to={meta.anchor}
+                        className="geis-pop-card group relative flex flex-col justify-between overflow-hidden rounded-[14px] border border-white/10 bg-[#1b1f26] p-5 md:p-6 text-white no-underline shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-all duration-300 hover:border-[#b51b2a]/40 hover:bg-[#222730]"
+                      >
+                        <div className="relative z-10">
+                          <div className="flex items-center justify-between gap-2">
+                            <div className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-bold text-[#f3b7bd]">
+                              <IconComponent className="size-3 text-[#ff7b85]" aria-hidden="true" />
+                              <span>{meta.category}</span>
+                            </div>
+
+                            <span className="inline-flex items-center gap-1 rounded-[6px] border border-[#b51b2a]/40 bg-[#b51b2a]/20 px-2.5 py-1 font-['Montserrat',sans-serif] text-[12px] font-black text-[#ff949d]">
+                              {meta.isOnline && (
+                                <span className="size-1.5 rounded-full bg-[#ff4d58] animate-pulse" aria-hidden="true" />
+                              )}
+                              <span>{meta.timeBadge}</span>
+                            </span>
+                          </div>
+
+                          <div className="mt-4">
+                            <p className="font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.14em] text-[#ff7b85]">
+                              {item.day} &bull; {item.time}
+                            </p>
+                            <h3 className="mt-1 font-['Montserrat',sans-serif] text-[19px] md:text-[21px] font-bold leading-[1.25] text-[#f8f8f6] group-hover:text-white transition-colors">
+                              {item.title}
+                            </h3>
+                            <p className="mt-2.5 font-['Lato',sans-serif] text-[13px] md:text-[14px] leading-[1.65] text-[#d7d9da] line-clamp-3">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="relative z-10 mt-5 border-t border-white/10 pt-3.5 flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-1.5 text-[12px] font-medium text-[#b0b4ba]">
+                            {meta.isOnline ? (
+                              <Video className="size-3.5 text-[#ff7b85] shrink-0" aria-hidden="true" />
+                            ) : (
+                              <MapPin className="size-3.5 text-[#ff7b85] shrink-0" aria-hidden="true" />
+                            )}
+                            <span className="truncate">{meta.venue}</span>
+                          </div>
+
+                          <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white/5 text-white/70 transition-all duration-300 group-hover:bg-[#b51b2a] group-hover:text-white group-hover:translate-x-0.5">
+                            <ArrowRight className="size-3.5" aria-hidden="true" />
+                          </span>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Bottom CTA Button */}
+        <div className="relative z-10 mt-12 text-center">
           <Link
             to="/schedule"
-            className="geis-button-hover inline-flex h-[56px] items-center justify-between gap-4 rounded-[8px] bg-[#b51b2a] px-8 font-['Lato',sans-serif] text-[16px] font-bold text-white no-underline shadow-md hover:bg-[#8f1621] transition-colors"
+            className="geis-button-hover group inline-flex min-h-[52px] items-center justify-center gap-3 rounded-[10px] bg-[#b51b2a] px-8 py-3.5 font-['Montserrat',sans-serif] text-[15px] md:text-[16px] font-bold tracking-wide text-white no-underline shadow-[0_8px_20px_rgba(181,27,42,0.35)] hover:bg-[#8f1621] hover:shadow-[0_12px_28px_rgba(181,27,42,0.5)] transition-all duration-300"
           >
-            Lihat Selengkapnya
-            <span aria-hidden="true">&rarr;</span>
+            <MapPin className="size-4.5 text-[#f3b7bd] transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
+            <span>Lihat Selengkapnya &amp; Detail Lokasi</span>
+            <ArrowRight className="size-4.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </div>
       </SectionWrapper>
 
       {/* 05. Programs Section */}
       <SectionWrapper id="programs">
-        <img
-          src={pixelCross}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute right-7 top-10 h-14 w-14 rounded-[6px] object-cover opacity-20 mix-blend-multiply"
-        />
         <SectionLabel>Program & Journey</SectionLabel>
         <h2 className="mt-4 font-['Playfair_Display',serif] text-[44px] md:text-[54px] lg:text-[62px] font-bold leading-[1.05]">
           Programs

@@ -1,10 +1,5 @@
 import type { ProgramDetail } from "../data/programs";
 import { SITE_INFO } from "../config/site";
-import pixelCross from "../../assets/decor/pixel-cross.jpg";
-import pixelJesus from "../../assets/decor/pixel-jesus.jpg";
-import redFluidShape from "../../assets/decor/red-fluid-shape.jpg";
-import redGrain from "../../assets/decor/red-grain.jpg";
-import warmWallpaper from "../../assets/decor/warm-wallpaper.jpg";
 import alphaLogo from "../../assets/images/alpha-logo.png";
 import BackHeader from "../components/BackHeader";
 import PrimaryActionLink from "../components/PrimaryActionLink";
@@ -15,7 +10,6 @@ type ProgramDetailPageProps = {
 
 export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
   const isAlpha = program.path === "/alpha";
-  const texture = isAlpha ? alphaLogo : program.path === "/SJ" ? warmWallpaper : redGrain;
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f8f6f0] pt-[74px] md:pt-[92px]">
@@ -25,20 +19,6 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
         className="relative overflow-hidden py-20 md:py-28"
         style={{ backgroundColor: program.bgColor }}
       >
-        <img
-          src={texture}
-          alt=""
-          aria-hidden="true"
-          className={`pointer-events-none absolute -right-20 -top-16 h-[300px] w-[300px] rotate-12 rounded-full opacity-[0.13] mix-blend-multiply md:h-[480px] md:w-[480px] ${
-            isAlpha ? "object-contain" : "object-cover"
-          }`}
-        />
-        <img
-          src={pixelCross}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-8 left-6 hidden h-16 w-16 rounded-[6px] object-cover opacity-25 mix-blend-multiply md:block"
-        />
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 text-center">
           {isAlpha && (
             <img
@@ -70,12 +50,6 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
       </section>
 
       <section className="relative overflow-hidden bg-[#f8f6f0] py-20 md:py-24">
-        <img
-          src={redFluidShape}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-28 top-12 h-[260px] w-[260px] -rotate-12 rounded-full object-cover opacity-[0.08] mix-blend-multiply md:h-[420px] md:w-[420px]"
-        />
         <div className="max-w-[900px] mx-auto px-6 md:px-12">
           <p className="font-['Lato',sans-serif] font-normal text-[19px] md:text-[22px] text-[#15181c] leading-[1.8]">
             {program.intro}
@@ -84,12 +58,6 @@ export default function ProgramDetailPage({ program }: ProgramDetailPageProps) {
       </section>
 
       <section className="relative overflow-hidden bg-[#fffdf8] py-20 md:py-28">
-        <img
-          src={pixelJesus}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute right-6 top-10 hidden h-20 w-20 rounded-[8px] object-cover opacity-20 mix-blend-multiply md:block"
-        />
         <div className="max-w-[1100px] mx-auto px-6 md:px-12 space-y-16 md:space-y-24">
           {program.sections.map((section) => (
             <div

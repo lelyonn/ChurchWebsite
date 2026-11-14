@@ -263,7 +263,7 @@ export default function MobileAboutPage() {
               onClick={() => scrollByDirection("left")}
               disabled={!canScrollLeft}
               aria-label="Foto sebelumnya"
-              className={`flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 cursor-pointer ${
+              className={`flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 cursor-pointer ${
                 canScrollLeft
                   ? "opacity-100 hover:bg-white/20 active:scale-95"
                   : "cursor-not-allowed opacity-30"
@@ -276,7 +276,7 @@ export default function MobileAboutPage() {
               onClick={() => scrollByDirection("right")}
               disabled={!canScrollRight}
               aria-label="Foto berikutnya"
-              className={`flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 cursor-pointer ${
+              className={`flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 cursor-pointer ${
                 canScrollRight
                   ? "opacity-100 hover:bg-white/20 active:scale-95"
                   : "cursor-not-allowed opacity-30"

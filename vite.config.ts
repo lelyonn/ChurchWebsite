@@ -56,8 +56,7 @@ export default defineConfig({
             if (
               id.includes("@radix-ui") ||
               id.includes("clsx") ||
-              id.includes("tailwind-merge") ||
-              id.includes("tw-animate-css")
+              id.includes("tailwind-merge")
             ) {
               return "vendor-ui";
             }

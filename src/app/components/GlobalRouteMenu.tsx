@@ -58,7 +58,7 @@ export default function GlobalRouteMenu() {
     >
       <button
         type="button"
-        className="geis-nav-trigger flex h-12 items-center gap-2 rounded-[8px] border border-white/20 bg-[#6d1019] px-3 text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] backdrop-blur-md transition-colors hover:bg-[#8f1621] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+        className="geis-nav-trigger flex h-12 items-center gap-2 rounded-[8px] border border-white/20 bg-[#6d1019] px-3 text-white shadow-[0_10px_28px_rgba(0,0,0,0.34)] transition-colors hover:bg-[#8f1621] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
         aria-label={open ? "Tutup menu navigasi" : "Buka menu navigasi"}
         aria-expanded={open}
         onClick={() => setOpen((current) => !current)}

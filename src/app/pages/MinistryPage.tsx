@@ -218,7 +218,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
               <button
                 type="button"
                 aria-label={soundEnabled ? "Matikan suara video CKIDS" : "Nyalakan suara video CKIDS"}
-                className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/24 bg-white/12 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white backdrop-blur-md transition-colors hover:bg-white/18"
+                className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/24 bg-white/12 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white/18"
                 onClick={toggleVideoSound}
               >
                 <span>{soundEnabled ? "Suara Nyala" : "Suara Hening"}</span>
@@ -240,7 +240,7 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
               href={SITE_INFO.social.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/22 bg-white/8 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white no-underline backdrop-blur-md transition-colors hover:bg-white/14"
+              className="inline-flex h-[58px] items-center justify-between gap-6 rounded-[8px] border border-white/22 bg-white/8 px-6 font-['Montserrat',sans-serif] text-[13px] font-black uppercase tracking-[0.12em] text-white no-underline transition-colors hover:bg-white/14"
             >
               Hubungi Admin via WhatsApp
               <ArrowRight className="size-5" aria-hidden="true" />
