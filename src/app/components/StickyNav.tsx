@@ -18,15 +18,6 @@ function getSectionTop(href: string) {
     return Number.POSITIVE_INFINITY;
   }
 
-  const frame = target.closest<HTMLElement>("[data-figma-frame='true']");
-  const canvas = target.closest<HTMLElement>("[data-figma-canvas='true']");
-
-  if (frame && canvas) {
-    const scale = Number(frame.dataset.figmaScale) || 1;
-    const canvasTop = frame.getBoundingClientRect().top + window.scrollY;
-    return canvasTop + target.offsetTop * scale;
-  }
-
   return target.getBoundingClientRect().top + window.scrollY;
 }
 
@@ -84,12 +75,12 @@ export default function StickyNav() {
 
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 z-50 hidden transition-all duration-300 ease-out md:block ${
+      className={`fixed top-4 left-0 right-0 z-50 hidden transition-all duration-300 ease-out lg:block ${
         visible ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0 pointer-events-none"
       }`}
       data-name="Sticky Top Nav"
     >
-      <div className="mx-auto flex w-[calc(100%-32px)] max-w-[980px] items-center justify-between gap-4 rounded-full border border-white/10 bg-[#6d1019]/92 px-4 py-2 shadow-[0_18px_44px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+      <div className="mx-auto flex w-[calc(100%-32px)] max-w-[980px] items-center justify-between gap-4 rounded-full border border-white/10 bg-[#6d1019]/92 px-4 py-2 lg:pr-28 xl:pr-4 shadow-[0_18px_44px_rgba(0,0,0,0.24)] backdrop-blur-xl">
         <a
           href="#home"
           className="hidden sm:flex items-center gap-3 rounded-full px-3 py-2 no-underline text-white"

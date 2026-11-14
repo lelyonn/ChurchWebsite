@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { Link } from "react-router";
 import youthBgPhoto from "../../assets/images/carousel/youth-bg.jpg";
-import ckidsHeroVideo from "../../assets/videos/ckids-hero.mp4";
+import ckidsHeroMp4 from "../../assets/videos/ckids-hero.mp4";
+import ckidsHeroWebm from "../../assets/videos/ckids-hero.webm";
 import { SITE_INFO } from "../config/site";
 import { CKIDS_PHOTOS, COMMUNITY_PHOTOS, WORSHIP_PHOTOS } from "../data/communityPhotos";
 
@@ -175,15 +176,17 @@ export default function MinistryPage({ ministry }: MinistryPageProps) {
           <video
             ref={videoRef}
             className="absolute inset-0 size-full object-cover object-center"
-            src={ckidsHeroVideo}
             autoPlay
             muted={!soundEnabled}
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             poster={CKIDS_PHOTOS[0].src}
             aria-hidden="true"
-          />
+          >
+            <source src={ckidsHeroWebm} type="video/webm" />
+            <source src={ckidsHeroMp4} type="video/mp4" />
+          </video>
         ) : (
           <>
             <img

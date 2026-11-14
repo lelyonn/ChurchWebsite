@@ -2,51 +2,82 @@
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting...</title>
-    <script>
-      (function redirectToSpa(location) {
-        var segments = location.pathname.split("/").filter(Boolean);
-        var appRoutes = [
-          "about",
-          "schedule",
-          "alpha",
-          "sj",
-          "homecell",
-          "youth",
-          "ckids",
-          "powerhouse",
-        ];
-        var pathSegmentsToKeep =
-          segments.length > 1 && appRoutes.indexOf(segments[0].toLowerCase()) === -1
-            ? 1
-            : 0;
-        var basePath = location.pathname
-          .split("/")
-          .slice(0, 1 + pathSegmentsToKeep)
-          .join("/");
-        var routePath = location.pathname
-          .slice(1)
-          .split("/")
-          .slice(pathSegmentsToKeep)
-          .join("/")
-          .replace(/&/g, "~and~");
-        var search = location.search
-          ? "&" + location.search.slice(1).replace(/&/g, "~and~")
-          : "";
-
-        location.replace(
-          location.protocol +
-            "//" +
-            location.hostname +
-            (location.port ? ":" + location.port : "") +
-            basePath +
-            "/?/" +
-            routePath +
-            search +
-            location.hash
-        );
-      })(window.location);
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Halaman Tidak Ditemukan | Geis CCC</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0f172a;
+        color: #f8fafc;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .container {
+        max-width: 480px;
+        width: 100%;
+        background-color: #1e293b;
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        font-weight: 600;
+        font-size: 0.875rem;
+        border-radius: 9999px;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: 0 0 0.5rem;
+        font-weight: 800;
+        color: #f1f5f9;
+        line-height: 1;
+      }
+      h2 {
+        font-size: 1.25rem;
+        margin: 0 0 1rem;
+        font-weight: 600;
+        color: #cbd5e1;
+      }
+      p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0 0 2rem;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #0284c7;
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s ease;
+      }
+      .btn:hover {
+        background-color: #0369a1;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <span class="badge">Error 404</span>
+      <h1>404</h1>
+      <h2>Halaman Tidak Ditemukan</h2>
+      <p>Halaman yang Anda tuju tidak tersedia atau telah dipindahkan. Silakan kembali ke beranda.</p>
+      <a href="/" class="btn">Kembali ke Beranda</a>
+    </div>
+  </body>
 </html>

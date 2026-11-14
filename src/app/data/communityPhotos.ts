@@ -11,6 +11,13 @@ import worshipPrayer from "../../assets/images/community/worship-prayer.jpg";
 import worshipResponse from "../../assets/images/community/worship-response.jpg";
 import worshipTeam from "../../assets/images/community/worship-team.jpg";
 import youthService from "../../assets/images/community/youth-service.jpg";
+import pastorsPhotoDesktop from "../../assets/images/pastors-photo.webp";
+import pastorsPhotoMobile from "../../assets/images/pastors-photo-600.webp";
+
+export const PASTORS_PHOTOS = {
+  desktop: pastorsPhotoDesktop,
+  mobile: pastorsPhotoMobile,
+} as const;
 
 export const COMMUNITY_PHOTOS = {
   ckidsBible,

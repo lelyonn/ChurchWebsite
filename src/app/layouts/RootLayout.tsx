@@ -33,24 +33,12 @@ function scrollToHash(hash: string) {
   const target = document.getElementById(targetId);
 
   if (target) {
-    const frame = target.closest<HTMLElement>("[data-figma-frame='true']");
-    const canvas = target.closest<HTMLElement>("[data-figma-canvas='true']");
-
-    if (frame && canvas) {
-      const scale = Number(frame.dataset.figmaScale) || 1;
-      const canvasTop = frame.getBoundingClientRect().top + window.scrollY;
-      const targetTop = target.offsetTop * scale;
-
-      window.scrollTo({
-        top: Math.max(0, canvasTop + targetTop - STICKY_NAV_OFFSET),
-        left: 0,
-        behavior: "smooth",
-      });
-
-      return true;
-    }
-
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: Math.max(0, targetTop - STICKY_NAV_OFFSET),
+      left: 0,
+      behavior: "smooth",
+    });
     return true;
   }
 

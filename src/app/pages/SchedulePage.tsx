@@ -669,7 +669,7 @@ function MorningPrayerSection() {
   return (
     <section
       id="pagi-bersama-tuhan"
-      className="relative overflow-hidden bg-[#0c0f13] px-6 py-16 text-white md:px-14 md:py-24"
+      className="relative overflow-hidden bg-[#0c0f13] px-6 py-16 text-white md:px-14 md:py-24 scroll-mt-24 md:scroll-mt-28"
     >
       {/* Background Praying Image */}
       <img
@@ -749,16 +749,16 @@ function MorningPrayerSection() {
                 type="button"
                 onClick={() => handleCopy(meetingId.replace(/\s+/g, ""), "id")}
                 aria-label="Salin Meeting ID"
-                className="flex items-center gap-1.5 rounded-[4px] border border-white/15 bg-white/10 px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-white/20"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-[6px] border border-white/20 bg-white/10 px-4 py-2.5 text-[12px] font-bold text-white transition hover:bg-white/20 active:scale-95"
               >
                 {copiedField === "id" ? (
                   <>
-                    <Check className="size-3.5 text-emerald-400" />
+                    <Check className="size-4 text-emerald-400" />
                     <span className="text-emerald-300">Tersalin</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="size-3.5" />
+                    <Copy className="size-4" />
                     <span>Salin</span>
                   </>
                 )}
@@ -779,16 +779,16 @@ function MorningPrayerSection() {
                 type="button"
                 onClick={() => handleCopy(passcode, "passcode")}
                 aria-label="Salin Passcode"
-                className="flex items-center gap-1.5 rounded-[4px] border border-white/15 bg-white/10 px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-white/20"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-[6px] border border-white/20 bg-white/10 px-4 py-2.5 text-[12px] font-bold text-white transition hover:bg-white/20 active:scale-95"
               >
                 {copiedField === "passcode" ? (
                   <>
-                    <Check className="size-3.5 text-emerald-400" />
+                    <Check className="size-4 text-emerald-400" />
                     <span className="text-emerald-300">Tersalin</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="size-3.5" />
+                    <Copy className="size-4" />
                     <span>Salin</span>
                   </>
                 )}
@@ -821,7 +821,7 @@ function MorningPrayerSection() {
               onClick={() => handleCopy(zoomUrl, "url")}
               aria-label="Salin Link Zoom Lengkap"
               title="Salin Link Lengkap"
-              className="shrink-0 rounded p-1 text-white/80 transition hover:bg-white/10 hover:text-white"
+              className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-[6px] text-white/80 transition hover:bg-white/10 hover:text-white"
             >
               {copiedField === "url" ? (
                 <Check className="size-4 text-emerald-400" />

@@ -13,7 +13,7 @@
   --secondary: oklch(0.95 0.0058 264.53);
   --secondary-foreground: #030213;
   --muted: #ececf0;
-  --muted-foreground: #717182;
+  --muted-foreground: #5c6570;
   --accent: #e9ebef;
   --accent-foreground: #030213;
   --destructive: #d4183d;
@@ -39,6 +39,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* GEIS CCC Brand Design Tokens (WCAG AA/AAA Compliant) */
+  --geis-crimson-primary: #b51b2a;
+  --geis-crimson-hover: #8f1621;
+  --geis-brand-red: #d41c24;
+  --geis-dark-maroon: #6d1019;
+  --geis-pastel-peach: #f3b7bd;
+  --geis-beige-bg: #f8f6f0;
+  --geis-charcoal-dark: #1b1e21;
+  --geis-text-muted: #5c6570;
 }
 
 .dark {

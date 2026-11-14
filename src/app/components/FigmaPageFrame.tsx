@@ -1,60 +1,23 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type FigmaPageFrameProps = {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   children: ReactNode;
+  id?: string;
 };
 
+/**
+ * @deprecated Dekonstruksi kanvas statis Figma ke pure fluid responsive CSS (LT-ARCH-01).
+ * Komponen ini dipertahankan sebagai transparent container untuk backward compatibility.
+ */
 export default function FigmaPageFrame({
-  width,
-  height,
   children,
+  id = "home",
 }: FigmaPageFrameProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    if (!container) {
-      return;
-    }
-
-    const updateScale = () => {
-      const availableWidth = container.clientWidth || width;
-      const nextScale = availableWidth / width;
-      container.dataset.figmaScale = String(nextScale);
-      setScale(nextScale);
-    };
-
-    updateScale();
-
-    const resizeObserver = new ResizeObserver(updateScale);
-    resizeObserver.observe(container);
-
-    return () => resizeObserver.disconnect();
-  }, [width]);
-
   return (
-    <div
-      id="home"
-      ref={containerRef}
-      className="w-full overflow-hidden"
-      data-figma-frame="true"
-      style={{ height: height * scale }}
-    >
-      <div
-        className="relative overflow-hidden origin-top-left"
-        data-figma-canvas="true"
-        style={{
-          width,
-          height,
-          transform: `scale(${scale})`,
-        }}
-      >
-        {children}
-      </div>
+    <div id={id} className="w-full">
+      {children}
     </div>
   );
 }

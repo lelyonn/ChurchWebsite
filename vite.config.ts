@@ -30,4 +30,40 @@ export default defineConfig({
     },
   },
   assetsInclude: ["**/*.svg", "**/*.csv"],
+  build: {
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            // Core React runtime (React, ReactDOM, Scheduler)
+            if (
+              id.includes("/react/") ||
+              id.includes("/react-dom/") ||
+              id.includes("/scheduler/")
+            ) {
+              return "vendor-react";
+            }
+            // Routing library
+            if (id.includes("react-router")) {
+              return "vendor-router";
+            }
+            // Icon library (Lucide)
+            if (id.includes("lucide-react")) {
+              return "vendor-icons";
+            }
+            // Headless UI & class utilities
+            if (
+              id.includes("@radix-ui") ||
+              id.includes("clsx") ||
+              id.includes("tailwind-merge") ||
+              id.includes("tw-animate-css")
+            ) {
+              return "vendor-ui";
+            }
+          }
+        },
+      },
+    },
+  },
 });

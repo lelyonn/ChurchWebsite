@@ -170,7 +170,7 @@ export default function AlphaPage() {
             />
           </div>
 
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c41820]/20 bg-[#c41820]/5 px-4 py-1.5 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#c41820]">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#b51b2a]/20 bg-[#b51b2a]/5 px-4 py-1.5 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.2em] text-[#b51b2a]">
             <Sparkles className="size-3.5 shrink-0" aria-hidden="true" />
             <span>Program Eksplorasi Iman & Kehidupan</span>
           </div>
@@ -185,15 +185,15 @@ export default function AlphaPage() {
 
           <div className="mb-10 flex flex-wrap items-center justify-center gap-3 font-['Lato',sans-serif] text-[13px] font-semibold text-[#15181c] md:text-[14px]">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e2ded6] bg-white px-3.5 py-1.5 shadow-sm">
-              <CheckCircle2 className="size-4 text-[#c41820]" aria-hidden="true" />
+              <CheckCircle2 className="size-4 text-[#b51b2a]" aria-hidden="true" />
               100% Gratis Tanpa Biaya
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e2ded6] bg-white px-3.5 py-1.5 shadow-sm">
-              <Heart className="size-4 text-[#c41820]" aria-hidden="true" />
+              <Heart className="size-4 text-[#b51b2a]" aria-hidden="true" />
               Bebas Tekanan & Santai
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e2ded6] bg-white px-3.5 py-1.5 shadow-sm">
-              <Users className="size-4 text-[#c41820]" aria-hidden="true" />
+              <Users className="size-4 text-[#b51b2a]" aria-hidden="true" />
               Terbuka untuk Siapa Saja
             </span>
           </div>
@@ -204,7 +204,7 @@ export default function AlphaPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Daftar kelas Alpha via WhatsApp"
-              className="inline-flex h-[52px] w-full sm:w-auto items-center justify-center gap-2 rounded-[8px] bg-[#c41820] px-7 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.08em] text-white no-underline shadow-[0_12px_24px_rgba(196,24,32,0.22)] transition-colors hover:bg-[#9a1319] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c41820] focus-visible:ring-offset-2"
+              className="inline-flex h-[52px] w-full sm:w-auto items-center justify-center gap-2 rounded-[8px] bg-[#b51b2a] px-7 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.08em] text-white no-underline shadow-[0_12px_24px_rgba(181,27,42,0.22)] transition-colors hover:bg-[#8f1621] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b51b2a] focus-visible:ring-offset-2"
             >
               <MessageCircle className="size-4 shrink-0" aria-hidden="true" />
               <span>Daftar / Info Batch Terdekat</span>
@@ -215,7 +215,7 @@ export default function AlphaPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Buka website resmi Alpha Indonesia (tab baru)"
-              className="inline-flex h-[52px] w-full sm:w-auto items-center justify-center gap-2 rounded-[8px] border border-[#e2ded6] bg-white px-6 font-['Montserrat',sans-serif] text-[13px] font-bold text-[#15181c] no-underline shadow-sm transition-colors hover:bg-[#f8f6f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c41820] focus-visible:ring-offset-2"
+              className="inline-flex h-[52px] w-full sm:w-auto items-center justify-center gap-2 rounded-[8px] border border-[#e2ded6] bg-white px-6 font-['Montserrat',sans-serif] text-[13px] font-bold text-[#15181c] no-underline shadow-sm transition-colors hover:bg-[#f8f6f0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b51b2a] focus-visible:ring-offset-2"
             >
               <span>indonesia.alpha.org</span>
               <ExternalLink className="size-4 text-[#4b5560]" aria-hidden="true" />
@@ -229,7 +229,7 @@ export default function AlphaPage() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-center">
             <div className="lg:col-span-7">
-              <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#c41820]">
+              <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#b51b2a]">
                 Mengenal Alpha
               </p>
               <h2 className="mb-6 font-['Playfair_Display',serif] text-[32px] font-bold leading-[1.2] text-[#15181c] sm:text-[40px]">
@@ -252,25 +252,25 @@ export default function AlphaPage() {
                 </h3>
                 <ul className="space-y-3.5 font-['Lato',sans-serif] text-[15px] leading-[1.6] text-[#4b5560]">
                   <li className="flex items-start gap-3">
-                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#c41820]/10 text-[#c41820]">
+                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#b51b2a]/10 text-[#b51b2a]">
                       ✓
                     </span>
                     <span>Bisa ngobrol santai tanpa takut didebat atau dipojokkan.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#c41820]/10 text-[#c41820]">
+                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#b51b2a]/10 text-[#b51b2a]">
                       ✓
                     </span>
                     <span>Video berkualitas tinggi dengan topik yang relevan bagi kehidupan sehari-hari.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#c41820]/10 text-[#c41820]">
+                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#b51b2a]/10 text-[#b51b2a]">
                       ✓
                     </span>
                     <span>Menemukan sahabat baru yang saling mendukung di kota Solo.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#c41820]/10 text-[#c41820]">
+                    <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#b51b2a]/10 text-[#b51b2a]">
                       ✓
                     </span>
                     <span>Bebas hadir hanya untuk mendengarkan tanpa dipaksa berbicara.</span>
@@ -286,7 +286,7 @@ export default function AlphaPage() {
       <section className="border-y border-[#e2ded6]/70 bg-[#f8f6f0] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="mb-14 text-center">
-            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#c41820]">
+            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#b51b2a]">
               Format Kegiatan
             </p>
             <h2 className="mb-4 font-['Playfair_Display',serif] text-[32px] font-bold leading-[1.2] text-[#15181c] sm:text-[44px]">
@@ -307,7 +307,7 @@ export default function AlphaPage() {
                 >
                   <div>
                     <div className="mb-5 flex items-center justify-between">
-                      <div className="flex size-12 items-center justify-center rounded-[12px] bg-[#c41820]/10 text-[#c41820]">
+                      <div className="flex size-12 items-center justify-center rounded-[12px] bg-[#b51b2a]/10 text-[#b51b2a]">
                         <IconComp className="size-6" aria-hidden="true" />
                       </div>
                       <span className="font-['Montserrat',sans-serif] text-[13px] font-black tracking-widest text-[#a8acb1]">
@@ -318,7 +318,7 @@ export default function AlphaPage() {
                     <h3 className="mb-1 font-['Montserrat',sans-serif] text-[20px] font-bold text-[#15181c]">
                       {el.title}
                     </h3>
-                    <p className="mb-4 font-['Lato',sans-serif] text-[13px] font-semibold uppercase tracking-wider text-[#c41820]">
+                    <p className="mb-4 font-['Lato',sans-serif] text-[13px] font-semibold uppercase tracking-wider text-[#b51b2a]">
                       {el.subtitle}
                     </p>
 
@@ -328,7 +328,7 @@ export default function AlphaPage() {
                   </div>
 
                   <div className="mt-6 border-t border-[#f0eee8] pt-4 font-['Lato',sans-serif] text-[13px] font-semibold text-[#15181c]">
-                    <span className="inline-block text-[#c41820] mr-1.5">●</span>
+                    <span className="inline-block text-[#b51b2a] mr-1.5">●</span>
                     {el.highlight}
                   </div>
                 </div>
@@ -342,7 +342,7 @@ export default function AlphaPage() {
       <section className="bg-[#fffdf8] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#c41820]">
+            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#b51b2a]">
               Pilihan Seri
             </p>
             <h2 className="mb-4 font-['Playfair_Display',serif] text-[32px] font-bold leading-[1.2] text-[#15181c] sm:text-[44px]">
@@ -360,7 +360,7 @@ export default function AlphaPage() {
                 className="flex flex-col justify-between rounded-[16px] border border-[#e2ded6] bg-[#f8f6f0] p-8 shadow-sm"
               >
                 <div>
-                  <div className="mb-3 inline-block rounded-full bg-white px-3 py-1 font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-wider text-[#c41820] shadow-xs">
+                  <div className="mb-3 inline-block rounded-full bg-white px-3 py-1 font-['Lato',sans-serif] text-[11px] font-bold uppercase tracking-wider text-[#b51b2a] shadow-xs">
                     {series.tag}
                   </div>
                   <h3 className="mb-4 font-['Montserrat',sans-serif] text-[22px] font-bold leading-[1.3] text-[#15181c]">
@@ -372,7 +372,7 @@ export default function AlphaPage() {
                   <ul className="mb-6 space-y-2.5 font-['Lato',sans-serif] text-[14px] text-[#15181c]">
                     {series.features.map((feat) => (
                       <li key={feat} className="flex items-center gap-2.5">
-                        <CheckCircle2 className="size-4 shrink-0 text-[#c41820]" aria-hidden="true" />
+                        <CheckCircle2 className="size-4 shrink-0 text-[#b51b2a]" aria-hidden="true" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -383,7 +383,7 @@ export default function AlphaPage() {
                   href={WA_ALPHA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-[44px] items-center justify-center rounded-[8px] bg-white border border-[#e2ded6] px-5 font-['Montserrat',sans-serif] text-[13px] font-bold text-[#15181c] no-underline transition-colors hover:bg-[#c41820] hover:text-white hover:border-[#c41820]"
+                  className="inline-flex h-[44px] items-center justify-center rounded-[8px] bg-white border border-[#e2ded6] px-5 font-['Montserrat',sans-serif] text-[13px] font-bold text-[#15181c] no-underline transition-colors hover:bg-[#b51b2a] hover:text-white hover:border-[#b51b2a]"
                 >
                   Tanya Jadwal Seri Ini via WA
                 </a>
@@ -397,7 +397,7 @@ export default function AlphaPage() {
       <section className="border-t border-[#e2ded6]/70 bg-[#f8f6f0] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 text-center">
-            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#c41820]">
+            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#b51b2a]">
               Komitmen Kami
             </p>
             <h2 className="mb-4 font-['Playfair_Display',serif] text-[32px] font-bold leading-[1.2] text-[#15181c] sm:text-[44px]">
@@ -416,7 +416,7 @@ export default function AlphaPage() {
                   key={val.title}
                   className="rounded-[14px] border border-[#e2ded6] bg-white p-6 shadow-xs"
                 >
-                  <div className="mb-4 flex size-10 items-center justify-center rounded-[10px] bg-[#c41820]/10 text-[#c41820]">
+                  <div className="mb-4 flex size-10 items-center justify-center rounded-[10px] bg-[#b51b2a]/10 text-[#b51b2a]">
                     <Icon className="size-5" aria-hidden="true" />
                   </div>
                   <h3 className="mb-2 font-['Montserrat',sans-serif] text-[17px] font-bold text-[#15181c]">
@@ -436,7 +436,7 @@ export default function AlphaPage() {
       <section className="bg-[#fffdf8] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center">
-            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#c41820]">
+            <p className="mb-3 font-['Lato',sans-serif] text-[12px] font-bold uppercase tracking-[0.22em] text-[#b51b2a]">
               FAQ
             </p>
             <h2 className="mb-4 font-['Playfair_Display',serif] text-[32px] font-bold leading-[1.2] text-[#15181c] sm:text-[42px]">
@@ -458,11 +458,11 @@ export default function AlphaPage() {
               <AccordionItem
                 key={faq.id}
                 value={faq.id}
-                className="rounded-[12px] border border-[#e2ded6] bg-[#f8f6f0] px-6 py-1 shadow-xs transition-colors data-[state=open]:border-[#c41820]/40 data-[state=open]:bg-white"
+                className="rounded-[12px] border border-[#e2ded6] bg-[#f8f6f0] px-6 py-1 shadow-xs transition-colors data-[state=open]:border-[#b51b2a]/40 data-[state=open]:bg-white"
               >
                 <AccordionTrigger className="font-['Montserrat',sans-serif] text-[17px] font-bold leading-[1.4] text-[#15181c] hover:no-underline">
                   <span className="flex items-center gap-3 text-left">
-                    <HelpCircle className="size-4 shrink-0 text-[#c41820]" aria-hidden="true" />
+                    <HelpCircle className="size-4 shrink-0 text-[#b51b2a]" aria-hidden="true" />
                     <span>{faq.question}</span>
                   </span>
                 </AccordionTrigger>
@@ -494,7 +494,7 @@ export default function AlphaPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Hubungi admin via WhatsApp untuk daftar Alpha"
-              className="inline-flex h-[54px] w-full sm:w-auto items-center justify-center gap-2.5 rounded-[8px] bg-[#c41820] px-8 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.08em] text-white no-underline shadow-[0_12px_24px_rgba(196,24,32,0.3)] transition-colors hover:bg-[#9a1319] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              className="inline-flex h-[54px] w-full sm:w-auto items-center justify-center gap-2.5 rounded-[8px] bg-[#b51b2a] px-8 font-['Montserrat',sans-serif] text-[14px] font-bold uppercase tracking-[0.08em] text-white no-underline shadow-[0_12px_24px_rgba(181,27,42,0.3)] transition-colors hover:bg-[#8f1621] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
             >
               <MessageCircle className="size-5 shrink-0" aria-hidden="true" />
               <span>Daftar Alpha via WhatsApp</span>
