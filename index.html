@@ -1,22 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>GEIS CCC Solo - Christian Creative Church | Gereja Manahan</title>
+    <meta
+      name="description"
+      content="Selamat datang di GEIS CCC Solo (Christian Creative Church) Manahan Surakarta. Gereja yang kreatif, relevan, dan berdampak bagi generasi saat ini."
+    />
+    <meta
+      name="keywords"
+      content="GEIS CCC, GEIS Solo, Christian Creative Church, Gereja Solo, Gereja Manahan, Gereja Surakarta, Sunday Service Solo, Jadwal Ibadah Solo"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.geisccc.my.id/" />
 
-  <!DOCTYPE html>
-  <html lang="id">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-      <title>Geis CCC</title>
-      <meta name="description" content="Website resmi Geis CCC di Solo: jadwal ibadah, program, komunitas, dan informasi kunjungan." />
-      <link rel="icon" type="image/png" href="./favicon.png" />
-      <link rel="apple-touch-icon" href="./favicon.png" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-    </head>
+    <!-- Geo Tags (Surakarta, Indonesia) -->
+    <meta name="geo.region" content="ID-JT" />
+    <meta name="geo.placename" content="Surakarta" />
+    <meta name="geo.position" content="-7.5539;110.8122" />
+    <meta name="ICBM" content="-7.5539, 110.8122" />
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="GEIS CCC Solo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GEIS CCC Solo - Christian Creative Church | Gereja Manahan" />
+    <meta
+      property="og:description"
+      content="Selamat datang di GEIS CCC Solo (Christian Creative Church) Manahan Surakarta. Gereja yang kreatif, relevan, dan berdampak bagi generasi saat ini."
+    />
+    <meta property="og:url" content="https://www.geisccc.my.id/" />
+    <meta property="og:image" content="https://www.geisccc.my.id/og-image.jpg" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GEIS CCC Solo - Christian Creative Church | Gereja Manahan" />
+    <meta
+      name="twitter:description"
+      content="Selamat datang di GEIS CCC Solo (Christian Creative Church) Manahan Surakarta. Gereja yang kreatif, relevan, dan berdampak bagi generasi saat ini."
+    />
+    <meta name="twitter:image" content="https://www.geisccc.my.id/og-image.jpg" />
+
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+
+    <!-- Structured Data (JSON-LD Schema.org) -->
+    <script id="geis-jsonld-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Church",
+          "@id": "https://www.geisccc.my.id/#church",
+          "name": "GEIS CCC Solo",
+          "alternateName": [
+            "Christian Creative Church",
+            "Gereja El-Shaddai Injil Sepenuh",
+            "GEIS CCC",
+            "GEIS Solo",
+            "GEIS CCC Manahan"
+          ],
+          "description": "Gereja Kristen di Solo (Surakarta) yang kreatif, relevan, dan berdampak bagi generasi saat ini.",
+          "url": "https://www.geisccc.my.id",
+          "logo": "https://www.geisccc.my.id/logo.png",
+          "image": "https://www.geisccc.my.id/og-image.jpg",
+          "telephone": "+62-821-3532-9709",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. RM Said No. 233",
+            "addressLocality": "Manahan, Surakarta",
+            "addressRegion": "Jawa Tengah",
+            "postalCode": "57139",
+            "addressCountry": "ID"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -7.5539,
+            "longitude": 110.8122
+          },
+          "hasMap": "https://share.google/gMQJXhHA3Pmvb8bCL",
+          "sameAs": [
+            "https://www.instagram.com/geisccc/",
+            "https://share.google/gMQJXhHA3Pmvb8bCL"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.geisccc.my.id/#website",
+          "url": "https://www.geisccc.my.id/",
+          "name": "GEIS CCC Solo",
+          "description": "Website resmi GEIS CCC Solo - Christian Creative Church",
+          "publisher": { "@id": "https://www.geisccc.my.id/#church" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.geisccc.my.id/#webpage",
+          "url": "https://www.geisccc.my.id/",
+          "name": "GEIS CCC Solo - Christian Creative Church | Gereja Manahan",
+          "isPartOf": { "@id": "https://www.geisccc.my.id/#website" },
+          "about": { "@id": "https://www.geisccc.my.id/#church" },
+          "description": "Selamat datang di GEIS CCC Solo (Christian Creative Church) Manahan Surakarta. Gereja yang kreatif, relevan, dan berdampak bagi generasi saat ini."
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      #root {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
