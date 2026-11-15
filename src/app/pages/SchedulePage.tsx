@@ -1031,7 +1031,7 @@ function PowerhouseSection() {
             {schedule?.day ?? "Setiap Jumat"}
           </p>
           <p className="mt-2 font-['Montserrat',sans-serif] text-[42px] font-black leading-none text-[#ff2638] md:text-[56px]">
-            19.00 WIB
+            18.00 WIB
           </p>
           <p className="mt-6 font-['Lato',sans-serif] text-[15px] leading-[1.75] text-white/85 md:text-[17px]">
             {schedule?.description ??
